@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Local Business Meta Tags -->
+    <title>AS Beauty Center | Estética Avançada por Dra. Aline Schweitzer em São José - SC</title>
+    <meta name="description" content="Estética avançada, alta performance e cuidado personalizado em São José, SC. Conheça a AS Beauty Center e os protocolos com a assinatura da Dra. Aline Schweitzer.">
+    <meta name="keywords" content="clínica de estética em São José SC, estética avançada em São José, AS Beauty Center, Dra. Aline Schweitzer, botox São José, criolipólise São José, tricologia São José, depilação a laser São José SC">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="AS Beauty Center | Estética Avançada por Dra. Aline Schweitzer">
+    <meta property="og:description" content="Estética de resultado com estratégia, naturalidade e propósito. Agende sua avaliação personalizada em São José - SC.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Fonts: Cormorant Garamond (Editorial Serif) & Montserrat (Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            offwhite: '#FAF8F5',
+                            ivory: '#F4F0EA',
+                            sand: '#E5DDD3',
+                            champagne: '#D8C5B0',
+                            rose: '#E8DCD5',
+                            signature: '#A67B6D', /* Dra. Aline's signature terracotta-rose accent */
+                            signaturelight: '#F5ECE8',
+                            brown: '#7A624A',
+                            dark: '#1C1A18',
+                            darker: '#131211',
+                            text: '#4A4744',
+                            muted: '#807C77'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    letterSpacing: {
+                        widest: '.2em',
+                        superwide: '.35em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FAF8F5;
+            color: #4A4744;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* Editorial Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-35px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(35px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active, .reveal-left.active, .reveal-right.active {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .reveal-delay-1 { transition-delay: 120ms; }
+        .reveal-delay-2 { transition-delay: 240ms; }
+        .reveal-delay-3 { transition-delay: 360ms; }
+
+        /* Custom Refined Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF8F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D8C5B0;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A67B6D;
+        }
+
+        /* Soft overlay gradient for editorial imagery */
+        .editorial-overlay::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(28, 26, 24, 0.6) 0%, rgba(28, 26, 24, 0.1) 60%, rgba(28, 26, 24, 0) 100%);
+        }
+
+        .editorial-overlay-light::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(250, 248, 245, 0.8) 0%, rgba(250, 248, 245, 0) 70%);
+        }
+
+        /* Image Subtle Hover Zoom */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.04);
+        }
+
+        /* ===== Mobile-first corrections ===== */
+        html { scroll-padding-top: 76px; }
+        body { min-width: 0; }
+        img { display: block; max-width: 100%; }
+        a, button { -webkit-tap-highlight-color: transparent; }
+        .mobile-link { line-height: 1.35; }
+
+        @media (max-width: 1023px) {
+            .reveal-left, .reveal-right { transform: translateY(20px); }
+            .reveal-left.active, .reveal-right.active { transform: translateY(0); }
+        }
+
+        @media (max-width: 639px) {
+            /* Header */
+            #header > div:first-child { height: 68px; padding-left: 16px; padding-right: 16px; }
+            #header .group { min-width: 0; gap: 8px; }
+            #header .group span:last-child { font-size: 17px; white-space: nowrap; }
+            #header .group span:first-child { width: 34px; height: 34px; font-size: 16px; flex: 0 0 auto; }
+            #mobile-menu { top: 68px; max-height: calc(100svh - 68px); overflow-y: auto; }
+            #mobile-menu nav { padding: 20px 18px calc(24px + env(safe-area-inset-bottom)); gap: 16px; }
+            #mobile-menu a { font-size: 11px; letter-spacing: .14em; }
+
+            /* Global rhythm */
+            section { scroll-margin-top: 68px; }
+            .max-w-7xl.mx-auto.px-6 { padding-left: 16px; padding-right: 16px; }
+
+            /* Hero */
+            #inicio { padding-top: 88px; padding-bottom: 48px; }
+            #inicio .grid { gap: 30px; }
+            #inicio .grid > div:first-child { min-width: 0; }
+            #inicio .inline-flex { max-width: 100%; flex-wrap: wrap; gap: 7px 9px; padding: 8px 12px; }
+            #inicio .inline-flex span { font-size: 9px; line-height: 1.3; letter-spacing: .12em; }
+            #inicio h1 { font-size: clamp(34px, 10.2vw, 46px); line-height: 1.02; margin-bottom: 18px; }
+            #inicio p { font-size: 14px; line-height: 1.7; margin-bottom: 24px; }
+            #inicio .flex-col.sm\:flex-row { gap: 10px; margin-bottom: 26px; }
+            #inicio .flex-col.sm\:flex-row a { width: 100%; min-height: 50px; padding: 14px 18px; text-align: center; }
+            #inicio .pt-8.border-t { padding-top: 18px; }
+            #inicio .pt-8.border-t .text-xs { font-size: 9px; line-height: 1.4; }
+            #inicio .pt-8.border-t .hidden.sm\:block { display: none; }
+            #inicio .aspect-\[3\/4\] { aspect-ratio: 0.82; max-width: 360px; }
+            #inicio .aspect-\[3\/4\] img { object-position: 50% 18%; }
+            #inicio .absolute.-bottom-6 { position: relative; inset: auto; margin: -32px 14px 0 14px; max-width: none; width: auto; padding: 16px; }
+            #inicio .absolute.-bottom-6 p.font-serif { font-size: 16px; }
+            #inicio .absolute.-bottom-6 p.text-\[11px\] { font-size: 9px; line-height: 1.4; }
+            #inicio .absolute.-bottom-6 .mt-3 { margin-top: 10px; padding-top: 10px; }
+            #inicio .absolute.-bottom-6 .mt-3 span { font-size: 9px; }
+            #inicio .absolute.-top-10 { width: 180px; height: 180px; right: -34px; top: -28px; }
+            #inicio .absolute.-bottom-10 { width: 170px; height: 170px; left: -28px; bottom: -36px; }
+
+            /* Signature strip */
+            #inicio + section { padding-top: 16px; padding-bottom: 16px; }
+            #inicio + section .max-w-7xl { gap: 8px; }
+            #inicio + section p { font-size: 15px; line-height: 1.45; }
+            #inicio + section span { font-size: 8px; line-height: 1.3; letter-spacing: .16em; }
+
+            /* Section spacing */
+            #posicionamento, #dra-aline, #tratamentos, #experiencia, #avaliacoes, #contato { padding-top: 56px; padding-bottom: 56px; }
+            #posicionamento h2, #dra-aline h2, #tratamentos h2, #experiencia h2, #avaliacoes h2, #contato h2 { font-size: clamp(30px, 8.5vw, 40px); line-height: 1.05; }
+            #posicionamento .grid, #dra-aline .grid, #contato .grid { gap: 30px; }
+            #posicionamento .reveal > p { font-size: 14px; line-height: 1.75; }
+            #posicionamento .grid.sm\:grid-cols-2 { gap: 10px; }
+            #posicionamento .grid.sm\:grid-cols-2 > div { padding: 18px; }
+            #posicionamento .grid.sm\:grid-cols-2 > div .font-serif.text-4xl { font-size: 32px; margin-bottom: 6px; }
+            #posicionamento .grid.sm\:grid-cols-2 > div h3 { font-size: 19px; }
+            #posicionamento .grid.sm\:grid-cols-2 > div p { font-size: 11px; line-height: 1.55; }
+
+            /* Aline */
+            #dra-aline .order-2 { order: 1; }
+            #dra-aline .order-1 { order: 2; }
+            #dra-aline .aspect-\[3\/4\] { aspect-ratio: 0.9; }
+            #dra-aline .aspect-\[3\/4\] img { object-position: 50% 16%; }
+            #dra-aline .absolute.-bottom-6 { position: relative; left: auto; right: auto; bottom: auto; margin: -22px 12px 0; }
+            #dra-aline .absolute.-bottom-6 p { font-size: 14px; line-height: 1.35; }
+            #dra-aline .grid.grid-cols-3 { grid-template-columns: 1fr; gap: 0; }
+            #dra-aline .grid.grid-cols-3 > div { padding: 12px 0; }
+            #dra-aline .grid.grid-cols-3 > div + div { border-left: 0; border-top: 1px solid rgba(216,197,176,.55); padding-left: 0; }
+            #dra-aline .grid.grid-cols-3 span.font-serif { font-size: 28px; }
+
+            /* Treatment cards */
+            #tratamentos .grid.md\:grid-cols-12 { gap: 12px; }
+            #tratamentos .grid.md\:grid-cols-12 > div { grid-column: span 12 / span 12 !important; padding: 22px; border-radius: 22px; }
+            #tratamentos .grid.md\:grid-cols-12 > div:first-child,
+            #tratamentos .grid.md\:grid-cols-12 > div:nth-child(2) { min-height: auto; }
+            #tratamentos .grid.md\:grid-cols-12 h3 { font-size: 30px; }
+            #tratamentos .grid.md\:grid-cols-12 p { font-size: 13px; line-height: 1.65; }
+            #tratamentos .grid.md\:grid-cols-12 ul { margin-bottom: 24px; }
+            #tratamentos .grid.md\:grid-cols-12 ul li { font-size: 9px; letter-spacing: .11em; line-height: 1.4; }
+            #tratamentos .grid.md\:grid-cols-12 a { max-width: 100%; }
+            #tratamentos .grid.md\:grid-cols-12 a span { line-height: 1.35; }
+
+            /* Mid CTA */
+            #tratamentos + section { padding: 42px 16px; }
+            #tratamentos + section h3 { font-size: 27px; line-height: 1.08; }
+            #tratamentos + section p { font-size: 14px; line-height: 1.65; }
+            #tratamentos + section a { width: 100%; min-height: 50px; padding: 14px 18px; }
+            #tratamentos + section a span { white-space: normal; }
+
+            /* Experience */
+            #experiencia .grid.sm\:grid-cols-2 { grid-template-columns: 1fr; gap: 12px; }
+            #experiencia .grid.sm\:grid-cols-2 > div { padding: 20px; }
+            #experiencia .grid.sm\:grid-cols-2 > div span.font-serif { font-size: 25px; }
+            #experiencia .grid.sm\:grid-cols-2 > div p { font-size: 11px; line-height: 1.6; }
+            #experiencia .text-center.mb-20 { margin-bottom: 30px; }
+
+            /* Reviews */
+            #avaliacoes .flex-col.md\:flex-row { gap: 18px; margin-bottom: 30px; }
+            #avaliacoes .flex-col.md\:flex-row > div:last-child { max-width: 100%; width: 100%; justify-content: center; }
+            #avaliacoes .grid.lg\:grid-cols-12 { gap: 12px; }
+            #avaliacoes .lg\:col-span-6, #avaliacoes .lg\:col-span-6.grid { grid-column: span 12 / span 12 !important; }
+            #avaliacoes .lg\:col-span-6.bg-brand-offwhite { padding: 22px; border-radius: 22px; }
+            #avaliacoes .lg\:col-span-6.bg-brand-offwhite p.font-serif { font-size: 23px; line-height: 1.4; }
+            #avaliacoes .lg\:col-span-6.grid { gap: 12px; }
+            #avaliacoes .lg\:col-span-6.grid > div { padding: 18px; }
+            #avaliacoes .lg\:col-span-6.grid p { font-size: 11px; line-height: 1.6; }
+            #avaliacoes .mt-6.md\:mt-0 { margin-top: 4px; }
+            #avaliacoes .mt-6.md\:mt-0 span { font-size: 10px; }
+
+            /* Authority block */
+            #avaliacoes + section { padding: 52px 16px; }
+            #avaliacoes + section .grid { gap: 24px; }
+            #avaliacoes + section h2 { font-size: 32px; line-height: 1.05; }
+            #avaliacoes + section p { font-size: 14px; line-height: 1.7; }
+            #avaliacoes + section a { width: 100%; justify-content: center; min-height: 50px; }
+
+            /* Contact / map */
+            #contato .space-y-8 { gap: 22px; }
+            #contato .space-y-8 > div { align-items: flex-start; }
+            #contato .space-y-8 p.text-sm { font-size: 13px; line-height: 1.5; }
+            #contato > div > div:last-child { height: 300px; border-radius: 22px; }
+            #contato iframe { height: 100%; min-height: 300px; }
+            #contato a { width: 100%; justify-content: center; }
+
+            /* Final CTA */
+            #contato + section { padding: 58px 16px 72px; }
+            #contato + section h2 { font-size: 38px; line-height: 1.02; }
+            #contato + section p { font-size: 14px; line-height: 1.7; }
+            #contato + section a { width: 100%; min-height: 54px; justify-content: center; padding-left: 18px; padding-right: 18px; }
+
+            /* Footer */
+            footer { padding-top: 44px; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
+            footer .grid.md\:grid-cols-12 { gap: 28px; }
+            footer .md\:col-span-4.grid-cols-2 { grid-template-columns: 1fr 1fr; }
+            footer .pt-8.flex-col.sm\:flex-row { text-align: center; gap: 12px; }
+
+            /* Sticky CTA safe area */
+            body { padding-bottom: calc(82px + env(safe-area-inset-bottom)); }
+            .md\:hidden.fixed.bottom-0 { padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
+            .md\:hidden.fixed.bottom-0 a { min-height: 50px; }
+        }
+
+        @media (max-width: 380px) {
+            #inicio h1 { font-size: 32px; }
+            #header .group span:last-child { font-size: 15px; }
+            #inicio .pt-8.border-t .text-xs { font-size: 8px; }
+            #inicio .flex-col.sm\:flex-row a { font-size: 10px; letter-spacing: .12em; }
+            #posicionamento h2, #dra-aline h2, #tratamentos h2, #experiencia h2, #avaliacoes h2, #contato h2 { font-size: 29px; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal, .reveal-left, .reveal-right, .img-zoom-container img { transition: none !important; transform: none !important; }
+        }
+    </style>
+</head>
+<body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
+
+    <!-- Minimalist Glassmorphic Header -->
+    <header class="fixed w-full top-0 z-50 bg-brand-offwhite/85 backdrop-blur-md border-b border-brand-sand/30 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo with Autoral Monogram -->
+            <a href="#" class="group flex items-center gap-3">
+                <span class="w-9 h-9 rounded-full bg-brand-dark text-brand-ivory font-serif flex items-center justify-center text-lg font-light tracking-widest border border-brand-signature/30 transition-transform duration-300 group-hover:scale-105">AS</span>
+                <span class="font-serif text-xl md:text-2xl text-brand-dark tracking-wide font-normal">
+                    AS <span class="font-light italic text-brand-signature">Beauty Center</span>
+                </span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-9">
+                <a href="#inicio" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Início</a>
+                <a href="#posicionamento" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">A Filosofia</a>
+                <a href="#dra-aline" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Dra. Aline</a>
+                <a href="#tratamentos" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Tratamentos</a>
+                <a href="#experiencia" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Experiência</a>
+                <a href="#avaliacoes" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Avaliações</a>
+                <a href="#contato" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Contato</a>
+            </nav>
+
+            <!-- CTA Desktop -->
+            <div class="hidden sm:block">
+                <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="bg-brand-dark text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold hover:bg-brand-signature transition-all duration-300 shadow-sm flex items-center gap-2 group">
+                    <span>Agendar avaliação</span>
+                    <i class="ph ph-whatsapp-logo text-base text-brand-champagne group-hover:text-white transition-colors"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="lg:hidden text-brand-dark text-2xl p-2" id="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div class="lg:hidden hidden bg-brand-offwhite border-b border-brand-sand/40 absolute w-full left-0 top-20 shadow-xl transition-all" id="mobile-menu">
+            <nav class="flex flex-col py-6 px-8 gap-5 border-t border-brand-sand/20">
+                <a href="#inicio" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Início</a>
+                <a href="#posicionamento" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">A Filosofia</a>
+                <a href="#dra-aline" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Dra. Aline Schweitzer</a>
+                <a href="#tratamentos" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Tratamentos</a>
+                <a href="#experiencia" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">A Experiência</a>
+                <a href="#avaliacoes" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Avaliações</a>
+                <a href="#contato" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Localização e Contato</a>
+                <div class="pt-4 border-t border-brand-sand/30">
+                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="w-full bg-brand-dark text-white py-3 rounded-full text-center text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
+                        Agendar no WhatsApp <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION - Autoral Editorial Approach -->
+    <section id="inicio" class="pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Narrative Content -->
+                <div class="lg:col-span-7 flex flex-col justify-center reveal-left">
+                    
+                    <!-- Location & Brand Signature Pill -->
+                    <div class="inline-flex items-center gap-3 px-4 py-1.5 bg-brand-signaturelight rounded-full w-fit mb-8 border border-brand-signature/20">
+                        <span class="w-2 h-2 rounded-full bg-brand-signature"></span>
+                        <span class="text-xs uppercase tracking-widest font-medium text-brand-signature">São José · Santa Catarina</span>
+                        <span class="text-brand-sand">|</span>
+                        <span class="text-xs uppercase tracking-widest text-brand-dark font-semibold">AS Beauty Center</span>
+                    </div>
+
+                    <!-- Main Editorial Title -->
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.08] mb-8 font-light">
+                        Estética avançada, com a <span class="italic font-normal text-brand-signature block sm:inline">assinatura da Dra. Aline.</span>
+                    </h1>
+
+                    <!-- Editorial Subheadline -->
+                    <p class="text-base sm:text-lg text-brand-text font-light leading-relaxed mb-10 max-w-xl">
+                        Protocolos personalizados, alta tecnologia e uma visão autoral desenhada para realçar a sua beleza com estratégia, naturalidade e propósito.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
+                            <span>Agendar minha avaliação</span>
+                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#posicionamento" class="px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
+                            Conhecer a AS Beauty Center
+                        </a>
+                    </div>
+
+                    <!-- Social Proof Strip -->
+                    <div class="pt-8 border-t border-brand-sand/60 flex flex-wrap items-center gap-x-8 gap-y-4">
+                        <div class="flex items-center gap-2">
+                            <div class="flex text-[#D99B26] text-sm">
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                                <i class="ph-fill ph-star"></i>
+                            </div>
+                            <span class="font-serif text-lg font-medium text-brand-dark">5,0</span>
+                            <span class="text-xs text-brand-muted uppercase tracking-wider">(137 avaliações no Google)</span>
+                        </div>
+                        <div class="hidden sm:block w-px h-4 bg-brand-sand"></div>
+                        <div class="text-xs uppercase tracking-wider text-brand-dark font-medium flex items-center gap-1.5">
+                            <i class="ph ph-check-circle text-brand-signature text-base"></i>
+                            Atendimento Individualizado
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Dominant Editorial Photo (Dra. Aline Real Photo) -->
+                <div class="lg:col-span-5 relative reveal-right">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Main Portrait Frame -->
+                        <div class="aspect-[3/4] rounded-t-[5rem] rounded-b-[2rem] overflow-hidden shadow-2xl border-4 border-white relative z-10 img-zoom-container">
+                            <img src="aline-schewtizer-hero.png" alt="Dra. Aline Schweitzer - AS Beauty Center" class="w-full h-full object-cover object-center">
+                        </div>
+
+                        <!-- Autoral Overlay Badge (Editorial Seal) -->
+                        <div class="absolute -bottom-6 -left-4 sm:-left-8 z-20 bg-brand-dark text-white p-6 rounded-2xl shadow-xl max-w-[280px] border border-brand-champagne/30">
+                            <div class="flex items-center gap-2 text-brand-champagne mb-1">
+                                <i class="ph-fill ph-seal-check text-lg"></i>
+                                <span class="text-[10px] uppercase tracking-widest font-semibold">Responsabilidade Técnica</span>
+                            </div>
+                            <p class="font-serif text-lg text-white font-normal leading-snug">Dra. Aline Schweitzer</p>
+                            <p class="text-[11px] text-brand-rose/80 font-light mt-0.5">Alta performance em estética avançada</p>
+                            <div class="mt-3 pt-3 border-t border-white/10 flex items-center justify-between text-[11px]">
+                                <span class="text-brand-champagne font-serif italic">+2.000 formados</span>
+                                <span class="text-white/60">São José - SC</span>
+                            </div>
+                        </div>
+
+                        <!-- Abstract Luxe Background Element -->
+                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-brand-rose/50 rounded-full blur-3xl -z-0 pointer-events-none"></div>
+                        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-brand-champagne/40 rounded-full blur-3xl -z-0 pointer-events-none"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RECURRENT BRAND SIGNATURE STRIP (Editorial Divider) -->
+    <section class="py-6 bg-brand-dark text-brand-ivory border-y border-brand-champagne/20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center sm:justify-between items-center gap-4 text-center sm:text-left">
+            <p class="font-serif italic text-lg sm:text-xl text-brand-champagne font-light">
+                “Estética de resultado. Com estratégia, naturalidade e propósito.”
+            </p>
+            <span class="text-xs uppercase tracking-widest text-brand-rose/70 font-medium">
+                AS Beauty Center · Dra. Aline Schweitzer
+            </span>
+        </div>
+    </section>
+
+    <!-- EDITORIAL POSITIONING SECTION -->
+    <section id="posicionamento" class="py-24 bg-brand-ivory/60 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 reveal">
+                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Filosofia de Atendimento</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light leading-tight mb-6">
+                        A estética certa não começa no procedimento. <span class="italic text-brand-brown font-normal block mt-2">Começa na avaliação.</span>
+                    </h2>
+                    <p class="text-brand-text font-light text-base leading-relaxed mb-6">
+                        Na AS Beauty Center, recusamos fórmulas prontas e abordagens genéricas. Acreditamos que a verdadeira beleza surge do equilíbrio entre o desejo da paciente, a análise da estrutura anatômica e a precisão da ciência estética.
+                    </p>
+                    <p class="text-brand-text font-light text-base leading-relaxed">
+                        A proposta não é seguir tendências passageiras da internet, mas criar um plano estratégico único para valorizar os traços que fazem de você quem você é.
+                    </p>
+                </div>
+
+                <!-- 4-Step Narrative Micro-Process Grid -->
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6 reveal reveal-delay-1">
+                    
+                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
+                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">01</span>
+                        <h3 class="font-serif text-xl text-brand-dark mb-2">Avaliar</h3>
+                        <p class="text-xs text-brand-text font-light leading-relaxed">Escuta ativa, mapeamento de queixas e análise minuciosa da anatomia e saúde da pele.</p>
+                    </div>
+
+                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
+                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">02</span>
+                        <h3 class="font-serif text-xl text-brand-dark mb-2">Planejar</h3>
+                        <p class="text-xs text-brand-text font-light leading-relaxed">Desenvolvimento de um cronograma personalizado com alinhamento real de expectativas.</p>
+                    </div>
+
+                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
+                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">03</span>
+                        <h3 class="font-serif text-xl text-brand-dark mb-2">Tratar</h3>
+                        <p class="text-xs text-brand-text font-light leading-relaxed">Execução com tecnologia de ponta, técnicas consolidadas e máxima biossegurança.</p>
+                    </div>
+
+                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
+                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">04</span>
+                        <h3 class="font-serif text-xl text-brand-dark mb-2">Acompanhar</h3>
+                        <p class="text-xs text-brand-text font-light leading-relaxed">Monitoramento pós-procedimento contínuo para garantir resultados seguros e duradouros.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DRA. ALINE SCHWEITZER AUTHORITY SECTION -->
+    <section id="dra-aline" class="py-24 bg-brand-offwhite overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                
+                <!-- Real Photo of Dra. Aline Schweitzer -->
+                <div class="lg:col-span-5 relative order-2 lg:order-1 reveal">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-sand img-zoom-container">
+                            <img src="aline-schewtizer.png" alt="Dra. Aline Schweitzer na AS Beauty Center" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Accent Line Frame -->
+                        <div class="absolute -bottom-6 -right-6 w-full h-full border border-brand-signature/30 rounded-2xl -z-10 hidden sm:block"></div>
+                        
+                        <!-- Floating Quote Pill -->
+                        <div class="absolute -bottom-6 left-6 right-6 bg-brand-offwhite/95 backdrop-blur-md p-5 rounded-xl shadow-lg border border-brand-sand text-center">
+                            <p class="font-serif italic text-brand-dark text-sm sm:text-base">
+                                “Cuidar da estética também é entender a pessoa por trás dela.”
+                            </p>
+                            <span class="text-[10px] uppercase tracking-widest text-brand-signature font-semibold block mt-1.5">— Dra. Aline Schweitzer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Editorial Content -->
+                <div class="lg:col-span-7 order-1 lg:order-2 reveal">
+                    
+                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">A Especialista à frente da clínica</span>
+                    
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light leading-tight mb-4">
+                        Dra. Aline Schweitzer
+                    </h2>
+                    
+                    <p class="text-sm uppercase tracking-widest text-brand-brown font-semibold mb-8 border-b border-brand-sand pb-4">
+                        Alta performance em estética avançada
+                    </p>
+
+                    <div class="space-y-5 text-brand-text font-light text-base leading-relaxed mb-10">
+                        <p>
+                            Com uma trajetória construída em torno da ciência da estética, da precisão técnica e do aprimoramento constante, Aline criou a <strong>AS Beauty Center</strong> para ser a expressão de seu compromisso com a excelência.
+                        </p>
+                        <p>
+                            Atuando no ensino e na mentoria, já formou mais de 2.000 profissionais em todo o país. Essa bagagem acadêmica e prática garante que cada protocolo executado na clínica siga os mais elevados padrões de segurança e efetividade.
+                        </p>
+                    </div>
+
+                    <!-- Highlight Metrics Strip -->
+                    <div class="grid grid-cols-3 gap-4 py-6 px-6 bg-brand-ivory rounded-2xl border border-brand-sand/50 mb-8">
+                        <div>
+                            <span class="font-serif text-2xl sm:text-3xl text-brand-dark font-medium block">26,7k</span>
+                            <span class="text-[10px] uppercase tracking-wider text-brand-muted block mt-1">Comunidade Digital</span>
+                        </div>
+                        <div class="border-x border-brand-sand/60 px-4">
+                            <span class="font-serif text-2xl sm:text-3xl text-brand-dark font-medium block">+2.000</span>
+                            <span class="text-[10px] uppercase tracking-wider text-brand-muted block mt-1">Alunos Formados</span>
+                        </div>
+                        <div class="pl-2">
+                            <span class="font-serif text-2xl sm:text-3xl text-brand-signature font-medium block">100%</span>
+                            <span class="text-[10px] uppercase tracking-wider text-brand-muted block mt-1">Foco Individual</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA to Instagram -->
+                    <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" class="inline-flex items-center gap-3 text-brand-dark hover:text-brand-signature font-medium transition-colors group text-sm uppercase tracking-wider">
+                        <i class="ph ph-instagram-logo text-2xl text-brand-signature group-hover:scale-110 transition-transform"></i>
+                        <span class="border-b border-brand-dark group-hover:border-brand-signature pb-1">Acompanhe o trabalho da Dra. Aline no Instagram</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERSTITIAL EDITORIAL PAUSE -->
+    <section class="py-16 bg-brand-ivory text-center relative overflow-hidden border-y border-brand-sand/40">
+        <div class="max-w-4xl mx-auto px-6 reveal">
+            <span class="text-[11px] uppercase tracking-superwide text-brand-signature font-bold block mb-3">Conceito AS</span>
+            <p class="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-dark font-light leading-relaxed italic">
+                “Beleza não precisa ser exagerada. Precisa fazer sentido para você.”
+            </p>
+        </div>
+    </section>
+
+    <!-- TREATMENTS SECTION - Asymmetrical Editorial Layout -->
+    <section id="tratamentos" class="py-24 bg-brand-offwhite">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="max-w-2xl mb-16 reveal">
+                <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Protocolos e Especialidades</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light leading-tight">
+                    Tudo começa com o seu <span class="italic text-brand-brown font-normal">objetivo.</span>
+                </h2>
+                <p class="text-brand-text font-light mt-4 text-base">
+                    Conheça as principais áreas de atuação da AS Beauty Center. Cada procedimento é indicado somente após criteriosa avaliação clínica.
+                </p>
+            </div>
+
+            <!-- Treatments Asymmetrical Editorial Grid -->
+            <div class="grid md:grid-cols-12 gap-8">
+                
+                <!-- Category 1: Corpo (Large Feature) -->
+                <div class="md:col-span-7 bg-brand-ivory rounded-3xl p-8 lg:p-12 border border-brand-sand/60 flex flex-col justify-between relative overflow-hidden group reveal">
+                    <div class="mb-8 relative z-10">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature">Área Corporal</span>
+                            <i class="ph ph-sparkle text-xl text-brand-brown"></i>
+                        </div>
+                        <h3 class="font-serif text-3xl lg:text-4xl text-brand-dark mb-2">Corpo</h3>
+                        <p class="font-serif italic text-brand-brown text-lg mb-4">Contorno, equilíbrio e definição.</p>
+                        <p class="text-sm text-brand-text font-light leading-relaxed max-w-lg mb-6">
+                            Tratamentos avançados para gordura localizada, remodelação corporal e firmeza da pele com protocolos exclusivos de criolipólise e criomodelagem.
+                        </p>
+                        <ul class="space-y-2 text-xs uppercase tracking-wider text-brand-dark font-medium mb-8">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Criolipólise de Alta Performance</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Criomodelagem Avançada</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Protocolos de Redução e Remodelação</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20tratamentos%20Corporais." target="_blank" class="inline-flex items-center gap-3 bg-brand-dark text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-colors w-fit relative z-10">
+                        <span>Saber mais sobre Corpo</span>
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Category 2: Face (Accent Feature) -->
+                <div class="md:col-span-5 bg-brand-signaturelight rounded-3xl p-8 lg:p-12 border border-brand-signature/20 flex flex-col justify-between relative overflow-hidden group reveal reveal-delay-1">
+                    <div class="mb-8 relative z-10">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature">Área Facial</span>
+                            <i class="ph ph-flower-lotus text-xl text-brand-signature"></i>
+                        </div>
+                        <h3 class="font-serif text-3xl lg:text-4xl text-brand-dark mb-2">Face</h3>
+                        <p class="font-serif italic text-brand-signature text-lg mb-4">Naturalidade, harmonia e expressão.</p>
+                        <p class="text-sm text-brand-text font-light leading-relaxed mb-6">
+                            Aplicações estratégicas de toxina botulínica (Botox) e estética facial com foco na preservação da sua identidade e jovialidade natural.
+                        </p>
+                        <ul class="space-y-2 text-xs uppercase tracking-wider text-brand-dark font-medium mb-8">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Toxina Botulínica (Botox)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Estética Facial Avançada</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Gerenciamento de Envelhecimento</li>
+                        </ul>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20tratamentos%20Faciais%20(Botox)." target="_blank" class="inline-flex items-center gap-3 bg-brand-dark text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-colors w-fit relative z-10">
+                        <span>Saber mais sobre Face</span>
+                        <i class="ph ph-arrow-up-right"></i>
+                    </a>
+                </div>
+
+                <!-- Category 3: Terapia Capilar -->
+                <div class="md:col-span-4 bg-brand-ivory rounded-3xl p-8 border border-brand-sand/60 flex flex-col justify-between reveal">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature mb-3 block">Saúde Capilar</span>
+                        <h3 class="font-serif text-2xl text-brand-dark mb-1">Terapia Capilar</h3>
+                        <p class="font-serif italic text-brand-brown text-base mb-3">Saúde também é estética.</p>
+                        <p class="text-xs text-brand-text font-light leading-relaxed mb-6">
+                            Tricologia e procedimentos especializados para o tratamento de queda, fortalecimento e revitalização dos fios e do couro cabeludo.
+                        </p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20Terapia%20Capilar." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-dark hover:text-brand-signature transition-colors border-b border-brand-dark hover:border-brand-signature pb-1 w-fit">
+                        <span>Terapia Capilar</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Category 4: Depilação a Laser -->
+                <div class="md:col-span-4 bg-brand-ivory rounded-3xl p-8 border border-brand-sand/60 flex flex-col justify-between reveal reveal-delay-1">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature mb-3 block">Tecnologia</span>
+                        <h3 class="font-serif text-2xl text-brand-dark mb-1">Depilação a Laser</h3>
+                        <p class="font-serif italic text-brand-brown text-base mb-3">Pele lisa e confortável.</p>
+                        <p class="text-xs text-brand-text font-light leading-relaxed mb-6">
+                            Tecnologia segura para eliminação duradoura dos pelos em diferentes regiões corporais com máximo conforto e aplicação criteriosa.
+                        </p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20Depila%C3%A7%C3%A3o%20a%20Laser." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-dark hover:text-brand-signature transition-colors border-b border-brand-dark hover:border-brand-signature pb-1 w-fit">
+                        <span>Depilação a Laser</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Category 5: Massoterapia -->
+                <div class="md:col-span-4 bg-brand-ivory rounded-3xl p-8 border border-brand-sand/60 flex flex-col justify-between reveal reveal-delay-2">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature mb-3 block">Bem-estar</span>
+                        <h3 class="font-serif text-2xl text-brand-dark mb-1">Massoterapia</h3>
+                        <p class="font-serif italic text-brand-brown text-base mb-3">Um momento para desacelerar.</p>
+                        <p class="text-xs text-brand-text font-light leading-relaxed mb-6">
+                            Protocolos corporais integrativos de relaxamento, alívio de tensões e estímulo à circulação em um ambiente de absoluto acolhimento.
+                        </p>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20Massoterapia." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-dark hover:text-brand-signature transition-colors border-b border-brand-dark hover:border-brand-signature pb-1 w-fit">
+                        <span>Massoterapia</span>
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTEXTUAL CONVERSION BLOCK (Mid-Page Natural CTA) -->
+    <section class="py-16 bg-brand-sand/30 border-y border-brand-sand/50">
+        <div class="max-w-5xl mx-auto px-6 text-center reveal">
+            <h3 class="font-serif text-2xl sm:text-3xl text-brand-dark mb-3">Em dúvida sobre qual protocolo é ideal para você?</h3>
+            <p class="text-brand-text font-light text-base mb-8 max-w-xl mx-auto">
+                Não é necessário decidir sozinha. A avaliação personalizada na AS Beauty Center é o primeiro passo para mapear suas necessidades reais.
+            </p>
+            <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20AS%20Beauty%20Center%20para%20entender%20qual%20o%20melhor%20tratamento%20para%20mim." target="_blank" class="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all shadow-md">
+                <span>Falar com a equipe AS Beauty Center</span>
+                <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- THE "AS EXPERIENCE" SCENES SECTION -->
+    <section id="experiencia" class="py-24 bg-brand-offwhite relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-20 reveal">
+                <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">A Jornada na Clínica</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light">
+                    Você percebe a diferença <span class="italic text-brand-brown font-normal">nos detalhes.</span>
+                </h2>
+                <p class="text-brand-text font-light mt-4 text-base">
+                    Desde o seu primeiro contato até o pós-procedimento, criamos uma atmosfera pensada para o seu bem-estar integral.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                
+                <!-- Scene 01 -->
+                <div class="bg-brand-ivory p-8 rounded-2xl border border-brand-sand/50 relative reveal">
+                    <span class="font-serif text-3xl text-brand-signature block mb-4">01 · Recepção</span>
+                    <h3 class="font-serif text-xl text-brand-dark mb-2">Acolhimento imediato</h3>
+                    <p class="text-xs text-brand-text font-light leading-relaxed">Um ambiente sofisticado, calmo e silencioso, projetado para que você desacelere assim que cruzar a porta.</p>
+                </div>
+
+                <!-- Scene 02 -->
+                <div class="bg-brand-ivory p-8 rounded-2xl border border-brand-sand/50 relative reveal reveal-delay-1">
+                    <span class="font-serif text-3xl text-brand-signature block mb-4">02 · Escuta</span>
+                    <h3 class="font-serif text-xl text-brand-dark mb-2">Avaliação sem pressa</h3>
+                    <p class="text-xs text-brand-text font-light leading-relaxed">Tempo dedicado exclusivamente a você para compreender seus objetivos, histórico e desejos estéticos.</p>
+                </div>
+
+                <!-- Scene 03 -->
+                <div class="bg-brand-ivory p-8 rounded-2xl border border-brand-sand/50 relative reveal reveal-delay-2">
+                    <span class="font-serif text-3xl text-brand-signature block mb-4">03 · Execução</span>
+                    <h3 class="font-serif text-xl text-brand-dark mb-2">Técnica e conforto</h3>
+                    <p class="text-xs text-brand-text font-light leading-relaxed">Procedimentos realizados com extrema delicadeza, biossegurança rigorosa e tecnologia de ponta.</p>
+                </div>
+
+                <!-- Scene 04 -->
+                <div class="bg-brand-dark text-white p-8 rounded-2xl relative reveal reveal-delay-3">
+                    <span class="font-serif text-3xl text-brand-champagne block mb-4">04 · Cuidado</span>
+                    <h3 class="font-serif text-xl text-white mb-2">Acompanhamento</h3>
+                    <p class="text-xs text-brand-rose/80 font-light leading-relaxed">Sua jornada não termina ao fim da sessão. Oferecemos acompanhamento pós-procedimento atento e acessível.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVIEWS & SOCIAL PROOF SECTION (Humanized with Real Names) -->
+    <section id="avaliacoes" class="py-24 bg-brand-ivory overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+                <div>
+                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Depoimentos Reais</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light">
+                        A melhor prova é a experiência <span class="italic text-brand-brown font-normal block sm:inline">de quem já viveu.</span>
+                    </h2>
+                </div>
+                <div class="mt-6 md:mt-0 flex items-center gap-3 bg-brand-offwhite px-5 py-3 rounded-full border border-brand-sand w-fit">
+                    <div class="flex text-[#D99B26] text-base">
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                        <i class="ph-fill ph-star"></i>
+                    </div>
+                    <span class="font-serif font-bold text-brand-dark">5,0 ★ no Google</span>
+                    <span class="text-xs text-brand-muted">(137 avaliações)</span>
+                </div>
+            </div>
+
+            <!-- Spotlight Review Card + Secondary Grid -->
+            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+                
+                <!-- Main Spotlight Review -->
+                <div class="lg:col-span-6 bg-brand-offwhite p-10 lg:p-12 rounded-3xl border border-brand-sand/80 shadow-sm flex flex-col justify-between reveal">
+                    <div>
+                        <div class="flex text-[#D99B26] text-lg mb-6">
+                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                        </div>
+                        <p class="font-serif text-2xl sm:text-3xl text-brand-dark font-light italic leading-relaxed mb-8">
+                            “A clínica Beauty Center proporciona uma experiência verdadeiramente diferenciada. Cada detalhe é cuidadosamente pensado, e me senti extremamente confortável e segura do início ao fim.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-brand-sand/40">
+                        <div class="w-12 h-12 rounded-full bg-brand-signaturelight border border-brand-signature/30 flex items-center justify-center font-serif text-brand-signature font-bold text-lg">P</div>
+                        <div>
+                            <p class="font-medium text-brand-dark text-sm">Patricia Santos</p>
+                            <span class="text-xs text-brand-muted">Paciente da AS Beauty Center</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Reviews Column -->
+                <div class="lg:col-span-6 grid sm:grid-cols-2 gap-6 reveal reveal-delay-1">
+                    
+                    <!-- Review 2 -->
+                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
+                                “Que profissional maravilhosa! Eu amei meu tratamento, tive um ótimo resultado e o atendimento é impecável.”
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-rose flex items-center justify-center font-serif text-brand-brown text-xs font-bold">M</div>
+                            <span class="text-xs font-medium text-brand-dark">Maria Vogado</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
+                                “A clínica é muito acolhedora. No meu primeiro atendimento, me senti extremamente confortável e segura com a Dra. Aline.”
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-champagne flex items-center justify-center font-serif text-brand-brown text-xs font-bold">K</div>
+                            <span class="text-xs font-medium text-brand-dark">Karoline Castro</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
+                                “Desde a primeira consulta fui extremamente bem acolhida por toda a equipe. O ambiente é lindo e muito limpo.”
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-sand flex items-center justify-center font-serif text-brand-brown text-xs font-bold">J</div>
+                            <span class="text-xs font-medium text-brand-dark">Juliana Lima</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
+                                “Clínica linda, atendimento maravilhoso e serviço perfeito. Recomendo de olhos fechados em São José!”
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-brand-ivory border border-brand-sand flex items-center justify-center font-serif text-brand-brown text-xs font-bold">A</div>
+                            <span class="text-xs font-medium text-brand-dark">Ana Paula</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DIGITAL AUTHORITY BLOCK (Community & Education) -->
+    <section class="py-20 bg-brand-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-8 reveal">
+                    <span class="text-xs uppercase tracking-superwide text-brand-champagne font-bold mb-3 block">Autoridade Digital e Ensino</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-white font-light mb-4">
+                        Conhecimento também faz parte da <span class="italic text-brand-champagne font-normal">experiência.</span>
+                    </h2>
+                    <p class="text-brand-rose/80 font-light text-base leading-relaxed max-w-2xl">
+                        A estética avançada exige atualização contínua e rigor científico. Além da prática clínica diária na AS Beauty Center, a Dra. Aline Schweitzer compartilha diariamente conteúdo técnico, bastidores e conhecimento com milhares de seguidores e profissionais da área.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center reveal reveal-delay-1">
+                    <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" class="bg-brand-champagne text-brand-dark px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-white transition-colors flex items-center gap-3 shadow-lg">
+                        <i class="ph ph-instagram-logo text-xl"></i>
+                        <span>Acessar o Instagram</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & CONTACT SECTION -->
+    <section id="contato" class="py-24 bg-brand-offwhite relative">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Contact Details -->
+            <div class="lg:col-span-5 reveal">
+                <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Localização Exclusiva</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light mb-8">
+                    Seu próximo cuidado está em <span class="italic text-brand-brown font-normal block mt-1">São José — SC.</span>
+                </h2>
+
+                <div class="space-y-8 mb-10">
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-ivory border border-brand-sand flex items-center justify-center text-brand-signature text-xl shrink-0 mt-1">
+                            <i class="ph ph-map-pin"></i>
+                        </div>
+                        <div>
+                            <p class="font-serif text-lg text-brand-dark font-medium">AS Beauty Center</p>
+                            <p class="text-sm text-brand-text font-light leading-relaxed mt-1">
+                                Av. João Theodoro da Silva, 243 — Sala 03<br>
+                                Bairro Roçado, São José — Santa Catarina
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-ivory border border-brand-sand flex items-center justify-center text-brand-signature text-xl shrink-0 mt-1">
+                            <i class="ph ph-whatsapp-logo"></i>
+                        </div>
+                        <div>
+                            <p class="font-serif text-lg text-brand-dark font-medium">Agendamento & Informações</p>
+                            <p class="text-sm text-brand-text font-light leading-relaxed mt-1">
+                                (48) 98843-0101
+                            </p>
+                            <span class="text-xs text-brand-muted block mt-0.5">Atendimento de segunda a sexta-feira</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="https://maps.google.com/?q=Av.+João+Theodoro+da+Silva,+243+-+Roçado,+São+José+-+SC" target="_blank" class="inline-flex items-center gap-3 border border-brand-dark text-brand-dark px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-dark hover:text-white transition-all">
+                    <span>Como Chegar no Google Maps</span>
+                    <i class="ph ph-arrow-up-right"></i>
+                </a>
+            </div>
+
+            <!-- Stylized Map Embed Container -->
+            <div class="lg:col-span-7 h-[420px] rounded-3xl overflow-hidden shadow-lg border border-brand-sand relative reveal reveal-delay-1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.2163994788!2d-48.6253!3d-27.5946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM1JzQwLjYiUyA0OMKwMzcnMzEuMSJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; filter: grayscale(40%) contrast(90%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FINAL EDITORIAL CTA SECTION -->
+    <section class="py-24 bg-brand-dark text-center px-6 relative overflow-hidden">
+        <!-- Ambient Glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-signature/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-3xl mx-auto relative z-10 reveal">
+            <span class="text-xs uppercase tracking-superwide text-brand-champagne font-bold mb-4 block">Seu Próximo Passo</span>
+            
+            <h2 class="font-serif text-4xl sm:text-5xl text-white font-light mb-6 leading-tight">
+                Sua beleza merece <span class="italic text-brand-champagne font-normal">estratégia.</span>
+            </h2>
+            
+            <p class="text-brand-rose/80 font-light text-base sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+                Agende sua avaliação e descubra quais possibilidades fazem sentido para você na AS Beauty Center.
+            </p>
+            
+            <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">
+                <span>Agendar avaliação pelo WhatsApp</span>
+                <i class="ph ph-whatsapp-logo text-xl"></i>
+            </a>
+
+            <div class="mt-8 pt-6 border-t border-white/10 text-xs text-brand-rose/50 uppercase tracking-widest font-light">
+                AS Beauty Center · Dra. Aline Schweitzer · São José — SC
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-darker text-white/70 pt-16 pb-12 border-t border-white/10 text-xs">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid md:grid-cols-12 gap-10 pb-12 border-b border-white/10 items-start">
+                
+                <!-- Brand Info -->
+                <div class="md:col-span-5">
+                    <a href="#" class="font-serif text-2xl text-white tracking-wide font-normal block mb-3">
+                        AS <span class="italic text-brand-champagne font-light">Beauty Center</span>
+                    </a>
+                    <p class="text-white/60 font-light leading-relaxed max-w-sm mb-4">
+                        Clínica de estética avançada liderada pela Dra. Aline Schweitzer. Atendimento individualizado, alta performance e resultados naturais em São José — SC.
+                    </p>
+                    <p class="text-brand-champagne/80 font-serif italic text-sm">
+                        “Estética de resultado com estratégia, naturalidade e propósito.”
+                    </p>
+                </div>
+
+                <!-- Navigation Quick Links -->
+                <div class="md:col-span-4 grid grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-3">
+                        <span class="text-white uppercase tracking-widest text-[10px] font-bold mb-1">Navegação</span>
+                        <a href="#inicio" class="hover:text-white transition-colors">Início</a>
+                        <a href="#posicionamento" class="hover:text-white transition-colors">A Filosofia</a>
+                        <a href="#dra-aline" class="hover:text-white transition-colors">Dra. Aline</a>
+                        <a href="#tratamentos" class="hover:text-white transition-colors">Tratamentos</a>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <span class="text-white uppercase tracking-widest text-[10px] font-bold mb-1">Clínica</span>
+                        <a href="#experiencia" class="hover:text-white transition-colors">Experiência</a>
+                        <a href="#avaliacoes" class="hover:text-white transition-colors">Avaliações</a>
+                        <a href="#contato" class="hover:text-white transition-colors">Localização</a>
+                    </div>
+                </div>
+
+                <!-- Social & Contact -->
+                <div class="md:col-span-3 flex flex-col gap-4">
+                    <span class="text-white uppercase tracking-widest text-[10px] font-bold mb-1">Canais</span>
+                    <a href="https://api.whatsapp.com/send?phone=554888430101" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
+                        <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+                        <span>(48) 98843-0101</span>
+                    </a>
+                    <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" class="flex items-center gap-2 hover:text-white transition-colors">
+                        <i class="ph ph-instagram-logo text-lg text-brand-champagne"></i>
+                        <span>@alinefarmaceutica</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/40 text-[11px]">
+                <p>© 2026 AS Beauty Center. Todos os direitos reservados.</p>
+                <p>São José — SC · Responsável Técnica: Dra. Aline Schweitzer</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE BOTTOM BAR (Conversion Focus) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-brand-offwhite/95 backdrop-blur-md border-t border-brand-sand/50 p-3 z-50 shadow-[0_-4px_15px_rgba(0,0,0,0.08)]">
+        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="w-full bg-brand-dark text-white py-3.5 rounded-full flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-semibold active:bg-brand-signature transition-colors">
+            <span>Agendar pelo WhatsApp</span>
+            <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+        </a>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Navigation Toggle Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function setMenu(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuBtn.setAttribute('aria-expanded', String(open));
+            menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+            menuIcon.classList.toggle('ph-x', open);
+            menuIcon.classList.toggle('ph-list', !open);
+        }
+
+        setMenu(false);
+        menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => setMenu(false));
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') setMenu(false);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (mobileMenu.classList.contains('hidden')) return;
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) setMenu(false);
+        });
+
+        // Header Blur & Shadow on Scroll
+        const header = document.getElementById('header');
+        const updateHeader = () => {
+            if (window.scrollY > 30) {
+                header.classList.add('shadow-sm', 'bg-brand-offwhite/95');
+                header.classList.remove('bg-brand-offwhite/85');
+            } else {
+                header.classList.remove('shadow-sm', 'bg-brand-offwhite/95');
+                header.classList.add('bg-brand-offwhite/85');
+            }
+        };
+        updateHeader();
+        window.addEventListener('scroll', updateHeader, { passive: true });
+
+        // Intersection Observer for Editorial Scroll Reveals
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+            const revealOnScroll = 'IntersectionObserver' in window
+                ? new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('active');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' })
+                : null;
+
+            reveals.forEach(reveal => {
+                if (revealOnScroll) revealOnScroll.observe(reveal);
+                else reveal.classList.add('active');
+            });
+
+            // Fallback so content is never left invisible if an observer/network issue occurs.
+            window.setTimeout(() => reveals.forEach(reveal => reveal.classList.add('active')), 2200);
+        });
+    </script>
+</body>
+</html>

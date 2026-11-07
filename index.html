@@ -384,7 +384,7 @@
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-12">
                         <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
-                            <span>Agendar minha avaliação</span>
+                            <span>Agendar minha consulta</span>
                             <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
                         <a href="#posicionamento" class="px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
@@ -995,7 +995,7 @@
             </p>
             
             <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">
-                <span>Agendar avaliação pelo WhatsApp</span>
+                <span>Agendar minha consulta</span>
                 <i class="ph ph-whatsapp-logo text-xl"></i>
             </a>
 
@@ -1141,5 +1141,13 @@
             window.setTimeout(() => reveals.forEach(reveal => reveal.classList.add('active')), 2200);
         });
     </script>
+
+    <!-- WhatsApp flutuante: contato direto sem interromper a navegação -->
+    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta."
+       target="_blank" rel="noopener noreferrer" aria-label="Agendar minha consulta pelo WhatsApp"
+       class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-dark text-brand-champagne border border-brand-champagne/40 shadow-xl hover:bg-brand-signature hover:text-white hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-signature transition-colors duration-300"
+       style="box-shadow:0 8px 32px rgba(0,0,0,.22);">
+        <i class="ph-fill ph-whatsapp-logo text-3xl" aria-hidden="true"></i>
+    </a>
 </body>
 </html>

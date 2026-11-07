@@ -272,7 +272,7 @@
             #contato + section a { width: 100%; min-height: 54px; justify-content: center; padding-left: 18px; padding-right: 18px; }
 
             /* Footer */
-            footer { padding-top: 44px; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
+            footer { padding-top: 44px; padding-bottom: 72px; }
             footer .grid.md\:grid-cols-12 { gap: 28px; }
             footer .md\:col-span-4.grid-cols-2 { grid-template-columns: 1fr 1fr; }
             footer .pt-8.flex-col.sm\:flex-row { text-align: center; gap: 12px; }
@@ -317,6 +317,53 @@
             .clinic-photo img { transition: none !important; }
             .clinic-photo:hover img { transform: none !important; }
         }
+
+        /* AS Beauty | acabamento final: uma única ação flutuante sem sobreposições */
+        :root { --as-focus: #7A624A; }
+        html { scroll-padding-top: 96px; }
+        body { overflow-x: clip; }
+        a, button { touch-action: manipulation; }
+        a:focus-visible, button:focus-visible {
+            outline: 2px solid var(--as-focus);
+            outline-offset: 4px;
+        }
+        .as-whatsapp-float {
+            bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+            right: max(18px, env(safe-area-inset-right, 0px));
+            box-shadow: 0 12px 34px rgba(28,26,24,.20) !important;
+            isolation: isolate;
+        }
+        .as-whatsapp-float:focus-visible { outline-color: #A67B6D; }
+        #clinica { scroll-margin-top: 96px; }
+        #clinica .clinic-gallery { align-items: stretch; }
+        .clinic-photo { border-radius: 18px; box-shadow: 0 12px 30px rgba(28,26,24,.055); }
+        .clinic-photo figcaption { line-height: 1.45; text-wrap: balance; }
+        #tratamentos .grid > div, #posicionamento .grid.sm\\:grid-cols-2 > div {
+            transition: border-color .35s ease, box-shadow .35s ease, transform .5s cubic-bezier(.16,1,.3,1);
+        }
+        @media (hover:hover) and (pointer:fine) {
+            #tratamentos .grid > div:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(28,26,24,.07); }
+        }
+        @media (min-width: 768px) and (max-width: 1279px) {
+            #mobile-menu { top: 80px; max-height: calc(100dvh - 80px); overflow-y: auto; }
+        }
+        @media (max-width: 767px) {
+            #clinica { padding-top: 60px; padding-bottom: 60px; }
+            #clinica h2 { font-size: clamp(34px, 9vw, 46px); line-height: 1.04; }
+            #clinica .clinic-gallery { gap: 10px; }
+            .clinic-photo { border-radius: 12px; }
+            .clinic-photo figcaption { padding: 2rem .65rem .65rem; font-size: 10px; letter-spacing: .025em; }
+            .as-whatsapp-float { width: 56px; height: 56px; }
+            footer { padding-bottom: 56px; }
+        }
+        @media (max-width: 380px) {
+            #clinica .clinic-gallery { grid-template-columns: 1fr; }
+            #clinica .clinic-gallery .clinic-photo { grid-column: span 1 / span 1; aspect-ratio: 4/3; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+            .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; filter: none !important; }
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -334,7 +381,7 @@
             </a>
 
             <!-- Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-9">
+            <nav class="hidden xl:flex items-center gap-6 2xl:gap-9">
                 <a href="#inicio" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Início</a>
                 <a href="#posicionamento" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">A Filosofia</a>
                 <a href="#dra-aline" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Dra. Aline</a>
@@ -345,7 +392,7 @@
             </nav>
 
             <!-- CTA Desktop -->
-            <div class="hidden sm:block">
+            <div class="hidden xl:block">
                 <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="bg-brand-dark text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold hover:bg-brand-signature transition-all duration-300 shadow-sm flex items-center gap-2 group">
                     <span>Agendar minha consulta</span>
                     <i class="ph ph-whatsapp-logo text-base text-brand-champagne group-hover:text-white transition-colors"></i>
@@ -353,13 +400,13 @@
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="lg:hidden text-brand-dark text-2xl p-2" id="mobile-menu-btn" aria-label="Abrir menu">
+            <button class="xl:hidden text-brand-dark text-2xl p-2" id="mobile-menu-btn" aria-label="Abrir menu">
                 <i class="ph ph-list"></i>
             </button>
         </div>
 
         <!-- Mobile Navigation Dropdown -->
-        <div class="lg:hidden hidden bg-brand-offwhite border-b border-brand-sand/40 absolute w-full left-0 top-20 shadow-xl transition-all" id="mobile-menu">
+        <div class="xl:hidden hidden bg-brand-offwhite border-b border-brand-sand/40 absolute w-full left-0 top-20 shadow-xl transition-all" id="mobile-menu">
             <nav class="flex flex-col py-6 px-8 gap-5 border-t border-brand-sand/20">
                 <a href="#inicio" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Início</a>
                 <a href="#posicionamento" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">A Filosofia</a>
@@ -369,8 +416,8 @@
                 <a href="#avaliacoes" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Avaliações</a>
                 <a href="#contato" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Localização e Contato</a>
                 <div class="pt-4 border-t border-brand-sand/30">
-                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="w-full bg-brand-dark text-white py-3 rounded-full text-center text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
-                        Agendar no WhatsApp <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="w-full bg-brand-dark text-white py-3 rounded-full text-center text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
+                        Agendar minha consulta <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
                     </a>
                 </div>
             </nav>
@@ -406,7 +453,7 @@
 
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
+                        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
                             <span>Agendar minha consulta</span>
                             <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -1065,7 +1112,7 @@
                 Agende sua avaliação e descubra quais possibilidades fazem sentido para você na AS Beauty Center.
             </p>
             
-            <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">
+            <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">
                 <span>Agendar minha consulta</span>
                 <i class="ph ph-whatsapp-logo text-xl"></i>
             </a>
@@ -1134,14 +1181,6 @@
 
         </div>
     </footer>
-
-    <!-- STICKY MOBILE BOTTOM BAR (Conversion Focus) -->
-    <div class="md:hidden fixed bottom-0 left-0 w-full bg-brand-offwhite/95 backdrop-blur-md border-t border-brand-sand/50 p-3 z-50 shadow-[0_-4px_15px_rgba(0,0,0,0.08)]">
-        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="w-full bg-brand-dark text-white py-3.5 rounded-full flex items-center justify-center gap-2 text-xs uppercase tracking-widest font-semibold active:bg-brand-signature transition-colors">
-            <span>Agendar pelo WhatsApp</span>
-            <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
-        </a>
-    </div>
 
     <!-- JAVASCRIPT LOGIC -->
     <script>
@@ -1216,7 +1255,7 @@
     <!-- WhatsApp flutuante: contato direto sem interromper a navegação -->
     <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta."
        target="_blank" rel="noopener noreferrer" aria-label="Agendar minha consulta pelo WhatsApp"
-       class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-dark text-brand-champagne border border-brand-champagne/40 shadow-xl hover:bg-brand-signature hover:text-white hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-signature transition-colors duration-300"
+       class="as-whatsapp-float fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-dark text-brand-champagne border border-brand-champagne/40 shadow-xl hover:bg-brand-signature hover:text-white hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-signature transition-colors duration-300"
        style="box-shadow:0 8px 32px rgba(0,0,0,.22);">
         <i class="ph-fill ph-whatsapp-logo text-3xl" aria-hidden="true"></i>
     </a>

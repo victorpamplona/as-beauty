@@ -294,7 +294,30 @@
         @media (prefers-reduced-motion: reduce) {
             .reveal, .reveal-left, .reveal-right, .img-zoom-container img { transition: none !important; transform: none !important; }
         }
-    </style>
+    
+        /* Animações editoriais leves, adaptadas dos princípios Blur Reveal / stagger do Spell UI */
+        .hero-title { animation: as-text-reveal 1.15s .08s both cubic-bezier(.16,1,.3,1); }
+        .hero-subtitle { animation: as-text-reveal 1.15s .24s both cubic-bezier(.16,1,.3,1); }
+        .hero-image-mask { animation: as-image-reveal 1.35s .12s both cubic-bezier(.16,1,.3,1); }
+        @keyframes as-text-reveal {
+            from { opacity: 0; filter: blur(7px); transform: translateY(18px); }
+            to { opacity: 1; filter: blur(0); transform: translateY(0); }
+        }
+        @keyframes as-image-reveal {
+            from { opacity: 0; clip-path: inset(0 0 100% 0 round 4rem); transform: scale(1.035); }
+            to { opacity: 1; clip-path: inset(0 0 0 0 round 4rem); transform: scale(1); }
+        }
+        .clinic-photo { position: relative; overflow: hidden; border-radius: 1.2rem; background: #E5DDD3; isolation: isolate; }
+        .clinic-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.1s cubic-bezier(.16,1,.3,1); }
+        .clinic-photo:hover img { transform: scale(1.045); }
+        .clinic-photo figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 3.5rem 1rem 1rem; color: #fff; font-size: .7rem; font-weight: 500; letter-spacing: .07em; background: linear-gradient(transparent,rgba(0,0,0,.63)); }
+        .clinic-photo:not(:has(figcaption))::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.2); border-radius: inherit; pointer-events: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-title,.hero-subtitle,.hero-image-mask { animation: none !important; opacity: 1 !important; filter: none !important; clip-path: none !important; transform: none !important; }
+            .clinic-photo img { transition: none !important; }
+            .clinic-photo:hover img { transform: none !important; }
+        }
+</style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
 
@@ -323,8 +346,8 @@
 
             <!-- CTA Desktop -->
             <div class="hidden sm:block">
-                <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="bg-brand-dark text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold hover:bg-brand-signature transition-all duration-300 shadow-sm flex items-center gap-2 group">
-                    <span>Agendar avaliação</span>
+                <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="bg-brand-dark text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold hover:bg-brand-signature transition-all duration-300 shadow-sm flex items-center gap-2 group">
+                    <span>Agendar minha consulta</span>
                     <i class="ph ph-whatsapp-logo text-base text-brand-champagne group-hover:text-white transition-colors"></i>
                 </a>
             </div>
@@ -372,19 +395,19 @@
                     </div>
 
                     <!-- Main Editorial Title -->
-                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.08] mb-8 font-light">
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.08] mb-8 font-light hero-title">
                         Estética avançada, com a <span class="italic font-normal text-brand-signature block sm:inline">assinatura da Dra. Aline.</span>
                     </h1>
 
                     <!-- Editorial Subheadline -->
-                    <p class="text-base sm:text-lg text-brand-text font-light leading-relaxed mb-10 max-w-xl">
-                        Protocolos personalizados, alta tecnologia e uma visão autoral desenhada para realçar a sua beleza com estratégia, naturalidade e propósito.
+                    <p class="text-base sm:text-lg text-brand-text font-light leading-relaxed mb-10 max-w-xl hero-subtitle">
+                        Atendimento individualizado e tratamentos planejados a partir das suas necessidades, com atenção à naturalidade dos resultados.
                     </p>
 
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-12">
                         <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
-                            <span>Agendar minha avaliação</span>
+                            <span>Agendar minha consulta</span>
                             <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
                         <a href="#posicionamento" class="px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
@@ -419,8 +442,8 @@
                     <div class="relative mx-auto max-w-md lg:max-w-none">
                         
                         <!-- Main Portrait Frame -->
-                        <div class="aspect-[3/4] rounded-t-[5rem] rounded-b-[2rem] overflow-hidden shadow-2xl border-4 border-white relative z-10 img-zoom-container">
-                            <img src="aline-schewtizer-hero.png" alt="Dra. Aline Schweitzer - AS Beauty Center" class="w-full h-full object-cover object-center">
+                        <div class="aspect-[3/4] rounded-t-[5rem] rounded-b-[2rem] overflow-hidden shadow-2xl border-4 border-white relative z-10 img-zoom-container hero-image-mask">
+                            <img src="assets/hero-aline.webp" onerror="this.onerror=null;this.src='aline-schewtizer-hero.png'" alt="Retrato profissional da Dra. Aline Schweitzer" fetchpriority="high" width="900" height="1200" class="w-full h-full object-cover object-center">
                         </div>
 
                         <!-- Autoral Overlay Badge (Editorial Seal) -->
@@ -525,7 +548,7 @@
                     <div class="relative">
                         <!-- Main Image -->
                         <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-sand img-zoom-container">
-                            <img src="aline-schewtizer.png" alt="Dra. Aline Schweitzer na AS Beauty Center" class="w-full h-full object-cover">
+                            <img src="assets/aline-retrato.webp" onerror="this.onerror=null;this.src='aline-schewtizer.png'" alt="Dra. Aline Schweitzer na clínica" loading="lazy" width="900" height="1200" class="w-full h-full object-cover">
                         </div>
 
                         <!-- Accent Line Frame -->
@@ -737,7 +760,55 @@
     </section>
 
     <!-- THE "AS EXPERIENCE" SCENES SECTION -->
-    <section id="experiencia" class="py-24 bg-brand-offwhite relative">
+    
+    <!-- CLÍNICA: ensaio fotográfico real, sem fotografias de banco de imagens -->
+    <section id="clinica" class="py-24 lg:py-28 bg-brand-ivory/60 overflow-hidden" aria-labelledby="clinica-titulo">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 reveal">
+                <div class="max-w-2xl">
+                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-4 block">Conheça nosso espaço</span>
+                    <h2 id="clinica-titulo" class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark font-light leading-tight">Um olhar por dentro da <em class="text-brand-brown">AS Beauty.</em></h2>
+                </div>
+                <p class="text-brand-text font-light max-w-sm leading-relaxed text-sm">Ambientes e momentos reais do atendimento. Conheça alguns detalhes da clínica antes da sua visita.</p>
+            </div>
+            <div class="clinic-gallery grid grid-cols-2 md:grid-cols-12 gap-3 sm:gap-5">
+                <figure class="clinic-photo col-span-2 md:col-span-7 aspect-[5/4] md:aspect-[7/5] reveal">
+                    <img src="assets/clinica-atendimento.webp" loading="lazy" decoding="async" width="1400" height="1050" alt="Dra. Aline no espaço de atendimento da clínica">
+                    <figcaption>Um atendimento que começa pela escuta</figcaption>
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-5 aspect-[3/4] md:aspect-auto reveal reveal-delay-1">
+                    <img src="assets/clinica-ambiente.webp" loading="lazy" decoding="async" width="1000" height="1400" alt="Recepção com iluminação acolhedora e mobiliário da clínica">
+                    <figcaption>Recepção</figcaption>
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-4 aspect-[3/4] reveal">
+                    <img src="assets/clinica-procedimento.webp" loading="lazy" decoding="async" width="1100" height="1450" alt="Registro real de um atendimento estético">
+                    <figcaption>Cuidado em cada detalhe</figcaption>
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-4 aspect-[3/4] reveal reveal-delay-1">
+                    <img src="assets/clinica-tecnologia.webp" loading="lazy" decoding="async" width="1000" height="1400" alt="Equipamento utilizado em atendimento na clínica">
+                    <figcaption>Ambiente de atendimento</figcaption>
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-4 aspect-[3/4] reveal reveal-delay-2">
+                    <img src="assets/clinica-cuidado.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Dra. Aline realizando procedimento com uma paciente">
+                    <figcaption>Atendimento individualizado</figcaption>
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal">
+                    <img src="assets/clinica-recepcao.webp" loading="lazy" decoding="async" width="700" height="1000" alt="Poltronas e mesa da recepção">
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal reveal-delay-1">
+                    <img src="assets/clinica-detalhe.webp" loading="lazy" decoding="async" width="1100" height="1600" alt="Detalhe decorativo do espaço da clínica">
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal reveal-delay-2">
+                    <img src="assets/clinica-acolhimento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Momento de acolhimento registrado na clínica">
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal reveal-delay-3">
+                    <img src="assets/clinica-equipamento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Equipamento em destaque no espaço de atendimento">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+<section id="experiencia" class="py-24 bg-brand-offwhite relative">
         <div class="max-w-7xl mx-auto px-6">
             
             <div class="text-center max-w-2xl mx-auto mb-20 reveal">
@@ -995,7 +1066,7 @@
             </p>
             
             <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">
-                <span>Agendar avaliação pelo WhatsApp</span>
+                <span>Agendar minha consulta</span>
                 <i class="ph ph-whatsapp-logo text-xl"></i>
             </a>
 
@@ -1141,5 +1212,13 @@
             window.setTimeout(() => reveals.forEach(reveal => reveal.classList.add('active')), 2200);
         });
     </script>
+
+    <!-- WhatsApp flutuante: contato direto sem interromper a navegação -->
+    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta."
+       target="_blank" rel="noopener noreferrer" aria-label="Agendar minha consulta pelo WhatsApp"
+       class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-50 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-dark text-brand-champagne border border-brand-champagne/40 shadow-xl hover:bg-brand-signature hover:text-white hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-signature transition-colors duration-300"
+       style="box-shadow:0 8px 32px rgba(0,0,0,.22);">
+        <i class="ph-fill ph-whatsapp-logo text-3xl" aria-hidden="true"></i>
+    </a>
 </body>
 </html>

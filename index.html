@@ -494,6 +494,170 @@
                 clip-path: none !important;
             }
         }
+
+        /* AS BEAUTY — ETAPA 02 | Jornada de conversão editorial */
+        .as-concerns {
+            position: relative;
+            padding: clamp(76px,9vw,130px) 24px 72px;
+            background: #F8F8F7;
+            color: #20211F;
+            scroll-margin-top: 90px;
+            isolation: isolate;
+        }
+        .as-concerns::before {
+            content: ""; position: absolute; inset: 0 0 auto auto;
+            height: 450px; width: 45%;
+            background: radial-gradient(ellipse at 80% 10%,rgba(175,190,223,.22),transparent 70%);
+            pointer-events: none; z-index: -1;
+        }
+        .as-concerns-container { max-width: 1200px; margin: 0 auto; }
+        .as-concerns-intro { max-width: 850px; margin-bottom: 64px; }
+        .as-concerns-kicker {
+            display:flex;align-items:center;gap:14px;
+            font-family:Montserrat,sans-serif;font-size:10px;letter-spacing:.2em;
+            font-weight:600;color:var(--as-olive);margin-bottom:28px;
+        }
+        .as-kicker-number { white-space:nowrap; }
+        .as-kicker-line { width:35px;height:1px;background:var(--as-taupe);flex:0 0 auto; }
+        .as-concerns-intro h2 {
+            font-family:'Cormorant Garamond',serif;
+            font-weight:400;letter-spacing:-.03em;
+            font-size:clamp(3.2rem,6.5vw,6.15rem);line-height:1.02;
+            text-wrap:balance;margin:0 0 23px;
+        }
+        .as-concerns-intro h2 em {color:var(--as-olive);font-weight:400;}
+        .as-concerns-intro > p {
+            max-width:630px;font-size:15px;line-height:1.9;color:#625F59;
+            font-weight:400;
+        }
+        .as-concerns-layout {
+            display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
+            gap:clamp(32px,5vw,80px);align-items:start;
+        }
+        .as-concerns-small-label {
+            font:600 10px/1.5 Montserrat,sans-serif;
+            letter-spacing:.21em;color:var(--as-olive);
+            margin-bottom:20px;display:flex;gap:12px;justify-content:space-between;
+        }
+        .as-concerns-small-label span {color:#8B877F;font-weight:400;}
+        .as-concern-option {
+            appearance:none;border:0;border-top:1px solid #D7D2CB;
+            border-radius:0;background:transparent;width:100%;min-height:92px;
+            display:flex;align-items:center;gap:20px;padding:16px 5px;
+            text-align:left;cursor:pointer;color:#5E5C57;
+            transition:color .34s ease,padding .34s ease,background-color .34s ease;
+        }
+        .as-concern-option:last-of-type {border-bottom:1px solid #D7D2CB;}
+        .as-concern-option:hover,.as-concern-option.is-active {
+            color:var(--as-ink);padding-left:15px;
+        }
+        .as-concern-option.is-active {
+            background:linear-gradient(90deg,rgba(175,190,223,.19),transparent 85%);
+        }
+        .as-concern-index {
+            min-width:27px;align-self:center;color:#958F86;
+            font:500 10px/1 Montserrat,sans-serif;
+            letter-spacing:.08em;
+        }
+        .as-concern-option.is-active .as-concern-index { color:var(--as-olive); }
+        .as-concern-option-text {
+            font:400 clamp(25px,2.5vw,37px)/1.15 'Cormorant Garamond',serif;
+            letter-spacing:-.015em;flex:1;white-space:normal;
+        }
+        .as-concern-arrow {
+            width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+            border:1px solid #D7D2CB;font-size:15px;flex:0 0 auto;
+            transition:transform .35s ease,background .35s ease,border-color .35s ease,color .35s ease;
+        }
+        .as-concern-option:hover .as-concern-arrow,
+        .as-concern-option.is-active .as-concern-arrow {
+            background:var(--as-olive);border-color:var(--as-olive);color:white;transform:rotate(45deg);
+        }
+        .as-concerns-privacy {
+            margin-top:22px;color:#77736E;font-size:11px;line-height:1.6;
+            display:flex;align-items:start;gap:8px;
+        }
+        .as-concerns-privacy i {font-size:15px;color:var(--as-olive);}
+        .as-concern-panel {
+            background:#302F2A;color:#fff;position:sticky;top:108px;
+            min-height:560px;display:flex;flex-direction:column;justify-content:space-between;
+            padding:clamp(32px,4vw,56px);border-radius:3px 70px 3px 3px;
+            isolation:isolate;overflow:hidden;scroll-margin-top:95px;
+            box-shadow:0 24px 64px rgba(48,47,42,.12);
+        }
+        .as-concern-panel::before {
+            content:"";position:absolute;inset:auto -160px -210px auto;width:520px;height:520px;
+            border:1px solid rgba(175,190,223,.19);border-radius:50%;pointer-events:none;z-index:-1;
+        }
+        .as-concern-panel::after {
+            content:"";position:absolute;inset:auto -100px -155px auto;width:420px;height:420px;
+            border:1px solid rgba(175,190,223,.14);border-radius:50%;pointer-events:none;z-index:-1;
+        }
+        .as-panel-decoration {
+            width:50px;height:7px;background:var(--as-lavender);
+            position:absolute;top:0;left:clamp(32px,4vw,56px);
+        }
+        .as-concern-panel-top {display:flex;justify-content:space-between;gap:16px;align-items:start;}
+        .as-panel-eyebrow,.as-panel-counter,.as-panel-subtitle,.as-panel-note {
+            font:500 10px/1.6 Montserrat,sans-serif;letter-spacing:.14em;
+        }
+        .as-panel-eyebrow {max-width:220px;color:#DADAD6;}
+        .as-panel-counter {color:var(--as-lavender);white-space:nowrap;}
+        .as-panel-subtitle {display:block;color:var(--as-lavender);margin-bottom:18px;}
+        .as-concern-panel-copy {margin:66px 0 64px;}
+        .as-concern-panel-copy h3 {
+            font:400 clamp(45px,5vw,75px)/.98 'Cormorant Garamond',serif;
+            text-wrap:balance;letter-spacing:-.03em;margin-bottom:25px;
+        }
+        .as-concern-panel-copy p {font:400 14px/1.85 Montserrat,sans-serif;max-width:390px;color:#E0DEDA;}
+        .as-concern-panel-bottom > p {font:400 14px/1.7 'Cormorant Garamond',serif;font-style:italic;color:#EAE4DC;margin-bottom:20px;font-size:21px;}
+        .as-concern-cta {
+            background:var(--as-lavender);color:#22252B;
+            display:flex;align-items:center;justify-content:space-between;gap:20px;
+            text-decoration:none;min-height:64px;padding:18px 22px;border-radius:3px;
+            font:600 11px/1.5 Montserrat,sans-serif;letter-spacing:.07em;
+            transition:background-color .3s ease,transform .3s ease;
+        }
+        .as-concern-cta:hover {background:#CED8EB;transform:translateY(-2px);}
+        .as-concern-cta i {font-size:20px;flex:0 0 auto;}
+        .as-panel-note {display:block;color:#BABBB7;letter-spacing:0;line-height:1.65;margin-top:17px;font-size:10px;}
+        .as-concerns-footer {
+            display:flex;align-items:center;gap:18px;color:#8C867C;
+            font:500 9px/1.6 Montserrat,sans-serif;letter-spacing:.14em;
+            margin-top:65px;
+        }
+        .as-concerns-footer-line {height:1px;width:75px;background:#CFC9C1;}
+        @media (max-width: 1000px) {
+            .as-concerns-layout {gap:26px;}
+            .as-concern-panel {padding:30px;min-height:520px;}
+            .as-concern-option {min-height:81px;gap:12px;}
+            .as-concern-option-text {font-size:28px;}
+            .as-concern-panel-copy h3 {font-size:55px;}
+        }
+        @media (max-width: 767px) {
+            .as-concerns {padding:68px 16px 50px;}
+            .as-concerns-intro {margin-bottom:35px;}
+            .as-concerns-kicker {gap:9px;font-size:8px;letter-spacing:.12em;flex-wrap:wrap;}
+            .as-kicker-line {width:17px;}
+            .as-concerns-intro h2 {font-size:clamp(44px,11vw,62px);line-height:1.01;margin-bottom:18px;}
+            .as-concerns-intro > p {font-size:13px;line-height:1.8;}
+            .as-concerns-layout {grid-template-columns:1fr;gap:30px;}
+            .as-concern-option {min-height:74px;}
+            .as-concern-option-text {font-size:clamp(25px,6.7vw,34px);}
+            .as-concern-arrow {width:32px;height:32px;}
+            .as-concerns-small-label {font-size:9px;}
+            .as-concern-panel {position:relative;top:auto;min-height:0;padding:33px 24px 27px;border-radius:2px 48px 2px 2px;}
+            .as-concern-panel-copy {margin:48px 0 42px;}
+            .as-concern-panel-copy h3 {font-size:clamp(48px,12vw,66px);}
+            .as-concern-panel-copy p {font-size:13px;}
+            .as-concern-panel-bottom > p {font-size:19px;}
+            .as-concern-cta {min-height:58px;padding:15px;font-size:10px;}
+            .as-concerns-footer {margin-top:34px;font-size:8px;flex-wrap:wrap;gap:10px;}
+            .as-concerns-footer-line {width:26px;}
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .as-concern-option,.as-concern-arrow,.as-concern-cta {transition:none!important;transform:none!important;}
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -513,7 +677,7 @@
             <!-- Navigation Links -->
             <nav class="hidden xl:flex items-center gap-6 2xl:gap-9">
                 <a href="#inicio" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Início</a>
-                <a href="#posicionamento" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">A Filosofia</a>
+                <a href="#preocupacoes" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Sua jornada</a>
                 <a href="#dra-aline" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Dra. Aline</a>
                 <a href="#tratamentos" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Tratamentos</a>
                 <a href="#experiencia" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Experiência</a>
@@ -539,7 +703,7 @@
         <div class="xl:hidden hidden bg-brand-offwhite border-b border-brand-sand/40 absolute w-full left-0 top-20 shadow-xl transition-all" id="mobile-menu">
             <nav class="flex flex-col py-6 px-8 gap-5 border-t border-brand-sand/20">
                 <a href="#inicio" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Início</a>
-                <a href="#posicionamento" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">A Filosofia</a>
+                <a href="#preocupacoes" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Sua jornada</a>
                 <a href="#dra-aline" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Dra. Aline Schweitzer</a>
                 <a href="#tratamentos" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Tratamentos</a>
                 <a href="#experiencia" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">A Experiência</a>
@@ -587,8 +751,8 @@
                             <span>Quero agendar minha consulta</span>
                             <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="#tratamentos" class="as-secondary-cta px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
-                            Conhecer os tratamentos
+                        <a href="#preocupacoes" class="as-secondary-cta px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
+                            Descobrir por onde começar
                         </a>
                     </div>
 
@@ -641,6 +805,82 @@
             <span class="text-xs uppercase tracking-widest text-brand-rose/70 font-medium">
                 AS Beauty Center · Dra. Aline Schweitzer
             </span>
+        </div>
+    </section>
+
+
+    <!-- ETAPA 02 — Jornada interativa por preocupações, sem diagnóstico ou coleta de dados -->
+    <section id="preocupacoes" class="as-concerns" aria-labelledby="as-concerns-heading">
+        <div class="as-concerns-container">
+            <div class="as-concerns-intro reveal">
+                <div class="as-concerns-kicker">
+                    <span class="as-kicker-number">01 / SUA JORNADA</span>
+                    <span class="as-kicker-line" aria-hidden="true"></span>
+                    <span>O PRIMEIRO PASSO É UMA CONVERSA</span>
+                </div>
+                <h2 id="as-concerns-heading">O que você gostaria de <em>cuidar hoje?</em></h2>
+                <p>Antes de falar sobre procedimentos, queremos entender o que faz sentido para você. Escolha o assunto que mais desperta seu interesse.</p>
+            </div>
+
+            <div class="as-concerns-layout">
+                <div class="as-concerns-chooser" role="group" aria-label="Selecione o assunto de interesse">
+                    <p class="as-concerns-small-label">ESCOLHA UMA PREOCUPAÇÃO <span aria-hidden="true">— 01 A 05</span></p>
+                    <button type="button" class="as-concern-option is-active" data-concern="gordura" aria-pressed="true" aria-controls="as-concern-panel">
+                        <span class="as-concern-index" aria-hidden="true">01</span>
+                        <span class="as-concern-option-text">Gordura localizada</span>
+                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                    </button>
+                    <button type="button" class="as-concern-option" data-concern="flacidez" aria-pressed="false" aria-controls="as-concern-panel">
+                        <span class="as-concern-index" aria-hidden="true">02</span>
+                        <span class="as-concern-option-text">Flacidez corporal</span>
+                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                    </button>
+                    <button type="button" class="as-concern-option" data-concern="facial" aria-pressed="false" aria-controls="as-concern-panel">
+                        <span class="as-concern-index" aria-hidden="true">03</span>
+                        <span class="as-concern-option-text">Sinais do envelhecimento facial</span>
+                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                    </button>
+                    <button type="button" class="as-concern-option" data-concern="capilar" aria-pressed="false" aria-controls="as-concern-panel">
+                        <span class="as-concern-index" aria-hidden="true">04</span>
+                        <span class="as-concern-option-text">Queda capilar</span>
+                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                    </button>
+                    <button type="button" class="as-concern-option" data-concern="pelos" aria-pressed="false" aria-controls="as-concern-panel">
+                        <span class="as-concern-index" aria-hidden="true">05</span>
+                        <span class="as-concern-option-text">Pelos indesejados</span>
+                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                    </button>
+                    <p class="as-concerns-privacy"><i class="ph ph-lock-key" aria-hidden="true"></i> Sua escolha não é enviada nem armazenada pelo site.</p>
+                </div>
+
+                <div class="as-concern-panel" id="as-concern-panel" role="region" aria-label="Orientação sobre o assunto escolhido">
+                    <span class="as-panel-decoration" aria-hidden="true"></span>
+                    <div class="as-concern-panel-top">
+                        <span class="as-panel-eyebrow">ESCUTA, CUIDADO E INDIVIDUALIDADE</span>
+                        <span class="as-panel-counter" id="as-concern-counter" aria-hidden="true">01 / 05</span>
+                    </div>
+                    <div class="as-concern-panel-copy">
+                        <span class="as-panel-subtitle">SUA ESCOLHA</span>
+                        <h3 id="as-concern-title" aria-live="polite">Gordura localizada</h3>
+                        <p id="as-concern-description">Cada corpo tem suas particularidades. Uma consulta individualizada é o momento de conversar sobre o que incomoda você e conhecer possibilidades de cuidado.</p>
+                    </div>
+                    <div class="as-concern-panel-bottom">
+                        <p>Uma conversa pode ser o começo de um cuidado mais consciente.</p>
+                        <a id="as-concern-whatsapp"
+                            href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20individualizada%20para%20conversar%20sobre%20gordura%20localizada."
+                            target="_blank" rel="noopener noreferrer" class="as-concern-cta">
+                            <span>Conversar sobre minha consulta</span>
+                            <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                        <span class="as-panel-note">A escolha do tratamento depende de uma consulta profissional.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="as-concerns-footer">
+                <span>AS BEAUTY CENTER</span>
+                <span class="as-concerns-footer-line" aria-hidden="true"></span>
+                <span>SEU CUIDADO COMEÇA COM VOCÊ</span>
+            </div>
         </div>
     </section>
 
@@ -1363,6 +1603,72 @@
             // Fallback so content is never left invisible if an observer/network issue occurs.
             window.setTimeout(() => reveals.forEach(reveal => reveal.classList.add('active')), 2200);
         });
+    </script>
+
+
+    <script>
+        /* Etapa 02: escolha local, sem rastrear nem armazenar qualquer dado pessoal. */
+        (() => {
+            const section = document.getElementById('preocupacoes');
+            if (!section) return;
+            const options = Array.from(section.querySelectorAll('.as-concern-option'));
+            const title = document.getElementById('as-concern-title');
+            const description = document.getElementById('as-concern-description');
+            const counter = document.getElementById('as-concern-counter');
+            const link = document.getElementById('as-concern-whatsapp');
+            const choices = {
+                gordura: {
+                    title: 'Gordura localizada', number: '01',
+                    description: 'Cada corpo tem suas particularidades. Uma consulta individualizada é o momento de conversar sobre o que incomoda você e conhecer possibilidades de cuidado.',
+                    subject: 'gordura localizada'
+                },
+                flacidez: {
+                    title: 'Flacidez corporal', number: '02',
+                    description: 'Mudanças na firmeza da pele podem despertar dúvidas. Uma conversa individualizada ajuda a entender seu objetivo e discutir quais opções podem fazer sentido.',
+                    subject: 'flacidez corporal'
+                },
+                facial: {
+                    title: 'Sinais do envelhecimento facial', number: '03',
+                    description: 'Sua expressão e seus traços merecem respeito. A consulta é o espaço para conversar sobre as mudanças que você percebe e as possibilidades de cuidado facial.',
+                    subject: 'sinais do envelhecimento facial'
+                },
+                capilar: {
+                    title: 'Queda capilar', number: '04',
+                    description: 'Quando o cabelo muda, surgem perguntas. Na consulta, você pode compartilhar suas preocupações e entender quais próximos passos profissionais são apropriados.',
+                    subject: 'queda capilar'
+                },
+                pelos: {
+                    title: 'Pelos indesejados', number: '05',
+                    description: 'O conforto com a própria pele é individual. Converse sobre seus hábitos, expectativas e dúvidas antes de escolher qualquer procedimento.',
+                    subject: 'pelos indesejados'
+                }
+            };
+
+            options.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selected = choices[button.dataset.concern];
+                    if (!selected) return;
+                    options.forEach(item => {
+                        const active = item === button;
+                        item.classList.toggle('is-active', active);
+                        item.setAttribute('aria-pressed', String(active));
+                    });
+                    title.textContent = selected.title;
+                    description.textContent = selected.description;
+                    counter.textContent = selected.number + ' / 05';
+                    const message = 'Olá! Acessei o site da AS Beauty Center e gostaria de agendar uma consulta individualizada para conversar sobre ' + selected.subject + '.';
+                    link.href = 'https://api.whatsapp.com/send?phone=554888430101&text=' + encodeURIComponent(message);
+
+                    // Mostra o painel de resultado no celular após uma seleção direta.
+                    if (window.matchMedia('(max-width: 767px)').matches) {
+                        document.getElementById('as-concern-panel').scrollIntoView({
+                            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
     </script>
 
     <!-- WhatsApp flutuante: contato direto sem interromper a navegação -->

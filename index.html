@@ -990,6 +990,20 @@
         @media(max-width:767px){
           #tratamentos.as-services .as-service-card:has(.as-service-detail-link) {min-height:0;}
         }
+
+        /* Duas imagens da Dra. Aline no topo; fotografias da clínica abaixo */
+        #clinica .clinic-gallery > .clinic-photo:first-child{grid-column:span 7;aspect-ratio:7/6;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(2){grid-column:span 5;aspect-ratio:5/6;min-height:0;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(2) img{object-position:50% 42%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(3) img{object-position:50% 48%;}
+        @media (min-width:768px) and (max-width:1023px){
+            #clinica .clinic-gallery > .clinic-photo:first-child{grid-column:span 2;aspect-ratio:16/9;}
+            #clinica .clinic-gallery > .clinic-photo:nth-child(2){grid-column:span 1;aspect-ratio:4/5;}
+        }
+        @media (max-width:767px){
+            #clinica .clinic-gallery > .clinic-photo:first-child{grid-column:span 2;aspect-ratio:4/3;}
+            #clinica .clinic-gallery > .clinic-photo:nth-child(2){grid-column:span 1;aspect-ratio:3/4;}
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -1444,37 +1458,38 @@
                 <p class="text-brand-text font-light max-w-sm leading-relaxed text-sm">Ambientes e momentos reais do atendimento. Conheça alguns detalhes da clínica antes da sua visita.</p>
             </div>
             <div class="clinic-gallery">
-                <figure class="clinic-photo col-span-2 md:col-span-7 aspect-[5/4] md:aspect-[7/5] reveal">
+                <figure class="clinic-photo col-span-2 md:col-span-7 reveal">
                     <img src="assets/clinica-atendimento.webp" loading="lazy" decoding="async" width="1400" height="1050" alt="Dra. Aline no espaço de atendimento da clínica">
                     <figcaption>Um atendimento que começa pela escuta</figcaption>
                 </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-5 aspect-[3/4] md:aspect-auto reveal reveal-delay-1">
+                <figure class="clinic-photo col-span-1 md:col-span-5 reveal reveal-delay-1">
+                    <img src="assets/clinica-equipamento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Dra. Aline na clínica, atrás de um frasco de produto de estética">
+                <figcaption>Dra. Aline · AS Beauty Center</figcaption>
+                </figure>
+                <figure class="clinic-photo col-span-1 md:col-span-4 reveal">
                     <img src="assets/clinica-ambiente.webp" loading="lazy" decoding="async" width="1000" height="1400" alt="Recepção com iluminação acolhedora e mobiliário da clínica">
                     <figcaption>Recepção</figcaption>
                 </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-4 aspect-[3/4] reveal">
+                <figure class="clinic-photo col-span-1 md:col-span-4 reveal">
                     <img src="assets/clinica-procedimento.webp" loading="lazy" decoding="async" width="1100" height="1450" alt="Registro real de um atendimento estético">
                     <figcaption>Cuidado em cada detalhe</figcaption>
                 </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-4 aspect-[3/4] reveal reveal-delay-1">
+                <figure class="clinic-photo col-span-1 md:col-span-4 reveal">
                     <img src="assets/clinica-tecnologia.webp" loading="lazy" decoding="async" width="1000" height="1400" alt="Equipamento utilizado em atendimento na clínica">
                     <figcaption>Ambiente de atendimento</figcaption>
                 </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-4 aspect-[3/4] reveal reveal-delay-2">
+                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
                     <img src="assets/clinica-cuidado.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Dra. Aline realizando procedimento com uma paciente">
                     <figcaption>Atendimento individualizado</figcaption>
                 </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal">
+                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
                     <img src="assets/clinica-recepcao.webp" loading="lazy" decoding="async" width="700" height="1000" alt="Poltronas e mesa da recepção">
                 </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal reveal-delay-1">
+                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
                     <img src="assets/clinica-detalhe.webp" loading="lazy" decoding="async" width="1100" height="1600" alt="Detalhe decorativo do espaço da clínica">
                 </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal reveal-delay-2">
+                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
                     <img src="assets/clinica-acolhimento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Momento de acolhimento registrado na clínica">
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal reveal-delay-3">
-                    <img src="assets/clinica-equipamento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Frasco de produto fotografado no espaço da clínica">
                 </figure>
             </div>
         </div>

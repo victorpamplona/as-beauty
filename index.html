@@ -699,6 +699,80 @@
             #header.as-header .as-header-cta-link { transition: none !important; }
             #header.as-header .as-header-cta-link:hover { transform: none !important; }
         }
+
+        /* ETAPA 03: método e tratamentos, mantendo a identidade da paleta aprovada */
+        .as-method,.as-services{scroll-margin-top:96px}
+        .as-method{background:#F1F4FA;padding:clamp(86px,10vw,145px) 24px;position:relative;overflow:hidden}
+        .as-method::before{content:"";position:absolute;width:38vw;height:38vw;border:1px solid rgba(129,109,74,.13);border-radius:50%;left:-24vw;bottom:-22vw;pointer-events:none}
+        .as-method-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(45px,8vw,128px);align-items:center}
+        .as-method-kicker{display:flex;align-items:center;gap:13px;color:#816D4A;font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.18em;margin-bottom:30px}
+        .as-method-kicker span{display:inline-block;width:30px;height:1px;background:#816D4A}
+        .as-method-heading h2{font:400 clamp(53px,5.6vw,84px)/1.04 'Cormorant Garamond',serif;color:#242420;letter-spacing:-.032em;max-width:690px;text-wrap:balance;margin-bottom:31px}
+        .as-method-heading h2 em{font-weight:400;color:#816D4A}
+        .as-method-heading>p{font:400 14px/1.95 Montserrat,sans-serif;color:#575954;max-width:510px;margin-bottom:34px}
+        .as-method-link{display:inline-flex;align-items:center;gap:27px;border-bottom:1px solid #816D4A;padding:8px 0 15px;color:#5E4C33;text-decoration:none;font:600 11px/1.4 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;transition:gap .25s}
+        .as-method-link:hover{gap:36px}
+        .as-method-link i{font-size:18px}
+        .as-method-steps{background:rgba(255,255,255,.83);border:1px solid rgba(195,185,175,.52);padding:clamp(28px,4vw,55px);box-shadow:0 18px 54px rgba(40,40,35,.035)}
+        .as-method-step{display:grid;grid-template-columns:35px minmax(0,1fr);gap:17px;padding:23px 0 24px;border-bottom:1px solid rgba(195,185,175,.5)}
+        .as-method-step:first-child{padding-top:0}
+        .as-method-num{color:#816D4A;font:600 11px/2 Montserrat,sans-serif;letter-spacing:.08em}
+        .as-method-step h3{font:400 35px/1.08 'Cormorant Garamond',serif;color:#252623;margin:0 0 8px}
+        .as-method-step p{font:400 12px/1.85 Montserrat,sans-serif;color:#5D5C58;max-width:330px;margin:0}
+        .as-method-footer{display:flex;align-items:center;gap:16px;margin-top:28px;font:italic 20px/1.3 'Cormorant Garamond',serif;color:#62594D}
+        .as-method-footer span{color:#816D4A;font-size:29px;letter-spacing:-.08em}
+        .as-services{padding:clamp(86px,10vw,145px) 24px clamp(70px,9vw,120px);background:#fff;color:#252623}
+        .as-services-container{max-width:1200px;margin:auto}
+        .as-services-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.6fr);align-items:end;gap:68px;margin-bottom:60px}
+        .as-services-kicker{font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.2em;color:#816D4A;display:block;margin-bottom:27px}
+        .as-services-intro h2{font:400 clamp(52px,5.7vw,88px)/1.035 'Cormorant Garamond',serif;letter-spacing:-.033em;color:#272824;text-wrap:balance}
+        .as-services-intro h2 em{font-weight:400;color:#816D4A}
+        .as-services-intro p{font:400 13px/1.9 Montserrat,sans-serif;color:#5B5D59;max-width:375px;padding-bottom:9px}
+        .as-services-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+        .as-service-card{grid-column:span 4;min-width:0;min-height:446px;padding:35px 30px;position:relative;isolation:isolate;overflow:hidden;border:1px solid rgba(195,185,175,.34);display:flex;flex-direction:column;justify-content:space-between;background:#F8F8F6;transition:box-shadow .45s,transform .45s}
+        .as-service-card.as-feature{grid-column:span 6;min-height:490px;padding:41px 39px}
+        .as-service-card::before{content:"";position:absolute;z-index:-1;width:340px;height:340px;border-radius:50%;right:-170px;top:-160px;border:1px solid currentColor;opacity:.08;pointer-events:none}
+        .as-service-card::after{content:"";position:absolute;z-index:-1;width:230px;height:230px;border-radius:50%;right:-115px;top:-105px;border:1px solid currentColor;opacity:.055;pointer-events:none}
+        .as-service-card-top{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-bottom:47px}
+        .as-service-card-top span{font:600 9px/1.6 Montserrat,sans-serif;letter-spacing:.15em}
+        .as-service-card-top span:last-child{opacity:.55;white-space:nowrap}
+        .as-service-card-center{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:31px}
+        .as-service-kind{font:600 9px/1.5 Montserrat,sans-serif;letter-spacing:.23em;opacity:.74;margin-bottom:18px}
+        .as-service-card h3{font:400 clamp(39px,3.1vw,58px)/1 'Cormorant Garamond',serif;letter-spacing:-.025em;max-width:98%;text-wrap:balance;margin:0 0 18px}
+        .as-service-card.as-feature h3{font-size:clamp(50px,4.6vw,76px)}
+        .as-service-card-center p{font:400 12px/1.85 Montserrat,sans-serif;opacity:.9;max-width:430px;margin:0}
+        .as-service-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid currentColor;padding-top:20px;min-height:42px;color:inherit;text-decoration:none;font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.11em;text-transform:uppercase}
+        .as-service-cta i{font-size:17px;flex:0 0 auto;border:1px solid currentColor;border-radius:50%;width:31px;height:31px;display:grid;place-items:center;transition:transform .3s}
+        .as-service-cta:hover i{transform:translate(2px,-2px)}
+        .as-service-card.as-olive{background:#816D4A;color:#fff}
+        .as-service-card.as-lavender{background:#AFBEDF;color:#232B37}
+        .as-service-card.as-white{background:#FCFCFA;color:#2E302D}
+        .as-service-card.as-taupe{background:#736D66;color:#fff}
+        .as-service-card.as-cream{background:#EFEAE3;color:#332E28}
+        .as-service-card.as-blue{background:#EAF0F8;color:#2C3540}
+        .as-services-outro{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:32px;padding:32px 0;border-top:1px solid #DDD5CC;border-bottom:1px solid #DDD5CC}
+        .as-services-outro span{font:600 9px/1.6 Montserrat,sans-serif;letter-spacing:.15em;color:#816D4A}
+        .as-services-outro p{font:400 27px/1.3 'Cormorant Garamond',serif;color:#363630;margin-top:7px}
+        .as-services-outro a{display:inline-flex;align-items:center;gap:13px;color:#816D4A;text-decoration:none;font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+        .as-services-outro a:hover{text-decoration:underline;text-underline-offset:5px}
+        .as-services-outro i{font-size:17px}
+        @media (hover:hover) and (pointer:fine){.as-service-card:hover{transform:translateY(-3px);box-shadow:0 20px 45px rgba(32,33,31,.095)}}
+        @media (max-width:1100px){.as-method-container{gap:45px}.as-services-intro{gap:36px}.as-service-card{grid-column:span 6}}
+        @media (max-width:767px){
+          .as-method{padding:72px 16px 76px}.as-method-container{grid-template-columns:1fr;gap:44px}
+          .as-method-heading h2{font-size:clamp(44px,11vw,64px)}.as-method-heading>p{font-size:13px;line-height:1.8}
+          .as-method-steps{padding:27px 24px}.as-method-step h3{font-size:31px}
+          .as-services{padding:78px 16px 72px}.as-services-intro{grid-template-columns:1fr;gap:16px;margin-bottom:36px}
+          .as-services-intro h2{font-size:clamp(46px,10.5vw,67px)}
+          .as-services-grid{grid-template-columns:1fr;gap:12px}
+          .as-service-card,.as-service-card.as-feature{grid-column:span 1;min-height:360px;padding:28px 25px}
+          .as-service-card.as-feature h3,.as-service-card h3{font-size:clamp(43px,11vw,60px)}
+          .as-service-card-top{margin-bottom:40px}.as-service-card-center{padding-bottom:27px}
+          .as-services-outro{display:block;padding:28px 0}.as-services-outro p{font-size:25px;margin-bottom:18px}.as-services-outro a{white-space:normal}
+        }
+        @media (prefers-reduced-motion:reduce){.as-service-card,.as-service-cta i,.as-method-link{transition:none!important}.as-service-card:hover,.as-service-cta:hover i{transform:none!important}}
+        .as-concern-explore{display:inline-flex;align-items:center;gap:9px;color:#AFBEDF;text-underline-offset:5px;font:500 11px/1.7 Montserrat,sans-serif;margin-top:20px}
+        .as-concern-explore:hover{color:#fff}.as-concern-explore i{font-size:15px}
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -913,6 +987,7 @@
                             <span>Conversar sobre minha consulta</span>
                             <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
                         </a>
+                        <a id="as-concern-explore" class="as-concern-explore" href="#tratamento-crio-as">Conhecer esta frente de cuidado <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
                         <span class="as-panel-note">A escolha do tratamento depende de uma consulta profissional.</span>
                     </div>
                 </div>
@@ -926,56 +1001,25 @@
     </section>
 
     <!-- EDITORIAL POSITIONING SECTION -->
-    <section id="posicionamento" class="py-24 bg-brand-ivory/60 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-5 reveal">
-                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Filosofia de Atendimento</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light leading-tight mb-6">
-                        A estética certa não começa no procedimento. <span class="italic text-brand-brown font-normal block mt-2">Começa na consulta.</span>
-                    </h2>
-                    <p class="text-brand-text font-light text-base leading-relaxed mb-6">
-                        Na AS Beauty Center, recusamos fórmulas prontas e abordagens genéricas. Acreditamos que a verdadeira beleza surge do equilíbrio entre o desejo da paciente, a análise da estrutura anatômica e a precisão da ciência estética.
-                    </p>
-                    <p class="text-brand-text font-light text-base leading-relaxed">
-                        A proposta não é seguir tendências passageiras da internet, mas criar um plano estratégico único para valorizar os traços que fazem de você quem você é.
-                    </p>
-                </div>
-
-                <!-- 4-Step Narrative Micro-Process Grid -->
-                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-6 reveal reveal-delay-1">
-                    
-                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
-                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">01</span>
-                        <h3 class="font-serif text-xl text-brand-dark mb-2">Escutar</h3>
-                        <p class="text-xs text-brand-text font-light leading-relaxed">Escuta ativa, mapeamento de queixas e análise minuciosa da anatomia e saúde da pele.</p>
-                    </div>
-
-                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
-                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">02</span>
-                        <h3 class="font-serif text-xl text-brand-dark mb-2">Planejar</h3>
-                        <p class="text-xs text-brand-text font-light leading-relaxed">Desenvolvimento de um cronograma personalizado com alinhamento real de expectativas.</p>
-                    </div>
-
-                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
-                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">03</span>
-                        <h3 class="font-serif text-xl text-brand-dark mb-2">Tratar</h3>
-                        <p class="text-xs text-brand-text font-light leading-relaxed">Execução com tecnologia de ponta, técnicas consolidadas e máxima biossegurança.</p>
-                    </div>
-
-                    <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
-                        <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">04</span>
-                        <h3 class="font-serif text-xl text-brand-dark mb-2">Acompanhar</h3>
-                        <p class="text-xs text-brand-text font-light leading-relaxed">Monitoramento pós-procedimento contínuo para garantir resultados seguros e duradouros.</p>
-                    </div>
-
-                </div>
-
-            </div>
-
+    
+    <!-- ETAPA 03 | Filosofia orientada à consulta -->
+    <section id="posicionamento" class="as-method" aria-labelledby="as-method-title">
+      <div class="as-method-container">
+        <div class="as-method-heading reveal">
+          <span class="as-method-kicker"><span aria-hidden="true"></span> O JEITO AS BEAUTY DE CUIDAR</span>
+          <h2 id="as-method-title">Antes de escolher um tratamento, <em>existe uma conversa.</em></h2>
+          <p>Não existe uma única resposta para todas as pessoas. Na consulta individualizada, você pode falar sobre suas preocupações, esclarecer dúvidas e compreender quais possibilidades merecem ser consideradas.</p>
+          <a class="as-method-link" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20individualizada%20na%20AS%20Beauty%20Center." target="_blank" rel="noopener noreferrer">
+            Agendar minha consulta <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
         </div>
+        <div class="as-method-steps reveal reveal-delay-1" aria-label="Como começa o atendimento">
+          <div class="as-method-step"><span class="as-method-num">01</span><div><h3>Escutar</h3><p>Entender o que você deseja cuidar e quais são suas dúvidas.</p></div></div>
+          <div class="as-method-step"><span class="as-method-num">02</span><div><h3>Considerar</h3><p>Conversar sobre as possibilidades e os limites de cada abordagem.</p></div></div>
+          <div class="as-method-step"><span class="as-method-num">03</span><div><h3>Orientar</h3><p>Esclarecer os próximos passos de acordo com suas necessidades.</p></div></div>
+          <div class="as-method-footer"><span aria-hidden="true">AS</span> O cuidado faz mais sentido quando começa por você.</div>
+        </div>
+      </div>
     </section>
 
     <!-- DRA. ALINE SCHWEITZER AUTHORITY SECTION -->
@@ -1067,123 +1111,92 @@
     </section>
 
     <!-- TREATMENTS SECTION - Asymmetrical Editorial Layout -->
-    <section id="tratamentos" class="py-24 bg-brand-offwhite">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="max-w-2xl mb-16 reveal">
-                <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Protocolos e Especialidades</span>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light leading-tight">
-                    Tudo começa com o seu <span class="italic text-brand-brown font-normal">objetivo.</span>
-                </h2>
-                <p class="text-brand-text font-light mt-4 text-base">
-                    Conheça as principais áreas de atuação da AS Beauty Center. A indicação de cada procedimento depende de uma consulta individualizada.
-                </p>
-            </div>
-
-            <!-- Treatments Asymmetrical Editorial Grid -->
-            <div class="grid md:grid-cols-12 gap-8">
-                
-                <!-- Category 1: Corpo (Large Feature) -->
-                <div class="md:col-span-7 bg-brand-ivory rounded-3xl p-8 lg:p-12 border border-brand-sand/60 flex flex-col justify-between relative overflow-hidden group reveal">
-                    <div class="mb-8 relative z-10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature">Área Corporal</span>
-                            <i class="ph ph-sparkle text-xl text-brand-brown"></i>
-                        </div>
-                        <h3 class="font-serif text-3xl lg:text-4xl text-brand-dark mb-2">Corpo</h3>
-                        <p class="font-serif italic text-brand-brown text-lg mb-4">Contorno, equilíbrio e definição.</p>
-                        <p class="text-sm text-brand-text font-light leading-relaxed max-w-lg mb-6">
-                            Tratamentos avançados para gordura localizada, remodelação corporal e firmeza da pele com protocolos exclusivos de criolipólise e criomodelagem.
-                        </p>
-                        <ul class="space-y-2 text-xs uppercase tracking-wider text-brand-dark font-medium mb-8">
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Criolipólise de Alta Performance</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Criomodelagem Avançada</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Protocolos de Redução e Remodelação</li>
-                        </ul>
-                    </div>
-
-                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20tratamentos%20Corporais." target="_blank" class="inline-flex items-center gap-3 bg-brand-dark text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-colors w-fit relative z-10">
-                        <span>Saber mais sobre Corpo</span>
-                        <i class="ph ph-arrow-up-right"></i>
-                    </a>
-                </div>
-
-                <!-- Category 2: Face (Accent Feature) -->
-                <div class="md:col-span-5 bg-brand-signaturelight rounded-3xl p-8 lg:p-12 border border-brand-signature/20 flex flex-col justify-between relative overflow-hidden group reveal reveal-delay-1">
-                    <div class="mb-8 relative z-10">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature">Área Facial</span>
-                            <i class="ph ph-flower-lotus text-xl text-brand-signature"></i>
-                        </div>
-                        <h3 class="font-serif text-3xl lg:text-4xl text-brand-dark mb-2">Face</h3>
-                        <p class="font-serif italic text-brand-signature text-lg mb-4">Naturalidade, harmonia e expressão.</p>
-                        <p class="text-sm text-brand-text font-light leading-relaxed mb-6">
-                            Aplicações estratégicas de toxina botulínica (Botox) e estética facial com foco na preservação da sua identidade e jovialidade natural.
-                        </p>
-                        <ul class="space-y-2 text-xs uppercase tracking-wider text-brand-dark font-medium mb-8">
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Toxina Botulínica (Botox)</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Estética Facial Avançada</li>
-                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-signature"></span> Gerenciamento de Envelhecimento</li>
-                        </ul>
-                    </div>
-
-                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20tratamentos%20Faciais%20(Botox)." target="_blank" class="inline-flex items-center gap-3 bg-brand-dark text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-colors w-fit relative z-10">
-                        <span>Saber mais sobre Face</span>
-                        <i class="ph ph-arrow-up-right"></i>
-                    </a>
-                </div>
-
-                <!-- Category 3: Terapia Capilar -->
-                <div class="md:col-span-4 bg-brand-ivory rounded-3xl p-8 border border-brand-sand/60 flex flex-col justify-between reveal">
-                    <div>
-                        <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature mb-3 block">Saúde Capilar</span>
-                        <h3 class="font-serif text-2xl text-brand-dark mb-1">Terapia Capilar</h3>
-                        <p class="font-serif italic text-brand-brown text-base mb-3">Saúde também é estética.</p>
-                        <p class="text-xs text-brand-text font-light leading-relaxed mb-6">
-                            Tricologia e procedimentos especializados para o tratamento de queda, fortalecimento e revitalização dos fios e do couro cabeludo.
-                        </p>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20Terapia%20Capilar." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-dark hover:text-brand-signature transition-colors border-b border-brand-dark hover:border-brand-signature pb-1 w-fit">
-                        <span>Terapia Capilar</span>
-                        <i class="ph ph-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Category 4: Depilação a Laser -->
-                <div class="md:col-span-4 bg-brand-ivory rounded-3xl p-8 border border-brand-sand/60 flex flex-col justify-between reveal reveal-delay-1">
-                    <div>
-                        <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature mb-3 block">Tecnologia</span>
-                        <h3 class="font-serif text-2xl text-brand-dark mb-1">Depilação a Laser</h3>
-                        <p class="font-serif italic text-brand-brown text-base mb-3">Pele lisa e confortável.</p>
-                        <p class="text-xs text-brand-text font-light leading-relaxed mb-6">
-                            Tecnologia segura para eliminação duradoura dos pelos em diferentes regiões corporais com máximo conforto e aplicação criteriosa.
-                        </p>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20Depila%C3%A7%C3%A3o%20a%20Laser." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-dark hover:text-brand-signature transition-colors border-b border-brand-dark hover:border-brand-signature pb-1 w-fit">
-                        <span>Depilação a Laser</span>
-                        <i class="ph ph-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Category 5: Massoterapia -->
-                <div class="md:col-span-4 bg-brand-ivory rounded-3xl p-8 border border-brand-sand/60 flex flex-col justify-between reveal reveal-delay-2">
-                    <div>
-                        <span class="text-xs uppercase tracking-widest font-semibold text-brand-signature mb-3 block">Bem-estar</span>
-                        <h3 class="font-serif text-2xl text-brand-dark mb-1">Massoterapia</h3>
-                        <p class="font-serif italic text-brand-brown text-base mb-3">Um momento para desacelerar.</p>
-                        <p class="text-xs text-brand-text font-light leading-relaxed mb-6">
-                            Protocolos corporais integrativos de relaxamento, alívio de tensões e estímulo à circulação em um ambiente de absoluto acolhimento.
-                        </p>
-                    </div>
-                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20saber%20mais%20sobre%20Massoterapia." target="_blank" class="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-brand-dark hover:text-brand-signature transition-colors border-b border-brand-dark hover:border-brand-signature pb-1 w-fit">
-                        <span>Massoterapia</span>
-                        <i class="ph ph-arrow-right"></i>
-                    </a>
-                </div>
-
-            </div>
-
+    
+    <!-- ETAPA 03 | Apresentação editorial dos seis tratamentos -->
+    <section id="tratamentos" class="as-services" aria-labelledby="as-services-title">
+      <div class="as-services-container">
+        <div class="as-services-intro reveal">
+          <div><span class="as-services-kicker">TRATAMENTOS · AS BEAUTY CENTER / 03</span>
+            <h2 id="as-services-title">Cada preocupação tem <em>sua própria história.</em></h2></div>
+          <p>Conheça as frentes de atendimento da clínica. A indicação de procedimentos e a definição de um plano dependem de uma consulta individualizada.</p>
         </div>
+        <div class="as-services-grid">
+        <article class="as-service-card as-olive as-feature reveal" id="tratamento-crio-as" data-future-path="/tratamentos/crio-as/" aria-labelledby="as-treatment-title-01">
+          <div class="as-service-card-top"><span>GORDURA LOCALIZADA</span><span>01 / 06</span></div>
+          <div class="as-service-card-center">
+            <span class="as-service-kind">CORPO</span>
+            <h3 id="as-treatment-title-01">CRIO AS</h3>
+            <p>A gordura localizada é uma das preocupações que podem ser conversadas em consulta. Conheça a proposta CRIO AS e esclareça se essa abordagem faz sentido para o seu caso.</p>
+          </div>
+          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20CRIO%20AS%20e%20gordura%20localizada." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre CRIO AS">
+            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="as-service-card as-lavender as-feature reveal" id="tratamento-flacidez-corporal" data-future-path="/tratamentos/flacidez-corporal/" aria-labelledby="as-treatment-title-02">
+          <div class="as-service-card-top"><span>FIRMEZA DA PELE</span><span>02 / 06</span></div>
+          <div class="as-service-card-center">
+            <span class="as-service-kind">CORPO</span>
+            <h3 id="as-treatment-title-02">Flacidez corporal</h3>
+            <p>Mudanças na firmeza da pele são percebidas de maneiras diferentes. Saiba como a clínica aborda dúvidas sobre flacidez e estímulo de colágeno.</p>
+          </div>
+          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20flacidez%20corporal%20e%20est%C3%ADmulo%20de%20col%C3%A1geno." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Flacidez corporal">
+            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="as-service-card as-white  reveal" id="tratamento-depilacao-laser" data-future-path="/tratamentos/depilacao-a-laser/" aria-labelledby="as-treatment-title-03">
+          <div class="as-service-card-top"><span>HAKON 4D</span><span>03 / 06</span></div>
+          <div class="as-service-card-center">
+            <span class="as-service-kind">PELE</span>
+            <h3 id="as-treatment-title-03">Depilação a laser</h3>
+            <p>Pelos indesejados ou desconforto com a rotina de depilação? Converse sobre o laser HAKON 4D, suas condições de atendimento e limitações.</p>
+          </div>
+          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20depila%C3%A7%C3%A3o%20a%20laser%20HAKON%204D." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Depilação a laser">
+            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="as-service-card as-taupe  reveal" id="tratamento-rejuvenescimento-facial" data-future-path="/tratamentos/rejuvenescimento-facial/" aria-labelledby="as-treatment-title-04">
+          <div class="as-service-card-top"><span>TOXINA BOTULÍNICA</span><span>04 / 06</span></div>
+          <div class="as-service-card-center">
+            <span class="as-service-kind">FACE</span>
+            <h3 id="as-treatment-title-04">Rejuvenescimento facial</h3>
+            <p>Linhas de expressão e mudanças faciais despertam expectativas diferentes. Conheça as possibilidades de consulta sobre toxina botulínica e cuidados faciais.</p>
+          </div>
+          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20toxina%20botul%C3%ADnica%20e%20rejuvenescimento%20facial." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Rejuvenescimento facial">
+            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="as-service-card as-cream  reveal" id="tratamento-terapias-capilares" data-future-path="/tratamentos/terapias-capilares/" aria-labelledby="as-treatment-title-05">
+          <div class="as-service-card-top"><span>SAÚDE DOS FIOS</span><span>05 / 06</span></div>
+          <div class="as-service-card-center">
+            <span class="as-service-kind">CABELOS</span>
+            <h3 id="as-treatment-title-05">Terapias capilares</h3>
+            <p>A queda capilar pode ter diferentes causas. O primeiro passo é conversar sobre suas preocupações e entender quais orientações profissionais são apropriadas.</p>
+          </div>
+          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20terapias%20capilares." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Terapias capilares">
+            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </article>
+
+        <article class="as-service-card as-blue  reveal" id="tratamento-drenagem-linfatica" data-future-path="/tratamentos/drenagem-linfatica/" aria-labelledby="as-treatment-title-06">
+          <div class="as-service-card-top"><span>CUIDADO CORPORAL</span><span>06 / 06</span></div>
+          <div class="as-service-card-center">
+            <span class="as-service-kind">CORPO</span>
+            <h3 id="as-treatment-title-06">Drenagem linfática</h3>
+            <p>Uma possibilidade de cuidado corporal sobre a qual vale esclarecer objetivos, indicação e condições de atendimento antes de agendar.</p>
+          </div>
+          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20drenagem%20linf%C3%A1tica." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Drenagem linfática">
+            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+          </a>
+        </article></div>
+        <div class="as-services-outro reveal">
+          <div><span>AINDA TEM DÚVIDAS?</span><p>Você não precisa escolher um procedimento antes de conversar.</p></div>
+          <a href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20as%20possibilidades%20de%20atendimento%20da%20cl%C3%ADnica." target="_blank" rel="noopener noreferrer">Agendar consulta individualizada <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
     </section>
 
     <!-- CONTEXTUAL CONVERSION BLOCK (Mid-Page Natural CTA) -->
@@ -1699,6 +1712,9 @@
                     counter.textContent = selected.number + ' / 05';
                     const message = 'Olá! Acessei o site da AS Beauty Center e gostaria de agendar uma consulta individualizada para conversar sobre ' + selected.subject + '.';
                     link.href = 'https://api.whatsapp.com/send?phone=554888430101&text=' + encodeURIComponent(message);
+                    const explore=document.getElementById('as-concern-explore');
+                    const details={gordura:'#tratamento-crio-as',flacidez:'#tratamento-flacidez-corporal',facial:'#tratamento-rejuvenescimento-facial',capilar:'#tratamento-terapias-capilares',pelos:'#tratamento-depilacao-laser'};
+                    if(explore&&details[button.dataset.concern])explore.href=details[button.dataset.concern];
 
                     // Mostra o painel de resultado no celular após uma seleção direta.
                     if (window.matchMedia('(max-width: 767px)').matches) {

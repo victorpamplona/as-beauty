@@ -364,17 +364,147 @@
             *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
             .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; filter: none !important; }
         }
+
+        /* AS BEAUTY — PALETA V2 | ETAPA 01: Header, Hero e Assinatura */
+        :root {
+            --as-olive: #816D4A;
+            --as-lavender: #AFBEDF;
+            --as-taupe: #C3B9AF;
+            --as-white: #FFFFFF;
+            --as-ink: #20211F;
+            --as-blue-mist: #F1F4FA;
+        }
+        #header.as-header {
+            background: rgba(255,255,255,.92) !important;
+            border-bottom: 1px solid rgba(195,185,175,.35);
+            box-shadow: 0 8px 30px rgba(32,33,31,.025);
+        }
+        #header.as-header .as-brand-icon {
+            background: var(--as-olive);
+            color: var(--as-white);
+            border-color: rgba(129,109,74,.4);
+        }
+        #header.as-header .font-serif.italic.text-brand-signature { color: var(--as-olive); }
+        #header.as-header nav a:hover { color: var(--as-olive); }
+        #inicio.as-hero {
+            position: relative;
+            isolation: isolate;
+            background:
+                radial-gradient(ellipse 43% 64% at 92% 35%, rgba(175,190,223,.29), rgba(175,190,223,0) 95%),
+                linear-gradient(115deg, #fff 0%, #fff 53%, #FAFBFD 100%);
+        }
+        #inicio.as-hero .as-hero-eyebrow {
+            background: rgba(175,190,223,.20);
+            border: 1px solid rgba(129,109,74,.19);
+            color: var(--as-olive);
+            padding: .5rem .95rem;
+        }
+        #inicio.as-hero .as-hero-eyebrow > span:first-child {
+            background: var(--as-olive);
+        }
+        #inicio.as-hero .as-hero-eyebrow .text-brand-signature { color: var(--as-olive); }
+        #inicio.as-hero .as-hero-title {
+            max-width: 760px;
+            color: var(--as-ink);
+            letter-spacing: -.018em;
+            font-size: clamp(3.25rem, 5.2vw, 5.4rem);
+            line-height: 1.04;
+            text-wrap: balance;
+        }
+        #inicio.as-hero .as-hero-accent {
+            color: var(--as-olive);
+            line-height: 1.02;
+        }
+        #inicio.as-hero .as-hero-description {
+            max-width: 560px;
+            color: #51504B;
+            line-height: 1.8;
+            text-wrap: pretty;
+        }
+        #inicio.as-hero .as-primary-cta {
+            background: var(--as-olive);
+            border: 1px solid var(--as-olive);
+            color: var(--as-white);
+            box-shadow: 0 8px 22px rgba(129,109,74,.16);
+        }
+        #inicio.as-hero .as-primary-cta:hover {
+            background: #6F5B3E;
+            box-shadow: 0 14px 28px rgba(129,109,74,.20);
+        }
+        #inicio.as-hero .as-secondary-cta {
+            border-color: var(--as-taupe);
+            background: rgba(255,255,255,.75);
+            color: var(--as-ink);
+        }
+        #inicio.as-hero .as-secondary-cta:hover { background: var(--as-blue-mist); }
+        #inicio.as-hero .as-hero-facts {
+            border-color: rgba(195,185,175,.52);
+            color: var(--as-olive);
+        }
+        #inicio.as-hero .as-facts-line {
+            width: 20px; height: 1px; background: var(--as-taupe); display: inline-block;
+        }
+        #inicio.as-hero .as-image-shell {
+            border: 5px solid #fff;
+            border-radius: 132px 36px 34px 34px;
+            box-shadow: 0 25px 70px rgba(32,33,31,.15);
+        }
+        #inicio.as-hero .as-portrait-tag {
+            background: rgba(255,255,255,.96);
+            border: 1px solid rgba(195,185,175,.55);
+            color: var(--as-ink);
+            box-shadow: 0 14px 40px rgba(32,33,31,.12);
+            backdrop-filter: blur(9px);
+        }
+        #inicio.as-hero .as-caption-overline { color: var(--as-olive); }
+        #inicio.as-hero .as-portrait-tag p:last-child { color: #625E56; }
+        #inicio.as-hero .absolute.-top-10 { background: rgba(175,190,223,.37); }
+        #inicio.as-hero .absolute.-bottom-10 { background: rgba(195,185,175,.22); }
+        .as-signature-strip { background: var(--as-olive); border-color: rgba(255,255,255,.15); }
+        .as-signature-strip p { color: #fff; }
+        .as-signature-strip span { color: rgba(255,255,255,.83); }
+        @media (max-width: 1023px) {
+            #inicio.as-hero .as-hero-title { font-size: clamp(2.75rem, 6.8vw, 4.6rem); }
+        }
+        @media (max-width: 639px) {
+            #inicio.as-hero { background: linear-gradient(155deg, #fff 20%, #F1F4FA 100%); }
+            #inicio.as-hero .as-hero-title {
+                font-size: clamp(2.45rem, 9.35vw, 3.45rem);
+                line-height: 1.025;
+            }
+            #inicio.as-hero .as-hero-description {
+                font-size: 14px; line-height: 1.75; margin-bottom: 26px;
+            }
+            #inicio.as-hero .as-image-shell {
+                border-radius: 95px 24px 22px 22px;
+            }
+            #inicio.as-hero .as-portrait-tag {
+                margin-top: -24px; margin-left: 18px; margin-right: 18px;
+            }
+            #inicio.as-hero .as-hero-facts { gap: 10px; }
+            #inicio.as-hero .as-hero-facts span { font-size: 9px; line-height: 1.4; }
+            .as-signature-strip { padding-top: 20px; padding-bottom: 20px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #inicio.as-hero .hero-title,
+            #inicio.as-hero .hero-subtitle,
+            #inicio.as-hero .hero-image-mask {
+                animation: none !important; opacity: 1 !important;
+                transform: none !important; filter: none !important;
+                clip-path: none !important;
+            }
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
 
     <!-- Minimalist Glassmorphic Header -->
-    <header class="fixed w-full top-0 z-50 bg-brand-offwhite/85 backdrop-blur-md border-b border-brand-sand/30 transition-all duration-300" id="header">
+    <header class="as-header fixed w-full top-0 z-50 bg-brand-offwhite/85 backdrop-blur-md border-b border-brand-sand/30 transition-all duration-300" id="header">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             
             <!-- Logo with Autoral Monogram -->
             <a href="#" class="group flex items-center gap-3">
-                <span class="w-9 h-9 rounded-full bg-brand-dark text-brand-ivory font-serif flex items-center justify-center text-lg font-light tracking-widest border border-brand-signature/30 transition-transform duration-300 group-hover:scale-105">AS</span>
+                <span class="as-brand-icon w-9 h-9 rounded-full bg-brand-dark text-brand-ivory font-serif flex items-center justify-center text-lg font-light tracking-widest border border-brand-signature/30 transition-transform duration-300 group-hover:scale-105">AS</span>
                 <span class="font-serif text-xl md:text-2xl text-brand-dark tracking-wide font-normal">
                     AS <span class="font-light italic text-brand-signature">Beauty Center</span>
                 </span>
@@ -425,7 +555,7 @@
     </header>
 
     <!-- HERO SECTION - Autoral Editorial Approach -->
-    <section id="inicio" class="pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden relative">
+    <section id="inicio" class="as-hero pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-6">
             
             <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -434,7 +564,7 @@
                 <div class="lg:col-span-7 flex flex-col justify-center reveal-left">
                     
                     <!-- Location & Brand Signature Pill -->
-                    <div class="inline-flex items-center gap-3 px-4 py-1.5 bg-brand-signaturelight rounded-full w-fit mb-8 border border-brand-signature/20">
+                    <div class="as-hero-eyebrow inline-flex items-center gap-3 px-4 py-1.5 bg-brand-signaturelight rounded-full w-fit mb-8 border border-brand-signature/20">
                         <span class="w-2 h-2 rounded-full bg-brand-signature"></span>
                         <span class="text-xs uppercase tracking-widest font-medium text-brand-signature">São José · Santa Catarina</span>
                         <span class="text-brand-sand">|</span>
@@ -442,44 +572,34 @@
                     </div>
 
                     <!-- Main Editorial Title -->
-                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.08] mb-8 font-light hero-title">
-                        Estética avançada, com a <span class="italic font-normal text-brand-signature block sm:inline">assinatura da Dra. Aline.</span>
+                    <h1 class="as-hero-title font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.08] mb-8 font-light hero-title">
+                        Seu corpo mudou. <span class="as-hero-accent italic font-normal text-brand-signature block">Seu tratamento também pode ser diferente.</span>
                     </h1>
 
                     <!-- Editorial Subheadline -->
-                    <p class="text-base sm:text-lg text-brand-text font-light leading-relaxed mb-10 max-w-xl hero-subtitle">
-                        Atendimento individualizado e tratamentos planejados a partir das suas necessidades, com atenção à naturalidade dos resultados.
+                    <p class="as-hero-description text-base sm:text-lg text-brand-text font-light leading-relaxed mb-10 max-w-xl hero-subtitle">
+                        Na AS Beauty Center, o cuidado começa pela sua história. Conheça opções de tratamento para gordura localizada, flacidez, sinais do envelhecimento e outras preocupações estéticas — sempre a partir de uma consulta individualizada.
                     </p>
 
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
-                            <span>Agendar minha consulta</span>
+                        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="as-primary-cta bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
+                            <span>Quero agendar minha consulta</span>
                             <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
-                        <a href="#posicionamento" class="px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
-                            Conhecer a AS Beauty Center
+                        <a href="#tratamentos" class="as-secondary-cta px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
+                            Conhecer os tratamentos
                         </a>
                     </div>
 
-                    <!-- Social Proof Strip -->
-                    <div class="pt-8 border-t border-brand-sand/60 flex flex-wrap items-center gap-x-8 gap-y-4">
-                        <div class="flex items-center gap-2">
-                            <div class="flex text-[#D99B26] text-sm">
-                                <i class="ph-fill ph-star"></i>
-                                <i class="ph-fill ph-star"></i>
-                                <i class="ph-fill ph-star"></i>
-                                <i class="ph-fill ph-star"></i>
-                                <i class="ph-fill ph-star"></i>
-                            </div>
-                            <span class="font-serif text-lg font-medium text-brand-dark">5,0</span>
-                            <span class="text-xs text-brand-muted uppercase tracking-wider">(137 avaliações no Google)</span>
-                        </div>
-                        <div class="hidden sm:block w-px h-4 bg-brand-sand"></div>
-                        <div class="text-xs uppercase tracking-wider text-brand-dark font-medium flex items-center gap-1.5">
-                            <i class="ph ph-check-circle text-brand-signature text-base"></i>
-                            Atendimento Individualizado
-                        </div>
+                    <!-- Hero information rail: credibility without unverified statistics -->
+                    <div class="as-hero-facts pt-7 border-t border-brand-sand/60 flex flex-wrap items-center gap-x-7 gap-y-3" aria-label="Informações sobre o atendimento">
+                        <span class="flex items-center gap-2 text-xs uppercase tracking-widest font-medium">
+                            <span class="as-facts-line" aria-hidden="true"></span> Atendimento individualizado
+                        </span>
+                        <span class="flex items-center gap-2 text-xs uppercase tracking-widest font-medium">
+                            <span class="as-facts-line" aria-hidden="true"></span> São José · Santa Catarina
+                        </span>
                     </div>
 
                 </div>
@@ -489,22 +609,15 @@
                     <div class="relative mx-auto max-w-md lg:max-w-none">
                         
                         <!-- Main Portrait Frame -->
-                        <div class="aspect-[3/4] rounded-t-[5rem] rounded-b-[2rem] overflow-hidden shadow-2xl border-4 border-white relative z-10 img-zoom-container hero-image-mask">
+                        <div class="as-image-shell aspect-[3/4] rounded-t-[5rem] rounded-b-[2rem] overflow-hidden shadow-2xl border-4 border-white relative z-10 img-zoom-container hero-image-mask">
                             <img src="assets/hero-aline.webp" onerror="this.onerror=null;this.src='aline-schewtizer-hero.png'" alt="Retrato profissional da Dra. Aline Schweitzer" fetchpriority="high" width="900" height="1200" class="w-full h-full object-cover object-center">
                         </div>
 
-                        <!-- Autoral Overlay Badge (Editorial Seal) -->
-                        <div class="absolute -bottom-6 -left-4 sm:-left-8 z-20 bg-brand-dark text-white p-6 rounded-2xl shadow-xl max-w-[280px] border border-brand-champagne/30">
-                            <div class="flex items-center gap-2 text-brand-champagne mb-1">
-                                <i class="ph-fill ph-seal-check text-lg"></i>
-                                <span class="text-[10px] uppercase tracking-widest font-semibold">Responsabilidade Técnica</span>
-                            </div>
-                            <p class="font-serif text-lg text-white font-normal leading-snug">Dra. Aline Schweitzer</p>
-                            <p class="text-[11px] text-brand-rose/80 font-light mt-0.5">Alta performance em estética avançada</p>
-                            <div class="mt-3 pt-3 border-t border-white/10 flex items-center justify-between text-[11px]">
-                                <span class="text-brand-champagne font-serif italic">+2.000 formados</span>
-                                <span class="text-white/60">São José - SC</span>
-                            </div>
+                        <!-- Simplified editorial caption: no unsupported numeric claims -->
+                        <div class="as-portrait-tag absolute -bottom-6 -left-4 sm:-left-8 z-20 bg-white p-6 rounded-2xl shadow-xl max-w-[280px]">
+                            <span class="as-caption-overline block text-[10px] uppercase tracking-widest font-semibold mb-2">AS Beauty Center</span>
+                            <p class="font-serif text-xl font-normal leading-snug">Dra. Aline Schweitzer</p>
+                            <p class="text-[11px] font-light mt-1">Atendimento individualizado · São José, SC</p>
                         </div>
 
                         <!-- Abstract Luxe Background Element -->
@@ -520,7 +633,7 @@
     </section>
 
     <!-- RECURRENT BRAND SIGNATURE STRIP (Editorial Divider) -->
-    <section class="py-6 bg-brand-dark text-brand-ivory border-y border-brand-champagne/20">
+    <section class="as-signature-strip py-6 bg-brand-dark text-brand-ivory border-y border-brand-champagne/20">
         <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center sm:justify-between items-center gap-4 text-center sm:text-left">
             <p class="font-serif italic text-lg sm:text-xl text-brand-champagne font-light">
                 “Estética de resultado. Com estratégia, naturalidade e propósito.”

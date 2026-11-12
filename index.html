@@ -11,7 +11,7 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="AS Beauty Center | Estética Avançada por Dra. Aline Schweitzer">
-    <meta property="og:description" content="Estética de resultado com estratégia, naturalidade e propósito. Agende sua avaliação personalizada em São José - SC.">
+    <meta property="og:description" content="Estética de resultado com estratégia, naturalidade e propósito. Agende sua consulta individualizada em São José - SC.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
 
@@ -658,6 +658,47 @@
         @media (prefers-reduced-motion: reduce) {
             .as-concern-option,.as-concern-arrow,.as-concern-cta {transition:none!important;transform:none!important;}
         }
+
+        /* CTA do header — uma linha, sem quebra ou compressão em desktop */
+        #header.as-header .as-header-cta { flex: 0 0 auto; min-width: max-content; }
+        #header.as-header .as-header-cta-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            min-height: 44px;
+            padding: 0 21px;
+            border: 1px solid var(--as-olive);
+            border-radius: 999px;
+            background: var(--as-olive);
+            color: #FFFFFF;
+            text-decoration: none;
+            white-space: nowrap;
+            font-family: Montserrat, sans-serif;
+            font-size: 10px;
+            line-height: 1;
+            font-weight: 600;
+            letter-spacing: .075em;
+            text-transform: uppercase;
+            transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
+            box-shadow: 0 5px 16px rgba(129,109,74,.09);
+        }
+        #header.as-header .as-header-cta-link span { display: block; white-space: nowrap; }
+        #header.as-header .as-header-cta-link i { flex: 0 0 auto; color: #FFFFFF; font-size: 16px; line-height: 1; }
+        #header.as-header .as-header-cta-link:hover {
+            background: #6F5B3E;
+            transform: translateY(-1px);
+            box-shadow: 0 9px 24px rgba(129,109,74,.15);
+        }
+        @media (min-width: 1280px) and (max-width: 1510px) {
+            #header.as-header nav { gap: clamp(10px, 1.17vw, 18px); }
+            #header.as-header nav a { font-size: 10px; letter-spacing: .13em; white-space: nowrap; }
+            #header.as-header .as-header-cta-link { padding: 0 17px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #header.as-header .as-header-cta-link { transition: none !important; }
+            #header.as-header .as-header-cta-link:hover { transform: none !important; }
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -685,10 +726,10 @@
                 <a href="#contato" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Contato</a>
             </nav>
 
-            <!-- CTA Desktop -->
-            <div class="hidden xl:block">
-                <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="bg-brand-dark text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-semibold hover:bg-brand-signature transition-all duration-300 shadow-sm flex items-center gap-2 group">
-                    <span>Agendar minha consulta</span>
+            <!-- CTA Desktop: ação concisa, em uma linha -->
+            <div class="as-header-cta hidden xl:block">
+                <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="as-header-cta-link group" rel="noopener noreferrer" aria-label="Agendar consulta pelo WhatsApp">
+                    <span>Agendar consulta</span>
                     <i class="ph ph-whatsapp-logo text-base text-brand-champagne group-hover:text-white transition-colors"></i>
                 </a>
             </div>
@@ -893,7 +934,7 @@
                 <div class="lg:col-span-5 reveal">
                     <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Filosofia de Atendimento</span>
                     <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light leading-tight mb-6">
-                        A estética certa não começa no procedimento. <span class="italic text-brand-brown font-normal block mt-2">Começa na avaliação.</span>
+                        A estética certa não começa no procedimento. <span class="italic text-brand-brown font-normal block mt-2">Começa na consulta.</span>
                     </h2>
                     <p class="text-brand-text font-light text-base leading-relaxed mb-6">
                         Na AS Beauty Center, recusamos fórmulas prontas e abordagens genéricas. Acreditamos que a verdadeira beleza surge do equilíbrio entre o desejo da paciente, a análise da estrutura anatômica e a precisão da ciência estética.
@@ -908,7 +949,7 @@
                     
                     <div class="bg-brand-offwhite p-8 rounded-2xl border border-brand-sand/60 shadow-sm relative overflow-hidden group hover:border-brand-signature/50 transition-colors">
                         <span class="font-serif text-4xl text-brand-champagne font-light block mb-3">01</span>
-                        <h3 class="font-serif text-xl text-brand-dark mb-2">Avaliar</h3>
+                        <h3 class="font-serif text-xl text-brand-dark mb-2">Escutar</h3>
                         <p class="text-xs text-brand-text font-light leading-relaxed">Escuta ativa, mapeamento de queixas e análise minuciosa da anatomia e saúde da pele.</p>
                     </div>
 
@@ -1035,7 +1076,7 @@
                     Tudo começa com o seu <span class="italic text-brand-brown font-normal">objetivo.</span>
                 </h2>
                 <p class="text-brand-text font-light mt-4 text-base">
-                    Conheça as principais áreas de atuação da AS Beauty Center. Cada procedimento é indicado somente após criteriosa avaliação clínica.
+                    Conheça as principais áreas de atuação da AS Beauty Center. A indicação de cada procedimento depende de uma consulta individualizada.
                 </p>
             </div>
 
@@ -1150,7 +1191,7 @@
         <div class="max-w-5xl mx-auto px-6 text-center reveal">
             <h3 class="font-serif text-2xl sm:text-3xl text-brand-dark mb-3">Em dúvida sobre qual protocolo é ideal para você?</h3>
             <p class="text-brand-text font-light text-base mb-8 max-w-xl mx-auto">
-                Não é necessário decidir sozinha. A avaliação personalizada na AS Beauty Center é o primeiro passo para mapear suas necessidades reais.
+                Não é necessário decidir sozinha. A consulta individualizada na AS Beauty Center é o momento de conversar sobre suas necessidades e conhecer as possibilidades de cuidado.
             </p>
             <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20AS%20Beauty%20Center%20para%20entender%20qual%20o%20melhor%20tratamento%20para%20mim." target="_blank" class="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all shadow-md">
                 <span>Falar com a equipe AS Beauty Center</span>
@@ -1233,7 +1274,7 @@
                 <!-- Scene 02 -->
                 <div class="bg-brand-ivory p-8 rounded-2xl border border-brand-sand/50 relative reveal reveal-delay-1">
                     <span class="font-serif text-3xl text-brand-signature block mb-4">02 · Escuta</span>
-                    <h3 class="font-serif text-xl text-brand-dark mb-2">Avaliação sem pressa</h3>
+                    <h3 class="font-serif text-xl text-brand-dark mb-2">Consulta sem pressa</h3>
                     <p class="text-xs text-brand-text font-light leading-relaxed">Tempo dedicado exclusivamente a você para compreender seus objetivos, histórico e desejos estéticos.</p>
                 </div>
 
@@ -1462,7 +1503,7 @@
             </h2>
             
             <p class="text-brand-rose/80 font-light text-base sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-                Agende sua avaliação e descubra quais possibilidades fazem sentido para você na AS Beauty Center.
+                Agende sua consulta e conheça as possibilidades de cuidado da AS Beauty Center.
             </p>
             
             <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">

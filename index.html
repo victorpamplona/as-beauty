@@ -792,6 +792,181 @@
             #tratamentos.as-services .as-service-card.as-feature h3 {font-size:clamp(43px,11vw,60px);}
             #tratamentos.as-services .as-service-card {scroll-margin-top:85px;}
         }
+
+        /* ETAPA 03B — Grid editorial seguro em todas as larguras */
+        #tratamentos.as-services .as-services-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0,1fr));
+            gap: clamp(14px, 1.7vw, 24px);
+            align-items: stretch;
+        }
+        #tratamentos.as-services .as-service-card,
+        #tratamentos.as-services .as-service-card.as-feature {
+            grid-column: span 6;
+            min-width: 0;
+            width: 100%;
+            min-height: 465px;
+            height: 100%;
+            padding: clamp(27px, 3.3vw, 43px);
+            overflow: hidden;
+        }
+        #tratamentos.as-services .as-service-card.as-feature {min-height: 465px;}
+        #tratamentos.as-services .as-service-card-center {min-width:0;}
+        #tratamentos.as-services .as-service-card h3 {
+            max-width:100%;
+            min-width:0;
+            white-space:normal;
+            font-size:clamp(35px,3.25vw,58px);
+            line-height:1.04;
+            overflow-wrap:break-word;
+            hyphens:auto;
+            text-wrap:balance;
+        }
+        #tratamentos.as-services .as-service-card.as-feature h3 {
+            font-size:clamp(45px,4.2vw,68px);
+        }
+        #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {
+            font-size:clamp(33px,3.05vw,51px);
+            letter-spacing:-.035em;
+            line-height:1.05;
+        }
+        #tratamentos.as-services .as-service-card-top {margin-bottom:32px;}
+        #tratamentos.as-services .as-service-card-center {padding-bottom:30px;}
+        #tratamentos.as-services .as-service-card-center p {max-width:465px;}
+        #tratamentos.as-services .as-service-cta {
+            width:100%;
+            min-width:0;
+            padding-inline:0;
+            border-inline:0;
+            border-bottom:0;
+            border-radius:0;
+            outline-offset:5px;
+        }
+        #tratamentos.as-services .as-service-cta:focus-visible {outline:2px solid currentColor;}
+
+        /* Galeria: fotografias independentes, com respiro e enquadramento controlado */
+        #clinica .clinic-gallery {
+            display:grid;
+            grid-template-columns:repeat(12,minmax(0,1fr));
+            gap:clamp(16px,1.8vw,26px) !important;
+            align-items:stretch;
+        }
+        #clinica .clinic-gallery > .clinic-photo {
+            box-sizing:border-box;
+            min-width:0;
+            width:100%;
+            margin:0;
+            padding:0;
+            display:block;
+            position:relative;
+            overflow:hidden;
+            border-radius:18px !important;
+            border:1px solid rgba(129,109,74,.10);
+            box-shadow:0 16px 34px rgba(32,33,31,.05);
+            isolation:isolate;
+            aspect-ratio:3 / 4;
+            grid-column:span 3;
+        }
+        #clinica .clinic-gallery > .clinic-photo:nth-child(1) {
+            grid-column:span 7;
+            aspect-ratio:7 / 5;
+        }
+        #clinica .clinic-gallery > .clinic-photo:nth-child(2) {
+            grid-column:span 5;
+            aspect-ratio:auto;
+            min-height:100%;
+        }
+        #clinica .clinic-gallery > .clinic-photo:nth-child(n+3):nth-child(-n+5) {grid-column:span 4;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(n+6) {grid-column:span 3;}
+        #clinica .clinic-gallery > .clinic-photo img {
+            position:absolute;
+            inset:0;
+            display:block;
+            width:100%;
+            height:100%;
+            max-width:none;
+            object-fit:cover;
+            object-position:center;
+            transition:transform .85s cubic-bezier(.16,1,.3,1);
+        }
+        #clinica .clinic-gallery > .clinic-photo:nth-child(1) img {object-position:50% 50%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(2) img {object-position:50% 44%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(3) img {object-position:50% 42%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(4) img {object-position:52% 45%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(5) img {object-position:50% 35%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(6) img {object-position:50% 52%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(7) img {object-position:50% 48%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(8) img {object-position:50% 48%;}
+        #clinica .clinic-gallery > .clinic-photo:nth-child(9) img {object-position:50% 43%;}
+        #clinica .clinic-gallery > .clinic-photo figcaption {
+            position:absolute;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index:2;
+            padding:44px 17px 17px;
+            font:500 11px/1.5 Montserrat,sans-serif;
+            letter-spacing:.015em;
+            color:#fff;
+            background:linear-gradient(to top,rgba(13,15,14,.76),transparent);
+            pointer-events:none;
+        }
+        @media(hover:hover) and (pointer:fine) {
+            #clinica .clinic-gallery > .clinic-photo:hover img {transform:scale(1.035);}
+        }
+        @media (min-width:768px) and (max-width:1023px){
+            #clinica .clinic-gallery {grid-template-columns:repeat(2,minmax(0,1fr));}
+            #clinica .clinic-gallery > .clinic-photo {grid-column:span 1 !important;aspect-ratio:4 / 5;}
+            #clinica .clinic-gallery > .clinic-photo:first-child {grid-column:span 2 !important;aspect-ratio:16 / 9;}
+            #clinica .clinic-gallery > .clinic-photo:nth-child(2) {min-height:0;}
+            #tratamentos.as-services .as-service-card h3 {font-size:clamp(33px,4.2vw,46px);}
+            #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {font-size:clamp(30px,3.85vw,39px);}
+        }
+        @media (max-width:767px){
+            #tratamentos.as-services .as-services-grid {grid-template-columns:minmax(0,1fr);gap:14px;}
+            #tratamentos.as-services .as-service-card,
+            #tratamentos.as-services .as-service-card.as-feature {
+                grid-column:span 1;
+                min-height:0;
+                height:auto;
+                padding:28px 25px 25px;
+            }
+            #tratamentos.as-services .as-service-card h3,
+            #tratamentos.as-services .as-service-card.as-feature h3 {
+                font-size:clamp(36px,9vw,52px);
+            }
+            #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {
+                font-size:clamp(29px,7vw,42px);
+                letter-spacing:-.035em;
+            }
+            #tratamentos.as-services .as-service-card-top {margin-bottom:35px;}
+            #tratamentos.as-services .as-service-card-center {padding-bottom:33px;}
+            #clinica .clinic-gallery {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px !important;}
+            #clinica .clinic-gallery > .clinic-photo {
+                grid-column:span 1 !important;
+                aspect-ratio:3 / 4;
+                border-radius:12px !important;
+            }
+            #clinica .clinic-gallery > .clinic-photo:first-child {
+                grid-column:span 2 !important;
+                aspect-ratio:4 / 3;
+            }
+            #clinica .clinic-gallery > .clinic-photo:nth-child(2){min-height:0;aspect-ratio:3 / 4;}
+            #clinica .clinic-gallery > .clinic-photo figcaption {
+                padding:32px 10px 10px;
+                font-size:9px;
+                line-height:1.5;
+            }
+        }
+        @media (max-width:380px){
+            #clinica .clinic-gallery {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px !important;}
+            #clinica .clinic-gallery > .clinic-photo:not(:first-child) {grid-column:span 1 !important;aspect-ratio:3 / 4;}
+            #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {font-size:clamp(27px,7vw,31px);}
+        }
+        @media(prefers-reduced-motion:reduce){
+            #clinica .clinic-gallery > .clinic-photo img {transition:none !important;}
+            #clinica .clinic-gallery > .clinic-photo:hover img {transform:none !important;}
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -1244,7 +1419,7 @@
                 </div>
                 <p class="text-brand-text font-light max-w-sm leading-relaxed text-sm">Ambientes e momentos reais do atendimento. Conheça alguns detalhes da clínica antes da sua visita.</p>
             </div>
-            <div class="clinic-gallery grid grid-cols-2 md:grid-cols-12 gap-3 sm:gap-5">
+            <div class="clinic-gallery">
                 <figure class="clinic-photo col-span-2 md:col-span-7 aspect-[5/4] md:aspect-[7/5] reveal">
                     <img src="assets/clinica-atendimento.webp" loading="lazy" decoding="async" width="1400" height="1050" alt="Dra. Aline no espaço de atendimento da clínica">
                     <figcaption>Um atendimento que começa pela escuta</figcaption>

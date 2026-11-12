@@ -967,6 +967,29 @@
             #clinica .clinic-gallery > .clinic-photo img {transition:none !important;}
             #clinica .clinic-gallery > .clinic-photo:hover img {transform:none !important;}
         }
+
+        /* Link secundário — conteúdo do tratamento sem substituir agendamento contextual */
+        #tratamentos.as-services .as-service-detail-link {
+          display:inline-flex;
+          align-items:center;
+          gap:9px;
+          align-self:flex-start;
+          margin-top:23px;
+          padding-bottom:5px;
+          border-bottom:1px solid currentColor;
+          font:600 10px/1.5 Montserrat,sans-serif;
+          letter-spacing:.07em;
+          text-transform:uppercase;
+          color:inherit;
+          text-decoration:none;
+          transition:opacity .2s ease;
+        }
+        #tratamentos.as-services .as-service-detail-link:hover {opacity:.75;}
+        #tratamentos.as-services .as-service-detail-link span {font-size:14px;}
+        #tratamentos.as-services .as-service-card:has(.as-service-detail-link) {min-height:490px;}
+        @media(max-width:767px){
+          #tratamentos.as-services .as-service-card:has(.as-service-detail-link) {min-height:0;}
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -1321,6 +1344,7 @@
             <span class="as-service-kind">CORPO</span>
             <h3 id="as-treatment-title-01">CRIO AS</h3>
             <p>A gordura localizada é uma das preocupações que podem ser conversadas em consulta. Conheça a proposta CRIO AS e esclareça se essa abordagem faz sentido para o seu caso.</p>
+            <a class="as-service-detail-link" href="/tratamentos/crio-as/">Conhecer a CRIO AS <span aria-hidden="true">↗</span></a>
           </div>
           <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20CRIO%20AS%20e%20gordura%20localizada." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre CRIO AS">
             <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
@@ -1450,7 +1474,7 @@
                     <img src="assets/clinica-acolhimento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Momento de acolhimento registrado na clínica">
                 </figure>
                 <figure class="clinic-photo col-span-1 md:col-span-3 aspect-[3/4] reveal reveal-delay-3">
-                    <img src="assets/clinica-equipamento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Equipamento em destaque no espaço de atendimento">
+                    <img src="assets/clinica-equipamento.webp" loading="lazy" decoding="async" width="1000" height="1500" alt="Frasco de produto fotografado no espaço da clínica">
                 </figure>
             </div>
         </div>
@@ -1907,7 +1931,7 @@
                     const message = 'Olá! Acessei o site da AS Beauty Center e gostaria de agendar uma consulta individualizada para conversar sobre ' + selected.subject + '.';
                     link.href = 'https://api.whatsapp.com/send?phone=554888430101&text=' + encodeURIComponent(message);
                     const explore=document.getElementById('as-concern-explore');
-                    const details={gordura:'#tratamento-crio-as',flacidez:'#tratamento-flacidez-corporal',facial:'#tratamento-rejuvenescimento-facial',capilar:'#tratamento-terapias-capilares',pelos:'#tratamento-depilacao-laser'};
+                    const details={gordura:'/tratamentos/crio-as/',flacidez:'#tratamento-flacidez-corporal',facial:'#tratamento-rejuvenescimento-facial',capilar:'#tratamento-terapias-capilares',pelos:'#tratamento-depilacao-laser'};
                     if(explore&&details[button.dataset.concern])explore.href=details[button.dataset.concern];
 
                     // Mostra o painel de resultado no celular após uma seleção direta.

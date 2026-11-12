@@ -17,3 +17,35 @@
 @media(max-width:767px){.wrap{width:min(100% - 32px,1180px)}.header-row{min-height:70px}.brand-name{font-size:22px}.brand-symbol{width:34px;height:34px}.header-cta{padding:0 14px;font-size:9px;min-height:42px}.hero-grid{grid-template-columns:1fr;gap:35px;padding-bottom:60px}.breadcrumbs{padding:19px 0}.hero h1{font-size:clamp(48px,12vw,72px)}.hero .lead{font-size:13px;line-height:1.85}.hero-art{max-width:560px;padding:16px 0 0 16px}.hero-photo{height:440px}.hero-art:before{right:25px;bottom:35px}.hero-side-note{margin-left:16px}.section{padding:73px 0}.section-title{font-size:clamp(44px,10vw,62px)}.pain-grid,.steps{grid-template-columns:1fr;gap:12px}.pain-card{min-height:0;padding:25px}.pain-card .number{margin-bottom:35px}.explain-grid,.faq-container,.final-grid{grid-template-columns:1fr;gap:35px}.process-section .steps{margin-top:35px}.step .number{margin-bottom:18px}.final-action{justify-self:start}.text-link{margin-left:0;margin-top:18px}.float-contact{display:flex}.footer-row{flex-direction:column;align-items:flex-start}}
 @media(max-width:375px){.header-cta{font-size:8px;letter-spacing:.06em;min-height:40px;padding:0 11px}.brand-name{font-size:21px}.hero-photo{height:355px}.hero h1{font-size:46px}.button{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button,.as-service-card{transition:none}.button:hover{transform:none}}
+
+/* Ajustes finais de responsividade — páginas de tratamento */
+@media(max-width:960px){
+ .hero-grid{grid-template-columns:minmax(0,1fr);}
+ .hero-art{width:min(100%,590px);padding-top:24px;}
+ .hero h1{font-size:clamp(55px,8.1vw,81px);max-width:720px;}
+ .explain-grid{gap:38px;}
+ .faq-container{grid-template-columns:minmax(0,1fr);gap:33px;}
+ .faq-container .section-title{max-width:600px;}
+}
+@media(max-width:767px){
+ .hero h1{font-size:clamp(47px,11.4vw,69px);overflow-wrap:break-word;}
+ .hero-art{padding-top:16px;}
+ .hero-photo{height:clamp(350px,103vw,475px);}
+ .pain-card h3{overflow-wrap:break-word;}
+ .section-title{overflow-wrap:break-word;}
+ .faq-items details summary{font-size:13px;line-height:1.5;}
+}
+@media(max-width:420px){
+ .header-row{gap:8px;}
+ .brand{gap:7px;}
+ .brand-symbol{display:none;}
+ .brand-name{font-size:20px;white-space:nowrap;}
+ .header-cta{min-height:40px;padding:0 12px;font-size:8px;letter-spacing:.06em;gap:7px;}
+ .hero .lead{font-size:12px;}
+ .hero h1{font-size:clamp(44px,11.4vw,49px);}
+ .text-link{display:flex;width:max-content;}
+}
+@media(max-width:340px){
+ .brand-name{font-size:18px;}
+ .header-cta{font-size:7.7px;padding:0 10px;}
+}

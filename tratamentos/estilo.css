@@ -109,3 +109,50 @@
 @media (max-width:420px){
  .hero-art > .hero-side-note {min-height:64px;}
 }
+
+
+/* AS Beauty | CTAs e navegação livres de emojis e símbolos ilustrativos */
+.header-cta{
+   gap:0;
+   white-space:nowrap;
+   letter-spacing:.11em;
+}
+.button{
+   justify-content:center;
+   text-align:center;
+   gap:0;
+   font-size:11px;
+   letter-spacing:.075em;
+   line-height:1.45;
+}
+.button span:last-child {
+   font-size:inherit;
+   line-height:inherit;
+}
+.text-link{gap:0;}
+.float-contact {
+   width:auto;
+   min-width:108px;
+   height:46px;
+   padding:0 17px;
+   border-radius:999px;
+   font-family:Montserrat,Arial,sans-serif;
+   font-size:10px;
+   font-weight:600;
+   line-height:1;
+   letter-spacing:.09em;
+   text-transform:uppercase;
+   white-space:nowrap;
+}
+.float-contact:hover{background:#6F5B3E;}
+@media(max-width:767px){
+  .float-contact{
+    right:max(14px,env(safe-area-inset-right));
+    bottom:calc(14px + env(safe-area-inset-bottom));
+    padding:0 16px;
+  }
+}
+@media(max-width:375px){
+  .button{width:100%;text-align:center;justify-content:center;}
+  .float-contact{min-width:100px;font-size:9px;}
+}

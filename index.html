@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+    
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -1012,6 +1012,34 @@
             #clinica .clinic-gallery > .clinic-photo:first-child{grid-column:span 2;aspect-ratio:4/3;}
             #clinica .clinic-gallery > .clinic-photo:nth-child(2){grid-column:span 1;aspect-ratio:3/4;}
         }
+
+        /* CTAs editoriais sem emojis, ícones ou setas decorativas */
+        .as-menu-toggle {min-width:58px;min-height:40px;font:600 10px/1 Montserrat,sans-serif;letter-spacing:.11em;text-transform:uppercase;}
+        .as-concern-option .as-concern-arrow {
+            width:8px;height:8px;border:0;border-radius:50%;
+            background:rgba(129,109,74,.42);color:transparent;
+            flex:0 0 8px;transform:none;transition:background-color .25s ease;
+        }
+        .as-concern-option:hover .as-concern-arrow,
+        .as-concern-option.is-active .as-concern-arrow {
+            width:8px;height:8px;border:0;background:var(--as-olive);transform:none;
+        }
+        .as-whatsapp-float.as-contact-pill {
+            width:auto!important;min-width:110px!important;height:48px!important;
+            padding:0 18px!important;border-radius:999px!important;
+            background:#816D4A!important;color:#fff!important;
+            font:600 10px/1 Montserrat,sans-serif!important;
+            letter-spacing:.10em;text-transform:uppercase;white-space:nowrap;
+        }
+        .as-whatsapp-float.as-contact-pill:hover {background:#6F5B3E!important;transform:translateY(-2px);}
+        .as-service-detail-link {gap:0!important;}
+        @media(max-width:767px){
+            .as-whatsapp-float.as-contact-pill {
+                bottom:calc(14px + env(safe-area-inset-bottom,0px))!important;
+                right:max(14px,env(safe-area-inset-right,0px))!important;
+                height:46px!important;min-width:105px!important;
+            }
+        }
 </style>
 </head>
 <body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
@@ -1043,13 +1071,13 @@
             <div class="as-header-cta hidden xl:block">
                 <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="as-header-cta-link group" rel="noopener noreferrer" aria-label="Agendar consulta pelo WhatsApp">
                     <span>Agendar consulta</span>
-                    <i class="ph ph-whatsapp-logo text-base text-brand-champagne group-hover:text-white transition-colors"></i>
+                    
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button class="xl:hidden text-brand-dark text-2xl p-2" id="mobile-menu-btn" aria-label="Abrir menu">
-                <i class="ph ph-list"></i>
+            <button class="as-menu-toggle xl:hidden text-brand-dark p-2" id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="as-menu-label" aria-hidden="true">Menu</span>
             </button>
         </div>
 
@@ -1065,7 +1093,7 @@
                 <a href="#contato" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Localização e Contato</a>
                 <div class="pt-4 border-t border-brand-sand/30">
                     <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer" class="w-full bg-brand-dark text-white py-3 rounded-full text-center text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
-                        Agendar minha consulta <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+                        Agendar minha consulta 
                     </a>
                 </div>
             </nav>
@@ -1103,7 +1131,7 @@
                     <div class="flex flex-col sm:flex-row gap-4 mb-12">
                         <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer" class="as-primary-cta bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
                             <span>Quero agendar minha consulta</span>
-                            <i class="ph-bold ph-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            
                         </a>
                         <a href="#preocupacoes" class="as-secondary-cta px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
                             Descobrir por onde começar
@@ -1182,29 +1210,29 @@
                     <button type="button" class="as-concern-option is-active" data-concern="gordura" aria-pressed="true" aria-controls="as-concern-panel">
                         <span class="as-concern-index" aria-hidden="true">01</span>
                         <span class="as-concern-option-text">Gordura localizada</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                        <span class="as-concern-arrow" aria-hidden="true"></span>
                     </button>
                     <button type="button" class="as-concern-option" data-concern="flacidez" aria-pressed="false" aria-controls="as-concern-panel">
                         <span class="as-concern-index" aria-hidden="true">02</span>
                         <span class="as-concern-option-text">Flacidez corporal</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                        <span class="as-concern-arrow" aria-hidden="true"></span>
                     </button>
                     <button type="button" class="as-concern-option" data-concern="facial" aria-pressed="false" aria-controls="as-concern-panel">
                         <span class="as-concern-index" aria-hidden="true">03</span>
                         <span class="as-concern-option-text">Sinais do envelhecimento facial</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                        <span class="as-concern-arrow" aria-hidden="true"></span>
                     </button>
                     <button type="button" class="as-concern-option" data-concern="capilar" aria-pressed="false" aria-controls="as-concern-panel">
                         <span class="as-concern-index" aria-hidden="true">04</span>
                         <span class="as-concern-option-text">Queda capilar</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                        <span class="as-concern-arrow" aria-hidden="true"></span>
                     </button>
                     <button type="button" class="as-concern-option" data-concern="pelos" aria-pressed="false" aria-controls="as-concern-panel">
                         <span class="as-concern-index" aria-hidden="true">05</span>
                         <span class="as-concern-option-text">Pelos indesejados</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+                        <span class="as-concern-arrow" aria-hidden="true"></span>
                     </button>
-                    <p class="as-concerns-privacy"><i class="ph ph-lock-key" aria-hidden="true"></i> Sua escolha não fica armazenada neste site. Ao abrir o WhatsApp, o assunto é incluído na mensagem.</p>
+                    <p class="as-concerns-privacy"> Sua escolha não fica armazenada neste site. Ao abrir o WhatsApp, o assunto é incluído na mensagem.</p>
                 </div>
 
                 <div class="as-concern-panel" id="as-concern-panel" role="region" aria-label="Orientação sobre o assunto escolhido">
@@ -1224,9 +1252,9 @@
                             href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20individualizada%20para%20conversar%20sobre%20gordura%20localizada."
                             target="_blank" rel="noopener noreferrer" class="as-concern-cta">
                             <span>Conversar sobre minha consulta</span>
-                            <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+                            
                         </a>
-                        <a id="as-concern-explore" class="as-concern-explore" href="#tratamento-crio-as">Conhecer esta frente de cuidado <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
+                        <a id="as-concern-explore" class="as-concern-explore" href="#tratamento-crio-as">Conhecer esta frente de cuidado </a>
                         <span class="as-panel-note">A escolha do tratamento depende de uma consulta profissional.</span>
                     </div>
                 </div>
@@ -1249,7 +1277,7 @@
           <h2 id="as-method-title">Antes de escolher um tratamento, <em>existe uma conversa.</em></h2>
           <p>Não existe uma única resposta para todas as pessoas. Na consulta individualizada, você pode falar sobre suas preocupações, esclarecer dúvidas e compreender quais possibilidades merecem ser consideradas.</p>
           <a class="as-method-link" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20individualizada%20na%20AS%20Beauty%20Center." target="_blank" rel="noopener noreferrer">
-            Agendar minha consulta <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            Agendar minha consulta 
           </a>
         </div>
         <div class="as-method-steps reveal reveal-delay-1" aria-label="Como começa o atendimento">
@@ -1328,7 +1356,7 @@
 
                     <!-- CTA to Instagram -->
                     <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-brand-dark hover:text-brand-signature font-medium transition-colors group text-sm uppercase tracking-wider">
-                        <i class="ph ph-instagram-logo text-2xl text-brand-signature group-hover:scale-110 transition-transform"></i>
+                        
                         <span class="border-b border-brand-dark group-hover:border-brand-signature pb-1">Acompanhe o trabalho da Dra. Aline no Instagram</span>
                     </a>
 
@@ -1366,10 +1394,10 @@
             <span class="as-service-kind">CORPO</span>
             <h3 id="as-treatment-title-01">CRIO AS</h3>
             <p>A gordura localizada é uma das preocupações que podem ser conversadas em consulta. Conheça a proposta CRIO AS e esclareça se essa abordagem faz sentido para o seu caso.</p>
-            <a class="as-service-detail-link" href="/tratamentos/crio-as/">Conhecer a CRIO AS <span aria-hidden="true">↗</span></a>
+            <a class="as-service-detail-link" href="/tratamentos/crio-as/">Conhecer a CRIO AS </a>
           </div>
           <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20CRIO%20AS%20e%20gordura%20localizada." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre CRIO AS">
-            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            <span>Agendar consulta</span>
           </a>
         </article>
 
@@ -1379,10 +1407,10 @@
             <span class="as-service-kind">CORPO</span>
             <h3 id="as-treatment-title-02">Flacidez corporal</h3>
             <p>Mudanças na firmeza da pele são percebidas de maneiras diferentes. Saiba como a clínica aborda dúvidas sobre flacidez e estímulo de colágeno.</p>
-            <a class="as-service-detail-link" href="/tratamentos/flacidez-corporal/">Entender a flacidez <span aria-hidden="true">↗</span></a>
+            <a class="as-service-detail-link" href="/tratamentos/flacidez-corporal/">Entender a flacidez </a>
           </div>
           <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20flacidez%20corporal%20e%20est%C3%ADmulo%20de%20col%C3%A1geno." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Flacidez corporal">
-            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            <span>Agendar consulta</span>
           </a>
         </article>
 
@@ -1392,10 +1420,10 @@
             <span class="as-service-kind">PELE</span>
             <h3 id="as-treatment-title-03">Depilação a laser</h3>
             <p>Pelos indesejados ou desconforto com a rotina de depilação? Converse sobre o laser HAKON 4D, suas condições de atendimento e limitações.</p>
-            <a class="as-service-detail-link" href="/tratamentos/depilacao-a-laser/">Conhecer HAKON 4D <span aria-hidden="true">↗</span></a>
+            <a class="as-service-detail-link" href="/tratamentos/depilacao-a-laser/">Conhecer HAKON 4D </a>
           </div>
           <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20depila%C3%A7%C3%A3o%20a%20laser%20HAKON%204D." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Depilação a laser">
-            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            <span>Agendar consulta</span>
           </a>
         </article>
 
@@ -1405,10 +1433,10 @@
             <span class="as-service-kind">FACE</span>
             <h3 id="as-treatment-title-04">Rejuvenescimento facial</h3>
             <p>Linhas de expressão e mudanças faciais despertam expectativas diferentes. Conheça as possibilidades de consulta sobre toxina botulínica e cuidados faciais.</p>
-            <a class="as-service-detail-link" href="/tratamentos/rejuvenescimento-facial/">Conhecer cuidado facial <span aria-hidden="true">↗</span></a>
+            <a class="as-service-detail-link" href="/tratamentos/rejuvenescimento-facial/">Conhecer cuidado facial </a>
           </div>
           <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20toxina%20botul%C3%ADnica%20e%20rejuvenescimento%20facial." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Rejuvenescimento facial">
-            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            <span>Agendar consulta</span>
           </a>
         </article>
 
@@ -1418,10 +1446,10 @@
             <span class="as-service-kind">CABELOS</span>
             <h3 id="as-treatment-title-05">Terapias capilares</h3>
             <p>A queda capilar pode ter diferentes causas. O primeiro passo é conversar sobre suas preocupações e entender quais orientações profissionais são apropriadas.</p>
-            <a class="as-service-detail-link" href="/tratamentos/terapias-capilares/">Conhecer terapias capilares <span aria-hidden="true">↗</span></a>
+            <a class="as-service-detail-link" href="/tratamentos/terapias-capilares/">Conhecer terapias capilares </a>
           </div>
           <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20terapias%20capilares." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Terapias capilares">
-            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            <span>Agendar consulta</span>
           </a>
         </article>
 
@@ -1431,15 +1459,15 @@
             <span class="as-service-kind">CORPO</span>
             <h3 id="as-treatment-title-06">Drenagem linfática</h3>
             <p>Uma possibilidade de cuidado corporal sobre a qual vale esclarecer objetivos, indicação e condições de atendimento antes de agendar.</p>
-            <a class="as-service-detail-link" href="/tratamentos/drenagem-linfatica/">Conhecer a drenagem <span aria-hidden="true">↗</span></a>
+            <a class="as-service-detail-link" href="/tratamentos/drenagem-linfatica/">Conhecer a drenagem </a>
           </div>
           <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20drenagem%20linf%C3%A1tica." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Drenagem linfática">
-            <span>Agendar consulta</span><i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            <span>Agendar consulta</span>
           </a>
         </article></div>
         <div class="as-services-outro reveal">
           <div><span>AINDA TEM DÚVIDAS?</span><p>Você não precisa escolher um procedimento antes de conversar.</p></div>
-          <a href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20as%20possibilidades%20de%20atendimento%20da%20cl%C3%ADnica." target="_blank" rel="noopener noreferrer">Agendar consulta individualizada <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20as%20possibilidades%20de%20atendimento%20da%20cl%C3%ADnica." target="_blank" rel="noopener noreferrer">Agendar consulta individualizada </a>
         </div>
       </div>
     </section>
@@ -1453,7 +1481,7 @@
             </p>
             <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20AS%20Beauty%20Center%20para%20entender%20qual%20o%20melhor%20tratamento%20para%20mim." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all shadow-md">
                 <span>Falar com a equipe AS Beauty Center</span>
-                <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+                
             </a>
         </div>
     </section>
@@ -1568,14 +1596,8 @@
                     </h2>
                 </div>
                 <div class="mt-6 md:mt-0 flex items-center gap-3 bg-brand-offwhite px-5 py-3 rounded-full border border-brand-sand w-fit">
-                    <div class="flex text-[#D99B26] text-base">
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                    </div>
-                    <span class="font-serif font-bold text-brand-dark">5,0 ★ no Google</span>
+                    
+                    <span class="font-serif font-bold text-brand-dark">Nota 5,0 no Google</span>
                     <span class="text-xs text-brand-muted">(137 avaliações)</span>
                 </div>
             </div>
@@ -1586,9 +1608,7 @@
                 <!-- Main Spotlight Review -->
                 <div class="lg:col-span-6 bg-brand-offwhite p-10 lg:p-12 rounded-3xl border border-brand-sand/80 shadow-sm flex flex-col justify-between reveal">
                     <div>
-                        <div class="flex text-[#D99B26] text-lg mb-6">
-                            <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-                        </div>
+                        
                         <p class="font-serif text-2xl sm:text-3xl text-brand-dark font-light italic leading-relaxed mb-8">
                             “A clínica Beauty Center proporciona uma experiência verdadeiramente diferenciada. Cada detalhe é cuidadosamente pensado, e me senti extremamente confortável e segura do início ao fim.”
                         </p>
@@ -1608,7 +1628,7 @@
                     <!-- Review 2 -->
                     <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
                         <div>
-                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            
                             <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
                                 “Que profissional maravilhosa! Eu amei meu tratamento, tive um ótimo resultado e o atendimento é impecável.”
                             </p>
@@ -1622,7 +1642,7 @@
                     <!-- Review 3 -->
                     <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
                         <div>
-                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            
                             <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
                                 “A clínica é muito acolhedora. No meu primeiro atendimento, me senti extremamente confortável e segura com a Dra. Aline.”
                             </p>
@@ -1636,7 +1656,7 @@
                     <!-- Review 4 -->
                     <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
                         <div>
-                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            
                             <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
                                 “Desde a primeira consulta fui extremamente bem acolhida por toda a equipe. O ambiente é lindo e muito limpo.”
                             </p>
@@ -1650,7 +1670,7 @@
                     <!-- Review 5 -->
                     <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
                         <div>
-                            <div class="flex text-[#D99B26] text-sm mb-4"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                            
                             <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
                                 “Clínica linda, atendimento maravilhoso e serviço perfeito. Recomendo de olhos fechados em São José!”
                             </p>
@@ -1685,7 +1705,7 @@
 
                 <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center reveal reveal-delay-1">
                     <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer" class="bg-brand-champagne text-brand-dark px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-white transition-colors flex items-center gap-3 shadow-lg">
-                        <i class="ph ph-instagram-logo text-xl"></i>
+                        
                         <span>Acessar o Instagram</span>
                     </a>
                 </div>
@@ -1708,9 +1728,7 @@
                 <div class="space-y-8 mb-10">
                     
                     <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-full bg-brand-ivory border border-brand-sand flex items-center justify-center text-brand-signature text-xl shrink-0 mt-1">
-                            <i class="ph ph-map-pin"></i>
-                        </div>
+                        
                         <div>
                             <p class="font-serif text-lg text-brand-dark font-medium">AS Beauty Center</p>
                             <p class="text-sm text-brand-text font-light leading-relaxed mt-1">
@@ -1721,9 +1739,7 @@
                     </div>
 
                     <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 rounded-full bg-brand-ivory border border-brand-sand flex items-center justify-center text-brand-signature text-xl shrink-0 mt-1">
-                            <i class="ph ph-whatsapp-logo"></i>
-                        </div>
+                        
                         <div>
                             <p class="font-serif text-lg text-brand-dark font-medium">Agendamento & Informações</p>
                             <p class="text-sm text-brand-text font-light leading-relaxed mt-1">
@@ -1737,7 +1753,7 @@
 
                 <a href="https://maps.google.com/?q=Av.+João+Theodoro+da+Silva,+243+-+Roçado,+São+José+-+SC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 border border-brand-dark text-brand-dark px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-dark hover:text-white transition-all">
                     <span>Como Chegar no Google Maps</span>
-                    <i class="ph ph-arrow-up-right"></i>
+                    
                 </a>
             </div>
 
@@ -1767,7 +1783,7 @@
             
             <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">
                 <span>Agendar minha consulta</span>
-                <i class="ph ph-whatsapp-logo text-xl"></i>
+                
             </a>
 
             <div class="mt-8 pt-6 border-t border-white/10 text-xs text-brand-rose/50 uppercase tracking-widest font-light">
@@ -1816,11 +1832,11 @@
                 <div class="md:col-span-3 flex flex-col gap-4">
                     <span class="text-white uppercase tracking-widest text-[10px] font-bold mb-1">Canais</span>
                     <a href="https://api.whatsapp.com/send?phone=554888430101" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
-                        <i class="ph ph-whatsapp-logo text-lg text-brand-champagne"></i>
+                        
                         <span>(48) 98843-0101</span>
                     </a>
                     <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
-                        <i class="ph ph-instagram-logo text-lg text-brand-champagne"></i>
+                        
                         <span>@alinefarmaceutica</span>
                     </a>
                 </div>
@@ -1840,15 +1856,14 @@
         // Mobile Navigation Toggle Logic
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = menuBtn.querySelector('i');
+        const menuLabel = menuBtn.querySelector('.as-menu-label');
         const mobileLinks = document.querySelectorAll('.mobile-link');
 
         function setMenu(open) {
             mobileMenu.classList.toggle('hidden', !open);
             menuBtn.setAttribute('aria-expanded', String(open));
             menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-            menuIcon.classList.toggle('ph-x', open);
-            menuIcon.classList.toggle('ph-list', !open);
+            menuLabel.textContent = open ? 'Fechar' : 'Menu';
         }
 
         setMenu(false);
@@ -1977,9 +1992,9 @@
     <!-- WhatsApp flutuante: contato direto sem interromper a navegação -->
     <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta."
        target="_blank" rel="noopener noreferrer" aria-label="Agendar minha consulta pelo WhatsApp"
-       class="as-whatsapp-float fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brand-dark text-brand-champagne border border-brand-champagne/40 shadow-xl hover:bg-brand-signature hover:text-white hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-signature transition-colors duration-300"
+       class="as-whatsapp-float as-contact-pill"
        style="box-shadow:0 8px 32px rgba(0,0,0,.22);">
-        <i class="ph-fill ph-whatsapp-logo text-3xl" aria-hidden="true"></i>
+        <span>WhatsApp</span>
     </a>
 </body>
 </html>

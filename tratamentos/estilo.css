@@ -111,48 +111,64 @@
 }
 
 
-/* AS Beauty | CTAs e navegação livres de emojis e símbolos ilustrativos */
-.header-cta{
-   gap:0;
-   white-space:nowrap;
-   letter-spacing:.11em;
+
+/* AS Beauty — CTAs editoriais e WhatsApp com SVG, sem glifos de emoji */
+.header-cta {
+  gap:0;
+  white-space:nowrap;
+  letter-spacing:.11em;
 }
-.button{
-   justify-content:center;
-   text-align:center;
-   gap:0;
-   font-size:11px;
-   letter-spacing:.075em;
-   line-height:1.45;
+.button {
+  justify-content:center;
+  text-align:center;
+  gap:0;
+  font-size:11px;
+  letter-spacing:.075em;
+  line-height:1.45;
 }
-.button span:last-child {
-   font-size:inherit;
-   line-height:inherit;
-}
-.text-link{gap:0;}
+.text-link {gap:0;}
+/* Botões de consulta: foco no texto, sem setas ou pictogramas */
+.button > span:only-child {display:block;}
 .float-contact {
-   width:auto;
-   min-width:108px;
-   height:46px;
-   padding:0 17px;
-   border-radius:999px;
-   font-family:Montserrat,Arial,sans-serif;
-   font-size:10px;
-   font-weight:600;
-   line-height:1;
-   letter-spacing:.09em;
-   text-transform:uppercase;
-   white-space:nowrap;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:fixed;
+  z-index:75;
+  right:max(20px,env(safe-area-inset-right));
+  bottom:calc(20px + env(safe-area-inset-bottom));
+  width:56px;
+  min-width:56px;
+  height:56px;
+  padding:0;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.18);
+  background:var(--olive);
+  color:#FFFFFF;
+  box-shadow:0 10px 28px rgba(32,33,31,.19);
+  text-decoration:none;
+  transition:background-color .25s ease,transform .25s ease;
 }
-.float-contact:hover{background:#6F5B3E;}
-@media(max-width:767px){
-  .float-contact{
-    right:max(14px,env(safe-area-inset-right));
-    bottom:calc(14px + env(safe-area-inset-bottom));
-    padding:0 16px;
+.float-contact:hover {background:#6F5B3E;transform:translateY(-2px);}
+.float-contact:focus-visible {outline:2px solid var(--olive);outline-offset:4px;}
+.float-contact .as-whatsapp-svg {
+  display:block;
+  width:26px;
+  height:26px;
+  fill:currentColor;
+  flex:0 0 26px;
+}
+@media(max-width:767px) {
+  .float-contact {
+    display:flex;
+    right:max(16px,env(safe-area-inset-right));
+    bottom:calc(16px + env(safe-area-inset-bottom));
+    width:54px;
+    min-width:54px;
+    height:54px;
   }
 }
-@media(max-width:375px){
-  .button{width:100%;text-align:center;justify-content:center;}
-  .float-contact{min-width:100px;font-size:9px;}
+@media(prefers-reduced-motion:reduce){
+  .float-contact {transition:none!important;}
+  .float-contact:hover {transform:none!important;}
 }

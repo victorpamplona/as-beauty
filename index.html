@@ -1,2048 +1,426 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & Local Business Meta Tags -->
-    <title>AS Beauty Center | Estética Avançada em São José - SC</title>
-    <meta name="description" content="Conheça a AS Beauty Center em São José, SC. Explore cuidados estéticos e agende uma consulta individualizada com a Dra. Aline Schweitzer.">
-    <!-- Open Graph -->
-    <meta property="og:title" content="AS Beauty Center | Estética Avançada em São José">
-    <meta property="og:description" content="Conheça a AS Beauty Center em São José, SC. Explore cuidados estéticos e agende uma consulta individualizada com a Dra. Aline Schweitzer.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:site_name" content="AS Beauty Center">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="AS Beauty Center | São José, SC">
-    <meta name="twitter:description" content="Conheça a AS Beauty Center em São José, SC. Explore cuidados estéticos e agende uma consulta individualizada com a Dra. Aline Schweitzer.">
-    <meta name="theme-color" content="#816D4A">
-    <!-- Somente na branch de homologação. Remover antes de promover à produção e definir canonical do domínio final. -->
-    <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AS Beauty Center | Criomodelagem e Estética Avançada em São José - SC</title>
+  <meta name="description" content="Criomodelagem e estética avançada em São José, SC. Conheça os resultados da AS Beauty Center e agende sua consulta com a Dra. Aline Schweitzer pelo WhatsApp.">
+  <meta property="og:title" content="AS Beauty Center | Criomodelagem em São José - SC">
+  <meta property="og:description" content="Reduza medidas e valorize suas curvas com a criomodelagem. Agende sua consulta pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="AS Beauty Center">
+  <meta name="theme-color" content="#946446">
+  <!-- Somente em homologação. Remover antes de publicar no domínio final e definir canonical. -->
+  <meta name="robots" content="noindex, nofollow">
 
-    <!-- Fonts: Cormorant Garamond (Editorial Serif) & Montserrat (Modern Sans) -->
-    <link rel="preconnect" href="https://unpkg.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-    <link rel="preload" as="image" href="assets/hero-aline.webp" type="image/webp" fetchpriority="high">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Phosphor Icons -->
-    
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            offwhite: '#FAF8F5',
-                            ivory: '#F4F0EA',
-                            sand: '#E5DDD3',
-                            champagne: '#D8C5B0',
-                            rose: '#E8DCD5',
-                            signature: '#A67B6D', /* Dra. Aline's signature terracotta-rose accent */
-                            signaturelight: '#F5ECE8',
-                            brown: '#7A624A',
-                            dark: '#1C1A18',
-                            darker: '#131211',
-                            text: '#4A4744',
-                            muted: '#807C77'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        serif: ['Cormorant Garamond', 'serif'],
-                    },
-                    letterSpacing: {
-                        widest: '.2em',
-                        superwide: '.35em',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body {
-            background-color: #FAF8F5;
-            color: #4A4744;
-            font-family: 'Montserrat', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-
-        /* Editorial Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(28px);
-            transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-35px);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(35px);
-            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .reveal.active, .reveal-left.active, .reveal-right.active {
-            opacity: 1;
-            transform: translate(0, 0);
-        }
-
-        .reveal-delay-1 { transition-delay: 120ms; }
-        .reveal-delay-2 { transition-delay: 240ms; }
-        .reveal-delay-3 { transition-delay: 360ms; }
-
-        /* Custom Refined Scrollbar */
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #FAF8F5;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #D8C5B0;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #A67B6D;
-        }
-
-        /* Soft overlay gradient for editorial imagery */
-        .editorial-overlay::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(28, 26, 24, 0.6) 0%, rgba(28, 26, 24, 0.1) 60%, rgba(28, 26, 24, 0) 100%);
-        }
-
-        .editorial-overlay-light::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(250, 248, 245, 0.8) 0%, rgba(250, 248, 245, 0) 70%);
-        }
-
-        /* Image Subtle Hover Zoom */
-        .img-zoom-container {
-            overflow: hidden;
-        }
-        .img-zoom-container img {
-            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .img-zoom-container:hover img {
-            transform: scale(1.04);
-        }
-
-        /* ===== Mobile-first corrections ===== */
-        html { scroll-padding-top: 76px; }
-        body { min-width: 0; }
-        img { display: block; max-width: 100%; }
-        a, button { -webkit-tap-highlight-color: transparent; }
-        .mobile-link { line-height: 1.35; }
-
-        @media (max-width: 1023px) {
-            .reveal-left, .reveal-right { transform: translateY(20px); }
-            .reveal-left.active, .reveal-right.active { transform: translateY(0); }
-        }
-
-        @media (max-width: 639px) {
-            /* Header */
-            #header > div:first-child { height: 68px; padding-left: 16px; padding-right: 16px; }
-            #header .group { min-width: 0; gap: 8px; }
-            #header .group span:last-child { font-size: 17px; white-space: nowrap; }
-            #header .group span:first-child { width: 34px; height: 34px; font-size: 16px; flex: 0 0 auto; }
-            #mobile-menu { top: 68px; max-height: calc(100svh - 68px); overflow-y: auto; }
-            #mobile-menu nav { padding: 20px 18px calc(24px + env(safe-area-inset-bottom)); gap: 16px; }
-            #mobile-menu a { font-size: 11px; letter-spacing: .14em; }
-
-            /* Global rhythm */
-            section { scroll-margin-top: 68px; }
-            .max-w-7xl.mx-auto.px-6 { padding-left: 16px; padding-right: 16px; }
-
-            /* Hero */
-            #inicio { padding-top: 88px; padding-bottom: 48px; }
-            #inicio .grid { gap: 30px; }
-            #inicio .grid > div:first-child { min-width: 0; }
-            #inicio .inline-flex { max-width: 100%; flex-wrap: wrap; gap: 7px 9px; padding: 8px 12px; }
-            #inicio .inline-flex span { font-size: 9px; line-height: 1.3; letter-spacing: .12em; }
-            #inicio h1 { font-size: clamp(34px, 10.2vw, 46px); line-height: 1.02; margin-bottom: 18px; }
-            #inicio p { font-size: 14px; line-height: 1.7; margin-bottom: 24px; }
-            #inicio .flex-col.sm\:flex-row { gap: 10px; margin-bottom: 26px; }
-            #inicio .flex-col.sm\:flex-row a { width: 100%; min-height: 50px; padding: 14px 18px; text-align: center; }
-            #inicio .pt-8.border-t { padding-top: 18px; }
-            #inicio .pt-8.border-t .text-xs { font-size: 9px; line-height: 1.4; }
-            #inicio .pt-8.border-t .hidden.sm\:block { display: none; }
-            #inicio .aspect-\[3\/4\] { aspect-ratio: 0.82; max-width: 360px; }
-            #inicio .aspect-\[3\/4\] img { object-position: 50% 18%; }
-            #inicio .absolute.-bottom-6 { position: relative; inset: auto; margin: -32px 14px 0 14px; max-width: none; width: auto; padding: 16px; }
-            #inicio .absolute.-bottom-6 p.font-serif { font-size: 16px; }
-            #inicio .absolute.-bottom-6 p.text-\[11px\] { font-size: 9px; line-height: 1.4; }
-            #inicio .absolute.-bottom-6 .mt-3 { margin-top: 10px; padding-top: 10px; }
-            #inicio .absolute.-bottom-6 .mt-3 span { font-size: 9px; }
-            #inicio .absolute.-top-10 { width: 180px; height: 180px; right: -34px; top: -28px; }
-            #inicio .absolute.-bottom-10 { width: 170px; height: 170px; left: -28px; bottom: -36px; }
-
-            /* Signature strip */
-            #inicio + section { padding-top: 16px; padding-bottom: 16px; }
-            #inicio + section .max-w-7xl { gap: 8px; }
-            #inicio + section p { font-size: 15px; line-height: 1.45; }
-            #inicio + section span { font-size: 8px; line-height: 1.3; letter-spacing: .16em; }
-
-            /* Section spacing */
-            #posicionamento, #dra-aline, #tratamentos, #experiencia, #avaliacoes, #contato { padding-top: 56px; padding-bottom: 56px; }
-            #posicionamento h2, #dra-aline h2, #tratamentos h2, #experiencia h2, #avaliacoes h2, #contato h2 { font-size: clamp(30px, 8.5vw, 40px); line-height: 1.05; }
-            #posicionamento .grid, #dra-aline .grid, #contato .grid { gap: 30px; }
-            #posicionamento .reveal > p { font-size: 14px; line-height: 1.75; }
-            #posicionamento .grid.sm\:grid-cols-2 { gap: 10px; }
-            #posicionamento .grid.sm\:grid-cols-2 > div { padding: 18px; }
-            #posicionamento .grid.sm\:grid-cols-2 > div .font-serif.text-4xl { font-size: 32px; margin-bottom: 6px; }
-            #posicionamento .grid.sm\:grid-cols-2 > div h3 { font-size: 19px; }
-            #posicionamento .grid.sm\:grid-cols-2 > div p { font-size: 11px; line-height: 1.55; }
-
-            /* Aline */
-            #dra-aline .order-2 { order: 1; }
-            #dra-aline .order-1 { order: 2; }
-            #dra-aline .aspect-\[3\/4\] { aspect-ratio: 0.9; }
-            #dra-aline .aspect-\[3\/4\] img { object-position: 50% 16%; }
-            #dra-aline .absolute.-bottom-6 { position: relative; left: auto; right: auto; bottom: auto; margin: -22px 12px 0; }
-            #dra-aline .absolute.-bottom-6 p { font-size: 14px; line-height: 1.35; }
-            #dra-aline .grid.grid-cols-3 { grid-template-columns: 1fr; gap: 0; }
-            #dra-aline .grid.grid-cols-3 > div { padding: 12px 0; }
-            #dra-aline .grid.grid-cols-3 > div + div { border-left: 0; border-top: 1px solid rgba(216,197,176,.55); padding-left: 0; }
-            #dra-aline .grid.grid-cols-3 span.font-serif { font-size: 28px; }
-
-            /* Treatment cards */
-            #tratamentos .grid.md\:grid-cols-12 { gap: 12px; }
-            #tratamentos .grid.md\:grid-cols-12 > div { grid-column: span 12 / span 12 !important; padding: 22px; border-radius: 22px; }
-            #tratamentos .grid.md\:grid-cols-12 > div:first-child,
-            #tratamentos .grid.md\:grid-cols-12 > div:nth-child(2) { min-height: auto; }
-            #tratamentos .grid.md\:grid-cols-12 h3 { font-size: 30px; }
-            #tratamentos .grid.md\:grid-cols-12 p { font-size: 13px; line-height: 1.65; }
-            #tratamentos .grid.md\:grid-cols-12 ul { margin-bottom: 24px; }
-            #tratamentos .grid.md\:grid-cols-12 ul li { font-size: 9px; letter-spacing: .11em; line-height: 1.4; }
-            #tratamentos .grid.md\:grid-cols-12 a { max-width: 100%; }
-            #tratamentos .grid.md\:grid-cols-12 a span { line-height: 1.35; }
-
-            /* Mid CTA */
-            #tratamentos + section { padding: 42px 16px; }
-            #tratamentos + section h3 { font-size: 27px; line-height: 1.08; }
-            #tratamentos + section p { font-size: 14px; line-height: 1.65; }
-            #tratamentos + section a { width: 100%; min-height: 50px; padding: 14px 18px; }
-            #tratamentos + section a span { white-space: normal; }
-
-            /* Experience */
-            #experiencia .grid.sm\:grid-cols-2 { grid-template-columns: 1fr; gap: 12px; }
-            #experiencia .grid.sm\:grid-cols-2 > div { padding: 20px; }
-            #experiencia .grid.sm\:grid-cols-2 > div span.font-serif { font-size: 25px; }
-            #experiencia .grid.sm\:grid-cols-2 > div p { font-size: 11px; line-height: 1.6; }
-            #experiencia .text-center.mb-20 { margin-bottom: 30px; }
-
-            /* Reviews */
-            #avaliacoes .flex-col.md\:flex-row { gap: 18px; margin-bottom: 30px; }
-            #avaliacoes .flex-col.md\:flex-row > div:last-child { max-width: 100%; width: 100%; justify-content: center; }
-            #avaliacoes .grid.lg\:grid-cols-12 { gap: 12px; }
-            #avaliacoes .lg\:col-span-6, #avaliacoes .lg\:col-span-6.grid { grid-column: span 12 / span 12 !important; }
-            #avaliacoes .lg\:col-span-6.bg-brand-offwhite { padding: 22px; border-radius: 22px; }
-            #avaliacoes .lg\:col-span-6.bg-brand-offwhite p.font-serif { font-size: 23px; line-height: 1.4; }
-            #avaliacoes .lg\:col-span-6.grid { gap: 12px; }
-            #avaliacoes .lg\:col-span-6.grid > div { padding: 18px; }
-            #avaliacoes .lg\:col-span-6.grid p { font-size: 11px; line-height: 1.6; }
-            #avaliacoes .mt-6.md\:mt-0 { margin-top: 4px; }
-            #avaliacoes .mt-6.md\:mt-0 span { font-size: 10px; }
-
-            /* Authority block */
-            #avaliacoes + section { padding: 52px 16px; }
-            #avaliacoes + section .grid { gap: 24px; }
-            #avaliacoes + section h2 { font-size: 32px; line-height: 1.05; }
-            #avaliacoes + section p { font-size: 14px; line-height: 1.7; }
-            #avaliacoes + section a { width: 100%; justify-content: center; min-height: 50px; }
-
-            /* Contact / map */
-            #contato .space-y-8 { gap: 22px; }
-            #contato .space-y-8 > div { align-items: flex-start; }
-            #contato .space-y-8 p.text-sm { font-size: 13px; line-height: 1.5; }
-            #contato > div > div:last-child { height: 300px; border-radius: 22px; }
-            #contato iframe { height: 100%; min-height: 300px; }
-            #contato a { width: 100%; justify-content: center; }
-
-            /* Final CTA */
-            #contato + section { padding: 58px 16px 72px; }
-            #contato + section h2 { font-size: 38px; line-height: 1.02; }
-            #contato + section p { font-size: 14px; line-height: 1.7; }
-            #contato + section a { width: 100%; min-height: 54px; justify-content: center; padding-left: 18px; padding-right: 18px; }
-
-            /* Footer */
-            footer { padding-top: 44px; padding-bottom: 72px; }
-            footer .grid.md\:grid-cols-12 { gap: 28px; }
-            footer .md\:col-span-4.grid-cols-2 { grid-template-columns: 1fr 1fr; }
-            footer .pt-8.flex-col.sm\:flex-row { text-align: center; gap: 12px; }
-
-            /* Sticky CTA safe area */
-            body { padding-bottom: calc(82px + env(safe-area-inset-bottom)); }
-            .md\:hidden.fixed.bottom-0 { padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); }
-            .md\:hidden.fixed.bottom-0 a { min-height: 50px; }
-        }
-
-        @media (max-width: 380px) {
-            #inicio h1 { font-size: 32px; }
-            #header .group span:last-child { font-size: 15px; }
-            #inicio .pt-8.border-t .text-xs { font-size: 8px; }
-            #inicio .flex-col.sm\:flex-row a { font-size: 10px; letter-spacing: .12em; }
-            #posicionamento h2, #dra-aline h2, #tratamentos h2, #experiencia h2, #avaliacoes h2, #contato h2 { font-size: 29px; }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal, .reveal-left, .reveal-right, .img-zoom-container img { transition: none !important; transform: none !important; }
-        }
-    
-        /* Animações editoriais leves, adaptadas dos princípios Blur Reveal / stagger do Spell UI */
-        .hero-title { animation: as-text-reveal 1.15s .08s both cubic-bezier(.16,1,.3,1); }
-        .hero-subtitle { animation: as-text-reveal 1.15s .24s both cubic-bezier(.16,1,.3,1); }
-        .hero-image-mask { animation: as-image-reveal 1.35s .12s both cubic-bezier(.16,1,.3,1); }
-        @keyframes as-text-reveal {
-            from { opacity: 0; filter: blur(7px); transform: translateY(18px); }
-            to { opacity: 1; filter: blur(0); transform: translateY(0); }
-        }
-        @keyframes as-image-reveal {
-            from { opacity: 0; clip-path: inset(0 0 100% 0 round 4rem); transform: scale(1.035); }
-            to { opacity: 1; clip-path: inset(0 0 0 0 round 4rem); transform: scale(1); }
-        }
-        .clinic-photo { position: relative; overflow: hidden; border-radius: 1.2rem; background: #E5DDD3; isolation: isolate; }
-        .clinic-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.1s cubic-bezier(.16,1,.3,1); }
-        .clinic-photo:hover img { transform: scale(1.045); }
-        .clinic-photo figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 3.5rem 1rem 1rem; color: #fff; font-size: .7rem; font-weight: 500; letter-spacing: .07em; background: linear-gradient(transparent,rgba(0,0,0,.63)); }
-        .clinic-photo:not(:has(figcaption))::after { content: ""; position: absolute; inset: 0; border: 1px solid rgba(255,255,255,.2); border-radius: inherit; pointer-events: none; }
-        @media (prefers-reduced-motion: reduce) {
-            .hero-title,.hero-subtitle,.hero-image-mask { animation: none !important; opacity: 1 !important; filter: none !important; clip-path: none !important; transform: none !important; }
-            .clinic-photo img { transition: none !important; }
-            .clinic-photo:hover img { transform: none !important; }
-        }
-
-        /* AS Beauty | acabamento final: uma única ação flutuante sem sobreposições */
-        :root { --as-focus: #7A624A; }
-        html { scroll-padding-top: 96px; }
-        body { overflow-x: clip; }
-        a, button { touch-action: manipulation; }
-        a:focus-visible, button:focus-visible {
-            outline: 2px solid var(--as-focus);
-            outline-offset: 4px;
-        }
-        .as-whatsapp-float {
-            bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-            right: max(18px, env(safe-area-inset-right, 0px));
-            box-shadow: 0 12px 34px rgba(28,26,24,.20) !important;
-            isolation: isolate;
-        }
-        .as-whatsapp-float:focus-visible { outline-color: #A67B6D; }
-        #clinica { scroll-margin-top: 96px; }
-        #clinica .clinic-gallery { align-items: stretch; }
-        .clinic-photo { border-radius: 18px; box-shadow: 0 12px 30px rgba(28,26,24,.055); }
-        .clinic-photo figcaption { line-height: 1.45; text-wrap: balance; }
-        #tratamentos .grid > div, #posicionamento .grid.sm\\:grid-cols-2 > div {
-            transition: border-color .35s ease, box-shadow .35s ease, transform .5s cubic-bezier(.16,1,.3,1);
-        }
-        @media (hover:hover) and (pointer:fine) {
-            #tratamentos .grid > div:hover { transform: translateY(-3px); box-shadow: 0 18px 44px rgba(28,26,24,.07); }
-        }
-        @media (min-width: 768px) and (max-width: 1279px) {
-            #mobile-menu { top: 80px; max-height: calc(100dvh - 80px); overflow-y: auto; }
-        }
-        @media (max-width: 767px) {
-            #clinica { padding-top: 60px; padding-bottom: 60px; }
-            #clinica h2 { font-size: clamp(34px, 9vw, 46px); line-height: 1.04; }
-            #clinica .clinic-gallery { gap: 10px; }
-            .clinic-photo { border-radius: 12px; }
-            .clinic-photo figcaption { padding: 2rem .65rem .65rem; font-size: 10px; letter-spacing: .025em; }
-            .as-whatsapp-float { width: 56px; height: 56px; }
-            footer { padding-bottom: 56px; }
-        }
-        @media (max-width: 380px) {
-            #clinica .clinic-gallery { grid-template-columns: 1fr; }
-            #clinica .clinic-gallery .clinic-photo { grid-column: span 1 / span 1; aspect-ratio: 4/3; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-            .reveal, .reveal-left, .reveal-right { opacity: 1 !important; transform: none !important; filter: none !important; }
-        }
-
-        /* AS BEAUTY — PALETA V2 | ETAPA 01: Header, Hero e Assinatura */
-        :root {
-            --as-olive: #816D4A;
-            --as-lavender: #AFBEDF;
-            --as-taupe: #C3B9AF;
-            --as-white: #FFFFFF;
-            --as-ink: #20211F;
-            --as-blue-mist: #F1F4FA;
-        }
-        #header.as-header {
-            background: rgba(255,255,255,.92) !important;
-            border-bottom: 1px solid rgba(195,185,175,.35);
-            box-shadow: 0 8px 30px rgba(32,33,31,.025);
-        }
-        #header.as-header .as-brand-icon {
-            background: var(--as-olive);
-            color: var(--as-white);
-            border-color: rgba(129,109,74,.4);
-        }
-        #header.as-header .font-serif.italic.text-brand-signature { color: var(--as-olive); }
-        #header.as-header nav a:hover { color: var(--as-olive); }
-        #inicio.as-hero {
-            position: relative;
-            isolation: isolate;
-            background:
-                radial-gradient(ellipse 43% 64% at 92% 35%, rgba(175,190,223,.29), rgba(175,190,223,0) 95%),
-                linear-gradient(115deg, #fff 0%, #fff 53%, #FAFBFD 100%);
-        }
-        #inicio.as-hero .as-hero-eyebrow {
-            background: rgba(175,190,223,.20);
-            border: 1px solid rgba(129,109,74,.19);
-            color: var(--as-olive);
-            padding: .5rem .95rem;
-        }
-        #inicio.as-hero .as-hero-eyebrow > span:first-child {
-            background: var(--as-olive);
-        }
-        #inicio.as-hero .as-hero-eyebrow .text-brand-signature { color: var(--as-olive); }
-        #inicio.as-hero .as-hero-title {
-            max-width: 760px;
-            color: var(--as-ink);
-            letter-spacing: -.018em;
-            font-size: clamp(3.25rem, 5.2vw, 5.4rem);
-            line-height: 1.04;
-            text-wrap: balance;
-        }
-        #inicio.as-hero .as-hero-accent {
-            color: var(--as-olive);
-            line-height: 1.02;
-        }
-        #inicio.as-hero .as-hero-description {
-            max-width: 560px;
-            color: #51504B;
-            line-height: 1.8;
-            text-wrap: pretty;
-        }
-        #inicio.as-hero .as-primary-cta {
-            background: var(--as-olive);
-            border: 1px solid var(--as-olive);
-            color: var(--as-white);
-            box-shadow: 0 8px 22px rgba(129,109,74,.16);
-        }
-        #inicio.as-hero .as-primary-cta:hover {
-            background: #6F5B3E;
-            box-shadow: 0 14px 28px rgba(129,109,74,.20);
-        }
-        #inicio.as-hero .as-secondary-cta {
-            border-color: var(--as-taupe);
-            background: rgba(255,255,255,.75);
-            color: var(--as-ink);
-        }
-        #inicio.as-hero .as-secondary-cta:hover { background: var(--as-blue-mist); }
-        #inicio.as-hero .as-hero-facts {
-            border-color: rgba(195,185,175,.52);
-            color: var(--as-olive);
-        }
-        #inicio.as-hero .as-facts-line {
-            width: 20px; height: 1px; background: var(--as-taupe); display: inline-block;
-        }
-        #inicio.as-hero .as-image-shell {
-            border: 5px solid #fff;
-            border-radius: 132px 36px 34px 34px;
-            box-shadow: 0 25px 70px rgba(32,33,31,.15);
-        }
-        #inicio.as-hero .as-portrait-tag {
-            background: rgba(255,255,255,.96);
-            border: 1px solid rgba(195,185,175,.55);
-            color: var(--as-ink);
-            box-shadow: 0 14px 40px rgba(32,33,31,.12);
-            backdrop-filter: blur(9px);
-        }
-        #inicio.as-hero .as-caption-overline { color: var(--as-olive); }
-        #inicio.as-hero .as-portrait-tag p:last-child { color: #625E56; }
-        #inicio.as-hero .absolute.-top-10 { background: rgba(175,190,223,.37); }
-        #inicio.as-hero .absolute.-bottom-10 { background: rgba(195,185,175,.22); }
-        .as-signature-strip { background: var(--as-olive); border-color: rgba(255,255,255,.15); }
-        .as-signature-strip p { color: #fff; }
-        .as-signature-strip span { color: rgba(255,255,255,.83); }
-        @media (max-width: 1023px) {
-            #inicio.as-hero .as-hero-title { font-size: clamp(2.75rem, 6.8vw, 4.6rem); }
-        }
-        @media (max-width: 639px) {
-            #inicio.as-hero { background: linear-gradient(155deg, #fff 20%, #F1F4FA 100%); }
-            #inicio.as-hero .as-hero-title {
-                font-size: clamp(2.45rem, 9.35vw, 3.45rem);
-                line-height: 1.025;
-            }
-            #inicio.as-hero .as-hero-description {
-                font-size: 14px; line-height: 1.75; margin-bottom: 26px;
-            }
-            #inicio.as-hero .as-image-shell {
-                border-radius: 95px 24px 22px 22px;
-            }
-            #inicio.as-hero .as-portrait-tag {
-                margin-top: -24px; margin-left: 18px; margin-right: 18px;
-            }
-            #inicio.as-hero .as-hero-facts { gap: 10px; }
-            #inicio.as-hero .as-hero-facts span { font-size: 9px; line-height: 1.4; }
-            .as-signature-strip { padding-top: 20px; padding-bottom: 20px; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            #inicio.as-hero .hero-title,
-            #inicio.as-hero .hero-subtitle,
-            #inicio.as-hero .hero-image-mask {
-                animation: none !important; opacity: 1 !important;
-                transform: none !important; filter: none !important;
-                clip-path: none !important;
-            }
-        }
-
-        /* AS BEAUTY — ETAPA 02 | Jornada de conversão editorial */
-        .as-concerns {
-            position: relative;
-            padding: clamp(76px,9vw,130px) 24px 72px;
-            background: #F8F8F7;
-            color: #20211F;
-            scroll-margin-top: 90px;
-            isolation: isolate;
-        }
-        .as-concerns::before {
-            content: ""; position: absolute; inset: 0 0 auto auto;
-            height: 450px; width: 45%;
-            background: radial-gradient(ellipse at 80% 10%,rgba(175,190,223,.22),transparent 70%);
-            pointer-events: none; z-index: -1;
-        }
-        .as-concerns-container { max-width: 1200px; margin: 0 auto; }
-        .as-concerns-intro { max-width: 850px; margin-bottom: 64px; }
-        .as-concerns-kicker {
-            display:flex;align-items:center;gap:14px;
-            font-family:Montserrat,sans-serif;font-size:10px;letter-spacing:.2em;
-            font-weight:600;color:var(--as-olive);margin-bottom:28px;
-        }
-        .as-kicker-number { white-space:nowrap; }
-        .as-kicker-line { width:35px;height:1px;background:var(--as-taupe);flex:0 0 auto; }
-        .as-concerns-intro h2 {
-            font-family:'Cormorant Garamond',serif;
-            font-weight:400;letter-spacing:-.03em;
-            font-size:clamp(3.2rem,6.5vw,6.15rem);line-height:1.02;
-            text-wrap:balance;margin:0 0 23px;
-        }
-        .as-concerns-intro h2 em {color:var(--as-olive);font-weight:400;}
-        .as-concerns-intro > p {
-            max-width:630px;font-size:15px;line-height:1.9;color:#625F59;
-            font-weight:400;
-        }
-        .as-concerns-layout {
-            display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);
-            gap:clamp(32px,5vw,80px);align-items:start;
-        }
-        .as-concerns-small-label {
-            font:600 10px/1.5 Montserrat,sans-serif;
-            letter-spacing:.21em;color:var(--as-olive);
-            margin-bottom:20px;display:flex;gap:12px;justify-content:space-between;
-        }
-        .as-concerns-small-label span {color:#8B877F;font-weight:400;}
-        .as-concern-option {
-            appearance:none;border:0;border-top:1px solid #D7D2CB;
-            border-radius:0;background:transparent;width:100%;min-height:92px;
-            display:flex;align-items:center;gap:20px;padding:16px 5px;
-            text-align:left;cursor:pointer;color:#5E5C57;
-            transition:color .34s ease,padding .34s ease,background-color .34s ease;
-        }
-        .as-concern-option:last-of-type {border-bottom:1px solid #D7D2CB;}
-        .as-concern-option:hover,.as-concern-option.is-active {
-            color:var(--as-ink);padding-left:15px;
-        }
-        .as-concern-option.is-active {
-            background:linear-gradient(90deg,rgba(175,190,223,.19),transparent 85%);
-        }
-        .as-concern-index {
-            min-width:27px;align-self:center;color:#958F86;
-            font:500 10px/1 Montserrat,sans-serif;
-            letter-spacing:.08em;
-        }
-        .as-concern-option.is-active .as-concern-index { color:var(--as-olive); }
-        .as-concern-option-text {
-            font:400 clamp(25px,2.5vw,37px)/1.15 'Cormorant Garamond',serif;
-            letter-spacing:-.015em;flex:1;white-space:normal;
-        }
-        .as-concern-arrow {
-            width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
-            border:1px solid #D7D2CB;font-size:15px;flex:0 0 auto;
-            transition:transform .35s ease,background .35s ease,border-color .35s ease,color .35s ease;
-        }
-        .as-concern-option:hover .as-concern-arrow,
-        .as-concern-option.is-active .as-concern-arrow {
-            background:var(--as-olive);border-color:var(--as-olive);color:white;transform:rotate(45deg);
-        }
-        .as-concerns-privacy {
-            margin-top:22px;color:#77736E;font-size:11px;line-height:1.6;
-            display:flex;align-items:start;gap:8px;
-        }
-        .as-concerns-privacy i {font-size:15px;color:var(--as-olive);}
-        .as-concern-panel {
-            background:#302F2A;color:#fff;position:sticky;top:108px;
-            min-height:560px;display:flex;flex-direction:column;justify-content:space-between;
-            padding:clamp(32px,4vw,56px);border-radius:3px 70px 3px 3px;
-            isolation:isolate;overflow:hidden;scroll-margin-top:95px;
-            box-shadow:0 24px 64px rgba(48,47,42,.12);
-        }
-        .as-concern-panel::before {
-            content:"";position:absolute;inset:auto -160px -210px auto;width:520px;height:520px;
-            border:1px solid rgba(175,190,223,.19);border-radius:50%;pointer-events:none;z-index:-1;
-        }
-        .as-concern-panel::after {
-            content:"";position:absolute;inset:auto -100px -155px auto;width:420px;height:420px;
-            border:1px solid rgba(175,190,223,.14);border-radius:50%;pointer-events:none;z-index:-1;
-        }
-        .as-panel-decoration {
-            width:50px;height:7px;background:var(--as-lavender);
-            position:absolute;top:0;left:clamp(32px,4vw,56px);
-        }
-        .as-concern-panel-top {display:flex;justify-content:space-between;gap:16px;align-items:start;}
-        .as-panel-eyebrow,.as-panel-counter,.as-panel-subtitle,.as-panel-note {
-            font:500 10px/1.6 Montserrat,sans-serif;letter-spacing:.14em;
-        }
-        .as-panel-eyebrow {max-width:220px;color:#DADAD6;}
-        .as-panel-counter {color:var(--as-lavender);white-space:nowrap;}
-        .as-panel-subtitle {display:block;color:var(--as-lavender);margin-bottom:18px;}
-        .as-concern-panel-copy {margin:66px 0 64px;}
-        .as-concern-panel-copy h3 {
-            font:400 clamp(45px,5vw,75px)/.98 'Cormorant Garamond',serif;
-            text-wrap:balance;letter-spacing:-.03em;margin-bottom:25px;
-        }
-        .as-concern-panel-copy p {font:400 14px/1.85 Montserrat,sans-serif;max-width:390px;color:#E0DEDA;}
-        .as-concern-panel-bottom > p {font:400 14px/1.7 'Cormorant Garamond',serif;font-style:italic;color:#EAE4DC;margin-bottom:20px;font-size:21px;}
-        .as-concern-cta {
-            background:var(--as-lavender);color:#22252B;
-            display:flex;align-items:center;justify-content:space-between;gap:20px;
-            text-decoration:none;min-height:64px;padding:18px 22px;border-radius:3px;
-            font:600 11px/1.5 Montserrat,sans-serif;letter-spacing:.07em;
-            transition:background-color .3s ease,transform .3s ease;
-        }
-        .as-concern-cta:hover {background:#CED8EB;transform:translateY(-2px);}
-        .as-concern-cta i {font-size:20px;flex:0 0 auto;}
-        .as-panel-note {display:block;color:#BABBB7;letter-spacing:0;line-height:1.65;margin-top:17px;font-size:10px;}
-        .as-concerns-footer {
-            display:flex;align-items:center;gap:18px;color:#8C867C;
-            font:500 9px/1.6 Montserrat,sans-serif;letter-spacing:.14em;
-            margin-top:65px;
-        }
-        .as-concerns-footer-line {height:1px;width:75px;background:#CFC9C1;}
-        @media (max-width: 1000px) {
-            .as-concerns-layout {gap:26px;}
-            .as-concern-panel {padding:30px;min-height:520px;}
-            .as-concern-option {min-height:81px;gap:12px;}
-            .as-concern-option-text {font-size:28px;}
-            .as-concern-panel-copy h3 {font-size:55px;}
-        }
-        @media (max-width: 767px) {
-            .as-concerns {padding:68px 16px 50px;}
-            .as-concerns-intro {margin-bottom:35px;}
-            .as-concerns-kicker {gap:9px;font-size:8px;letter-spacing:.12em;flex-wrap:wrap;}
-            .as-kicker-line {width:17px;}
-            .as-concerns-intro h2 {font-size:clamp(44px,11vw,62px);line-height:1.01;margin-bottom:18px;}
-            .as-concerns-intro > p {font-size:13px;line-height:1.8;}
-            .as-concerns-layout {grid-template-columns:1fr;gap:30px;}
-            .as-concern-option {min-height:74px;}
-            .as-concern-option-text {font-size:clamp(25px,6.7vw,34px);}
-            .as-concern-arrow {width:32px;height:32px;}
-            .as-concerns-small-label {font-size:9px;}
-            .as-concern-panel {position:relative;top:auto;min-height:0;padding:33px 24px 27px;border-radius:2px 48px 2px 2px;}
-            .as-concern-panel-copy {margin:48px 0 42px;}
-            .as-concern-panel-copy h3 {font-size:clamp(48px,12vw,66px);}
-            .as-concern-panel-copy p {font-size:13px;}
-            .as-concern-panel-bottom > p {font-size:19px;}
-            .as-concern-cta {min-height:58px;padding:15px;font-size:10px;}
-            .as-concerns-footer {margin-top:34px;font-size:8px;flex-wrap:wrap;gap:10px;}
-            .as-concerns-footer-line {width:26px;}
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .as-concern-option,.as-concern-arrow,.as-concern-cta {transition:none!important;transform:none!important;}
-        }
-
-        /* CTA do header — uma linha, sem quebra ou compressão em desktop */
-        #header.as-header .as-header-cta { flex: 0 0 auto; min-width: max-content; }
-        #header.as-header .as-header-cta-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 11px;
-            min-height: 44px;
-            padding: 0 21px;
-            border: 1px solid var(--as-olive);
-            border-radius: 999px;
-            background: var(--as-olive);
-            color: #FFFFFF;
-            text-decoration: none;
-            white-space: nowrap;
-            font-family: Montserrat, sans-serif;
-            font-size: 10px;
-            line-height: 1;
-            font-weight: 600;
-            letter-spacing: .075em;
-            text-transform: uppercase;
-            transition: background .25s ease, transform .25s ease, box-shadow .25s ease;
-            box-shadow: 0 5px 16px rgba(129,109,74,.09);
-        }
-        #header.as-header .as-header-cta-link span { display: block; white-space: nowrap; }
-        #header.as-header .as-header-cta-link i { flex: 0 0 auto; color: #FFFFFF; font-size: 16px; line-height: 1; }
-        #header.as-header .as-header-cta-link:hover {
-            background: #6F5B3E;
-            transform: translateY(-1px);
-            box-shadow: 0 9px 24px rgba(129,109,74,.15);
-        }
-        @media (min-width: 1280px) and (max-width: 1510px) {
-            #header.as-header nav { gap: clamp(10px, 1.17vw, 18px); }
-            #header.as-header nav a { font-size: 10px; letter-spacing: .13em; white-space: nowrap; }
-            #header.as-header .as-header-cta-link { padding: 0 17px; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            #header.as-header .as-header-cta-link { transition: none !important; }
-            #header.as-header .as-header-cta-link:hover { transform: none !important; }
-        }
-
-        /* ETAPA 03: método e tratamentos, mantendo a identidade da paleta aprovada */
-        .as-method,.as-services{scroll-margin-top:96px}
-        .as-method{background:#F1F4FA;padding:clamp(86px,10vw,145px) 24px;position:relative;overflow:hidden}
-        .as-method::before{content:"";position:absolute;width:38vw;height:38vw;border:1px solid rgba(129,109,74,.13);border-radius:50%;left:-24vw;bottom:-22vw;pointer-events:none}
-        .as-method-container{max-width:1200px;margin:auto;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(45px,8vw,128px);align-items:center}
-        .as-method-kicker{display:flex;align-items:center;gap:13px;color:#816D4A;font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.18em;margin-bottom:30px}
-        .as-method-kicker span{display:inline-block;width:30px;height:1px;background:#816D4A}
-        .as-method-heading h2{font:400 clamp(53px,5.6vw,84px)/1.04 'Cormorant Garamond',serif;color:#242420;letter-spacing:-.032em;max-width:690px;text-wrap:balance;margin-bottom:31px}
-        .as-method-heading h2 em{font-weight:400;color:#816D4A}
-        .as-method-heading>p{font:400 14px/1.95 Montserrat,sans-serif;color:#575954;max-width:510px;margin-bottom:34px}
-        .as-method-link{display:inline-flex;align-items:center;gap:27px;border-bottom:1px solid #816D4A;padding:8px 0 15px;color:#5E4C33;text-decoration:none;font:600 11px/1.4 Montserrat,sans-serif;letter-spacing:.1em;text-transform:uppercase;transition:gap .25s}
-        .as-method-link:hover{gap:36px}
-        .as-method-link i{font-size:18px}
-        .as-method-steps{background:rgba(255,255,255,.83);border:1px solid rgba(195,185,175,.52);padding:clamp(28px,4vw,55px);box-shadow:0 18px 54px rgba(40,40,35,.035)}
-        .as-method-step{display:grid;grid-template-columns:35px minmax(0,1fr);gap:17px;padding:23px 0 24px;border-bottom:1px solid rgba(195,185,175,.5)}
-        .as-method-step:first-child{padding-top:0}
-        .as-method-num{color:#816D4A;font:600 11px/2 Montserrat,sans-serif;letter-spacing:.08em}
-        .as-method-step h3{font:400 35px/1.08 'Cormorant Garamond',serif;color:#252623;margin:0 0 8px}
-        .as-method-step p{font:400 12px/1.85 Montserrat,sans-serif;color:#5D5C58;max-width:330px;margin:0}
-        .as-method-footer{display:flex;align-items:center;gap:16px;margin-top:28px;font:italic 20px/1.3 'Cormorant Garamond',serif;color:#62594D}
-        .as-method-footer span{color:#816D4A;font-size:29px;letter-spacing:-.08em}
-        .as-services{padding:clamp(86px,10vw,145px) 24px clamp(70px,9vw,120px);background:#fff;color:#252623}
-        .as-services-container{max-width:1200px;margin:auto}
-        .as-services-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.6fr);align-items:end;gap:68px;margin-bottom:60px}
-        .as-services-kicker{font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.2em;color:#816D4A;display:block;margin-bottom:27px}
-        .as-services-intro h2{font:400 clamp(52px,5.7vw,88px)/1.035 'Cormorant Garamond',serif;letter-spacing:-.033em;color:#272824;text-wrap:balance}
-        .as-services-intro h2 em{font-weight:400;color:#816D4A}
-        .as-services-intro p{font:400 13px/1.9 Montserrat,sans-serif;color:#5B5D59;max-width:375px;padding-bottom:9px}
-        .as-services-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
-        .as-service-card{grid-column:span 4;min-width:0;min-height:446px;padding:35px 30px;position:relative;isolation:isolate;overflow:hidden;border:1px solid rgba(195,185,175,.34);display:flex;flex-direction:column;justify-content:space-between;background:#F8F8F6;transition:box-shadow .45s,transform .45s}
-        .as-service-card.as-feature{grid-column:span 6;min-height:490px;padding:41px 39px}
-        .as-service-card::before{content:"";position:absolute;z-index:-1;width:340px;height:340px;border-radius:50%;right:-170px;top:-160px;border:1px solid currentColor;opacity:.08;pointer-events:none}
-        .as-service-card::after{content:"";position:absolute;z-index:-1;width:230px;height:230px;border-radius:50%;right:-115px;top:-105px;border:1px solid currentColor;opacity:.055;pointer-events:none}
-        .as-service-card-top{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-bottom:47px}
-        .as-service-card-top span{font:600 9px/1.6 Montserrat,sans-serif;letter-spacing:.15em}
-        .as-service-card-top span:last-child{opacity:.55;white-space:nowrap}
-        .as-service-card-center{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:31px}
-        .as-service-kind{font:600 9px/1.5 Montserrat,sans-serif;letter-spacing:.23em;opacity:.74;margin-bottom:18px}
-        .as-service-card h3{font:400 clamp(39px,3.1vw,58px)/1 'Cormorant Garamond',serif;letter-spacing:-.025em;max-width:98%;text-wrap:balance;margin:0 0 18px}
-        .as-service-card.as-feature h3{font-size:clamp(50px,4.6vw,76px)}
-        .as-service-card-center p{font:400 12px/1.85 Montserrat,sans-serif;opacity:.9;max-width:430px;margin:0}
-        .as-service-cta{display:flex;align-items:center;justify-content:space-between;gap:20px;border-top:1px solid currentColor;padding-top:20px;min-height:42px;color:inherit;text-decoration:none;font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.11em;text-transform:uppercase}
-        .as-service-cta i{font-size:17px;flex:0 0 auto;border:1px solid currentColor;border-radius:50%;width:31px;height:31px;display:grid;place-items:center;transition:transform .3s}
-        .as-service-cta:hover i{transform:translate(2px,-2px)}
-        .as-service-card.as-olive{background:#816D4A;color:#fff}
-        .as-service-card.as-lavender{background:#AFBEDF;color:#232B37}
-        .as-service-card.as-white{background:#FCFCFA;color:#2E302D}
-        .as-service-card.as-taupe{background:#736D66;color:#fff}
-        .as-service-card.as-cream{background:#EFEAE3;color:#332E28}
-        .as-service-card.as-blue{background:#EAF0F8;color:#2C3540}
-        .as-services-outro{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:32px;padding:32px 0;border-top:1px solid #DDD5CC;border-bottom:1px solid #DDD5CC}
-        .as-services-outro span{font:600 9px/1.6 Montserrat,sans-serif;letter-spacing:.15em;color:#816D4A}
-        .as-services-outro p{font:400 27px/1.3 'Cormorant Garamond',serif;color:#363630;margin-top:7px}
-        .as-services-outro a{display:inline-flex;align-items:center;gap:13px;color:#816D4A;text-decoration:none;font:600 10px/1.5 Montserrat,sans-serif;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
-        .as-services-outro a:hover{text-decoration:underline;text-underline-offset:5px}
-        .as-services-outro i{font-size:17px}
-        @media (hover:hover) and (pointer:fine){.as-service-card:hover{transform:translateY(-3px);box-shadow:0 20px 45px rgba(32,33,31,.095)}}
-        @media (max-width:1100px){.as-method-container{gap:45px}.as-services-intro{gap:36px}.as-service-card{grid-column:span 6}}
-        @media (max-width:767px){
-          .as-method{padding:72px 16px 76px}.as-method-container{grid-template-columns:1fr;gap:44px}
-          .as-method-heading h2{font-size:clamp(44px,11vw,64px)}.as-method-heading>p{font-size:13px;line-height:1.8}
-          .as-method-steps{padding:27px 24px}.as-method-step h3{font-size:31px}
-          .as-services{padding:78px 16px 72px}.as-services-intro{grid-template-columns:1fr;gap:16px;margin-bottom:36px}
-          .as-services-intro h2{font-size:clamp(46px,10.5vw,67px)}
-          .as-services-grid{grid-template-columns:1fr;gap:12px}
-          .as-service-card,.as-service-card.as-feature{grid-column:span 1;min-height:360px;padding:28px 25px}
-          .as-service-card.as-feature h3,.as-service-card h3{font-size:clamp(43px,11vw,60px)}
-          .as-service-card-top{margin-bottom:40px}.as-service-card-center{padding-bottom:27px}
-          .as-services-outro{display:block;padding:28px 0}.as-services-outro p{font-size:25px;margin-bottom:18px}.as-services-outro a{white-space:normal}
-        }
-        @media (prefers-reduced-motion:reduce){.as-service-card,.as-service-cta i,.as-method-link{transition:none!important}.as-service-card:hover,.as-service-cta:hover i{transform:none!important}}
-        .as-concern-explore{display:inline-flex;align-items:center;gap:9px;color:#AFBEDF;text-underline-offset:5px;font:500 11px/1.7 Montserrat,sans-serif;margin-top:20px}
-        .as-concern-explore:hover{color:#fff}.as-concern-explore i{font-size:15px}
-
-        /* Prioridade de responsividade para a identidade editorial da etapa 03 */
-        #posicionamento.as-method .as-method-heading h2 {font-size:clamp(53px,5.6vw,84px);line-height:1.04;}
-        #tratamentos.as-services .as-services-intro h2 {font-size:clamp(52px,5.7vw,88px);line-height:1.035;}
-        #tratamentos.as-services .as-service-card h3 {font-size:clamp(39px,3.1vw,58px);line-height:1;}
-        #tratamentos.as-services .as-service-card.as-feature h3 {font-size:clamp(50px,4.6vw,76px);}
-        #tratamentos.as-services .as-service-card {scroll-margin-top:105px;}
-        @media(max-width:1100px){
-            #tratamentos.as-services .as-service-card {grid-column:span 6;}
-        }
-        @media(max-width:767px){
-            #posicionamento.as-method .as-method-heading h2 {font-size:clamp(44px,11vw,64px);}
-            #tratamentos.as-services .as-services-intro h2 {font-size:clamp(46px,10.5vw,67px);}
-            #tratamentos.as-services .as-service-card,
-            #tratamentos.as-services .as-service-card.as-feature {grid-column:span 1;}
-            #tratamentos.as-services .as-service-card h3,
-            #tratamentos.as-services .as-service-card.as-feature h3 {font-size:clamp(43px,11vw,60px);}
-            #tratamentos.as-services .as-service-card {scroll-margin-top:85px;}
-        }
-
-        /* ETAPA 03B — Grid editorial seguro em todas as larguras */
-        #tratamentos.as-services .as-services-grid {
-            display: grid;
-            grid-template-columns: repeat(12, minmax(0,1fr));
-            gap: clamp(14px, 1.7vw, 24px);
-            align-items: stretch;
-        }
-        #tratamentos.as-services .as-service-card,
-        #tratamentos.as-services .as-service-card.as-feature {
-            grid-column: span 6;
-            min-width: 0;
-            width: 100%;
-            min-height: 465px;
-            height: 100%;
-            padding: clamp(27px, 3.3vw, 43px);
-            overflow: hidden;
-        }
-        #tratamentos.as-services .as-service-card.as-feature {min-height: 465px;}
-        #tratamentos.as-services .as-service-card-center {min-width:0;}
-        #tratamentos.as-services .as-service-card h3 {
-            max-width:100%;
-            min-width:0;
-            white-space:normal;
-            font-size:clamp(35px,3.25vw,58px);
-            line-height:1.04;
-            overflow-wrap:break-word;
-            hyphens:auto;
-            text-wrap:balance;
-        }
-        #tratamentos.as-services .as-service-card.as-feature h3 {
-            font-size:clamp(45px,4.2vw,68px);
-        }
-        #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {
-            font-size:clamp(33px,3.05vw,51px);
-            letter-spacing:-.035em;
-            line-height:1.05;
-        }
-        #tratamentos.as-services .as-service-card-top {margin-bottom:32px;}
-        #tratamentos.as-services .as-service-card-center {padding-bottom:30px;}
-        #tratamentos.as-services .as-service-card-center p {max-width:465px;}
-        #tratamentos.as-services .as-service-cta {
-            width:100%;
-            min-width:0;
-            padding-inline:0;
-            border-inline:0;
-            border-bottom:0;
-            border-radius:0;
-            outline-offset:5px;
-        }
-        #tratamentos.as-services .as-service-cta:focus-visible {outline:2px solid currentColor;}
-
-        /* Galeria: fotografias independentes, com respiro e enquadramento controlado */
-        #clinica .clinic-gallery {
-            display:grid;
-            grid-template-columns:repeat(12,minmax(0,1fr));
-            gap:clamp(16px,1.8vw,26px) !important;
-            align-items:stretch;
-        }
-        #clinica .clinic-gallery > .clinic-photo {
-            box-sizing:border-box;
-            min-width:0;
-            width:100%;
-            margin:0;
-            padding:0;
-            display:block;
-            position:relative;
-            overflow:hidden;
-            border-radius:18px !important;
-            border:1px solid rgba(129,109,74,.10);
-            box-shadow:0 16px 34px rgba(32,33,31,.05);
-            isolation:isolate;
-            aspect-ratio:3 / 4;
-            grid-column:span 3;
-        }
-        #clinica .clinic-gallery > .clinic-photo:nth-child(1) {
-            grid-column:span 7;
-            aspect-ratio:7 / 5;
-        }
-        #clinica .clinic-gallery > .clinic-photo:nth-child(2) {
-            grid-column:span 5;
-            aspect-ratio:auto;
-            min-height:100%;
-        }
-        #clinica .clinic-gallery > .clinic-photo:nth-child(n+3):nth-child(-n+5) {grid-column:span 4;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(n+6) {grid-column:span 3;}
-        #clinica .clinic-gallery > .clinic-photo img {
-            position:absolute;
-            inset:0;
-            display:block;
-            width:100%;
-            height:100%;
-            max-width:none;
-            object-fit:cover;
-            object-position:center;
-            transition:transform .85s cubic-bezier(.16,1,.3,1);
-        }
-        #clinica .clinic-gallery > .clinic-photo:nth-child(1) img {object-position:50% 50%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(2) img {object-position:50% 44%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(3) img {object-position:50% 42%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(4) img {object-position:52% 45%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(5) img {object-position:50% 35%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(6) img {object-position:50% 52%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(7) img {object-position:50% 48%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(8) img {object-position:50% 48%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(9) img {object-position:50% 43%;}
-        #clinica .clinic-gallery > .clinic-photo figcaption {
-            position:absolute;
-            bottom:0;
-            left:0;
-            right:0;
-            z-index:2;
-            padding:44px 17px 17px;
-            font:500 11px/1.5 Montserrat,sans-serif;
-            letter-spacing:.015em;
-            color:#fff;
-            background:linear-gradient(to top,rgba(13,15,14,.76),transparent);
-            pointer-events:none;
-        }
-        @media(hover:hover) and (pointer:fine) {
-            #clinica .clinic-gallery > .clinic-photo:hover img {transform:scale(1.035);}
-        }
-        @media (min-width:768px) and (max-width:1023px){
-            #clinica .clinic-gallery {grid-template-columns:repeat(2,minmax(0,1fr));}
-            #clinica .clinic-gallery > .clinic-photo {grid-column:span 1 !important;aspect-ratio:4 / 5;}
-            #clinica .clinic-gallery > .clinic-photo:first-child {grid-column:span 2 !important;aspect-ratio:16 / 9;}
-            #clinica .clinic-gallery > .clinic-photo:nth-child(2) {min-height:0;}
-            #tratamentos.as-services .as-service-card h3 {font-size:clamp(33px,4.2vw,46px);}
-            #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {font-size:clamp(30px,3.85vw,39px);}
-        }
-        @media (max-width:767px){
-            #tratamentos.as-services .as-services-grid {grid-template-columns:minmax(0,1fr);gap:14px;}
-            #tratamentos.as-services .as-service-card,
-            #tratamentos.as-services .as-service-card.as-feature {
-                grid-column:span 1;
-                min-height:0;
-                height:auto;
-                padding:28px 25px 25px;
-            }
-            #tratamentos.as-services .as-service-card h3,
-            #tratamentos.as-services .as-service-card.as-feature h3 {
-                font-size:clamp(36px,9vw,52px);
-            }
-            #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {
-                font-size:clamp(29px,7vw,42px);
-                letter-spacing:-.035em;
-            }
-            #tratamentos.as-services .as-service-card-top {margin-bottom:35px;}
-            #tratamentos.as-services .as-service-card-center {padding-bottom:33px;}
-            #clinica .clinic-gallery {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px !important;}
-            #clinica .clinic-gallery > .clinic-photo {
-                grid-column:span 1 !important;
-                aspect-ratio:3 / 4;
-                border-radius:12px !important;
-            }
-            #clinica .clinic-gallery > .clinic-photo:first-child {
-                grid-column:span 2 !important;
-                aspect-ratio:4 / 3;
-            }
-            #clinica .clinic-gallery > .clinic-photo:nth-child(2){min-height:0;aspect-ratio:3 / 4;}
-            #clinica .clinic-gallery > .clinic-photo figcaption {
-                padding:32px 10px 10px;
-                font-size:9px;
-                line-height:1.5;
-            }
-        }
-        @media (max-width:380px){
-            #clinica .clinic-gallery {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px !important;}
-            #clinica .clinic-gallery > .clinic-photo:not(:first-child) {grid-column:span 1 !important;aspect-ratio:3 / 4;}
-            #tratamentos.as-services #tratamento-rejuvenescimento-facial h3 {font-size:clamp(27px,7vw,31px);}
-        }
-        @media(prefers-reduced-motion:reduce){
-            #clinica .clinic-gallery > .clinic-photo img {transition:none !important;}
-            #clinica .clinic-gallery > .clinic-photo:hover img {transform:none !important;}
-        }
-
-        /* Link secundário — conteúdo do tratamento sem substituir agendamento contextual */
-        #tratamentos.as-services .as-service-detail-link {
-          display:inline-flex;
-          align-items:center;
-          gap:9px;
-          align-self:flex-start;
-          margin-top:23px;
-          padding-bottom:5px;
-          border-bottom:1px solid currentColor;
-          font:600 10px/1.5 Montserrat,sans-serif;
-          letter-spacing:.07em;
-          text-transform:uppercase;
-          color:inherit;
-          text-decoration:none;
-          transition:opacity .2s ease;
-        }
-        #tratamentos.as-services .as-service-detail-link:hover {opacity:.75;}
-        #tratamentos.as-services .as-service-detail-link span {font-size:14px;}
-        #tratamentos.as-services .as-service-card:has(.as-service-detail-link) {min-height:490px;}
-        @media(max-width:767px){
-          #tratamentos.as-services .as-service-card:has(.as-service-detail-link) {min-height:0;}
-        }
-
-        /* Duas imagens da Dra. Aline no topo; fotografias da clínica abaixo */
-        #clinica .clinic-gallery > .clinic-photo:first-child{grid-column:span 7;aspect-ratio:7/6;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(2){grid-column:span 5;aspect-ratio:5/6;min-height:0;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(2) img{object-position:50% 42%;}
-        #clinica .clinic-gallery > .clinic-photo:nth-child(3) img{object-position:50% 48%;}
-        @media (min-width:768px) and (max-width:1023px){
-            #clinica .clinic-gallery > .clinic-photo:first-child{grid-column:span 2;aspect-ratio:16/9;}
-            #clinica .clinic-gallery > .clinic-photo:nth-child(2){grid-column:span 1;aspect-ratio:4/5;}
-        }
-        @media (max-width:767px){
-            #clinica .clinic-gallery > .clinic-photo:first-child{grid-column:span 2;aspect-ratio:4/3;}
-            #clinica .clinic-gallery > .clinic-photo:nth-child(2){grid-column:span 1;aspect-ratio:3/4;}
-        }
-
-
-        /* AS Beauty — iconografia minimalista (SVG, sem fonte de emojis) */
-        .as-menu-toggle {
-            min-width:58px; min-height:40px;
-            font:600 10px/1 Montserrat,sans-serif;
-            letter-spacing:.11em; text-transform:uppercase;
-        }
-        #preocupacoes .as-concern-option .as-concern-arrow {
-            display:grid; place-items:center; flex:0 0 36px;
-            width:36px; height:36px;
-            background:transparent; border:1px solid rgba(129,109,74,.28);
-            border-radius:50%; color:#816D4A;
-            transform:none; transition:background-color .25s ease,border-color .25s ease,color .25s ease;
-        }
-        #preocupacoes .as-concern-option:hover .as-concern-arrow,
-        #preocupacoes .as-concern-option.is-active .as-concern-arrow {
-            width:36px; height:36px; flex-basis:36px;
-            background:var(--as-olive); border-color:var(--as-olive);
-            color:#fff; transform:none;
-        }
-        #preocupacoes .as-arrow-svg {
-            display:block; width:15px; height:15px;
-            fill:none; stroke:currentColor;
-            transform:none !important;
-        }
-        #preocupacoes .as-cta-icon {
-            flex:0 0 38px; width:38px; height:38px;
-            display:grid; place-items:center;
-            padding-left:9px; border-left:1px solid rgba(32,35,42,.18);
-        }
-        #preocupacoes .as-cta-icon .as-arrow-svg {width:16px;height:16px;}
-        #preocupacoes .as-concern-cta {gap:13px;}
-        #preocupacoes .as-concern-cta > span:first-child {min-width:0;}
-        #tratamentos.as-services .as-service-detail-link {gap:0;}
-        .as-whatsapp-float.as-whatsapp-icon-button {
-            position:fixed; display:grid; place-items:center;
-            width:56px !important; min-width:56px !important;
-            height:56px !important; padding:0 !important;
-            background:var(--as-olive) !important;
-            color:#fff !important; border:1px solid rgba(255,255,255,.2);
-            border-radius:50% !important;
-            box-shadow:0 10px 28px rgba(33,35,32,.18);
-            transition:background-color .25s ease,transform .25s ease;
-        }
-        .as-whatsapp-float.as-whatsapp-icon-button:hover {
-            background:#6F5B3E !important;
-            transform:translateY(-2px);
-        }
-        .as-whatsapp-float.as-whatsapp-icon-button:focus-visible {
-            outline:2px solid var(--as-olive); outline-offset:4px;
-        }
-        .as-whatsapp-svg {
-            display:block; width:27px; height:27px;
-            fill:currentColor; flex:0 0 27px;
-        }
-        @media(max-width:767px) {
-            #preocupacoes .as-concern-option .as-concern-arrow,
-            #preocupacoes .as-concern-option:hover .as-concern-arrow,
-            #preocupacoes .as-concern-option.is-active .as-concern-arrow {
-                width:34px; height:34px; flex-basis:34px;
-            }
-            #preocupacoes .as-concern-cta {padding:13px 16px;}
-            #preocupacoes .as-cta-icon {width:33px;flex-basis:33px;height:33px;padding-left:7px;}
-            .as-whatsapp-float.as-whatsapp-icon-button {
-                width:54px !important; min-width:54px !important;
-                height:54px !important;
-                bottom:calc(16px + env(safe-area-inset-bottom,0px)) !important;
-                right:max(16px,env(safe-area-inset-right,0px)) !important;
-            }
-        }
-        @media(prefers-reduced-motion:reduce) {
-            .as-whatsapp-float.as-whatsapp-icon-button,
-            #preocupacoes .as-concern-option .as-concern-arrow {transition:none!important;}
-            .as-whatsapp-float.as-whatsapp-icon-button:hover {transform:none!important;}
-        }
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero-aline.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/home.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="pb-[72px] md:pb-0 relative selection:bg-brand-signature/20 selection:text-brand-dark">
+<body>
+  <!-- Ícones (traço fino, estilo Lucide) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-wa" viewBox="0 0 32 32"><path fill="currentColor" d="M19.11 17.44c-.27-.14-1.58-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.52-.44-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22s.95 2.58 1.08 2.76c.14.18 1.87 2.86 4.54 4.01.64.28 1.14.45 1.53.58.64.2 1.22.17 1.68.1.51-.08 1.58-.64 1.8-1.26.22-.62.22-1.15.15-1.26-.07-.11-.25-.18-.52-.31Z"/><path fill="currentColor" d="M16.03 3.2c-7.07 0-12.8 5.65-12.8 12.62 0 2.23.59 4.41 1.72 6.33L3.2 28.8l6.87-1.79a12.9 12.9 0 0 0 5.96 1.46h.01c7.06 0 12.79-5.65 12.79-12.63S23.1 3.2 16.03 3.2Zm0 23.14h-.01a10.8 10.8 0 0 1-5.5-1.5l-.39-.23-4.08 1.06 1.09-3.97-.25-.41a10.43 10.43 0 0 1-1.61-5.53c0-5.79 4.81-10.5 10.73-10.5 2.87 0 5.56 1.1 7.59 3.1a10.34 10.34 0 0 1 3.15 7.4c0 5.79-4.82 10.5-10.72 10.5Z"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+      <symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/><path d="m9 3.5 3 2.5 3-2.5M9 20.5l3-2.5 3 2.5M3.5 9 6 12l-2.5 3M20.5 9 18 12l2.5 3"/></symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+      <symbol id="i-sprout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+      <symbol id="i-drops" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    </defs>
+  </svg>
 
-    <!-- Minimalist Glassmorphic Header -->
-    <header class="as-header fixed w-full top-0 z-50 bg-brand-offwhite/85 backdrop-blur-md border-b border-brand-sand/30 transition-all duration-300" id="header">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            
-            <!-- Logo with Autoral Monogram -->
-            <a href="#" class="group flex items-center gap-3">
-                <span class="as-brand-icon w-9 h-9 rounded-full bg-brand-dark text-brand-ivory font-serif flex items-center justify-center text-lg font-light tracking-widest border border-brand-signature/30 transition-transform duration-300 group-hover:scale-105">AS</span>
-                <span class="font-serif text-xl md:text-2xl text-brand-dark tracking-wide font-normal">
-                    AS <span class="font-light italic text-brand-signature">Beauty Center</span>
-                </span>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="header" id="topo">
+    <div class="wrap header-row">
+      <a class="logo" href="#inicio" aria-label="AS Beauty Center — início">
+        <span class="logo-mark" aria-hidden="true">AS</span>
+        <span class="logo-text"><strong>Beauty Center</strong><span>Estética avançada</span></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#dra-aline">Dra. Aline</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn--primary" href="https://wa.me/5548988430101?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta pelo WhatsApp">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg>
+          <span class="btn-label">Agendar <span class="btn-label-long">consulta</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="menu-mobile" hidden>
+      <nav class="wrap" aria-label="Menu">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#dra-aline">Dra. Aline</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#duvidas">Dúvidas frequentes</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- 1. TOPO: clínica + criomodelagem -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="overline">Estética avançada em São José · SC</span>
+          <h1 id="hero-title">Criomodelagem: <em>reduza medidas e valorize suas curvas.</em></h1>
+          <p class="hero-lead">Tratamento não invasivo para gordura localizada, com plano individual e acompanhamento da Dra. Aline Schweitzer.</p>
+          <ul class="checks">
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Sem cirurgia e sem cortes</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Volta à rotina no mesmo dia</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plano pensado para o seu corpo</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="https://wa.me/5548988430101?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20sobre%20criomodelagem." target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#i-wa"/></svg>Quero agendar minha consulta
             </a>
+            <a class="link-arrow" href="#resultados">Ver resultados <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-item"><svg aria-hidden="true"><use href="#i-star"/></svg><span><strong>Nota 5,0</strong>no Google</span></div>
+            <div class="trust-item"><svg aria-hidden="true"><use href="#i-award"/></svg><span><strong>+2.000 profissionais</strong>formados pela Dra. Aline</span></div>
+            <div class="trust-item"><svg aria-hidden="true"><use href="#i-heart"/></svg><span><strong>Atendimento</strong>individualizado</span></div>
+          </div>
+        </div>
 
-            <!-- Navigation Links -->
-            <nav class="hidden xl:flex items-center gap-6 2xl:gap-9">
-                <a href="#inicio" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Início</a>
-                <a href="#preocupacoes" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Sua jornada</a>
-                <a href="#dra-aline" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Dra. Aline</a>
-                <a href="#tratamentos" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Tratamentos</a>
-                <a href="#experiencia" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Experiência</a>
-                <a href="#avaliacoes" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Avaliações</a>
-                <a href="#contato" class="text-xs uppercase tracking-widest text-brand-dark hover:text-brand-signature transition-colors font-medium">Contato</a>
-            </nav>
-
-            <!-- CTA Desktop: ação concisa, em uma linha -->
-            <div class="as-header-cta hidden xl:block">
-                <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" class="as-header-cta-link group" rel="noopener noreferrer" aria-label="Agendar consulta pelo WhatsApp">
-                    <span>Agendar consulta</span>
-                    
-                </a>
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <img src="assets/hero-aline.webp" alt="Dra. Aline Schweitzer na AS Beauty Center" width="1050" height="1400" fetchpriority="high">
+          </div>
+          <div class="hero-name"><strong>Dra. Aline Schweitzer</strong>Responsável técnica</div>
+          <!-- TROCAR: quando chegar a foto, colocar <img src="assets/resultados/crio-01-antes.webp" alt="..."> dentro de cada lado e remover data-pendente -->
+          <figure class="hero-ba">
+            <div class="ba">
+              <div class="ba-side" data-pendente><span>Antes</span></div>
+              <div class="ba-side" data-pendente><span>Depois</span></div>
             </div>
-
-            <!-- Mobile Menu Toggle Button -->
-            <button class="as-menu-toggle xl:hidden text-brand-dark p-2" id="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
-                <span class="as-menu-label" aria-hidden="true">Menu</span>
-            </button>
-        </div>
-
-        <!-- Mobile Navigation Dropdown -->
-        <div class="xl:hidden hidden bg-brand-offwhite border-b border-brand-sand/40 absolute w-full left-0 top-20 shadow-xl transition-all" id="mobile-menu">
-            <nav class="flex flex-col py-6 px-8 gap-5 border-t border-brand-sand/20">
-                <a href="#inicio" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Início</a>
-                <a href="#preocupacoes" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Sua jornada</a>
-                <a href="#dra-aline" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Dra. Aline Schweitzer</a>
-                <a href="#tratamentos" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Tratamentos</a>
-                <a href="#experiencia" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">A Experiência</a>
-                <a href="#avaliacoes" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Avaliações</a>
-                <a href="#contato" class="mobile-link text-sm uppercase tracking-widest font-medium text-brand-dark">Localização e Contato</a>
-                <div class="pt-4 border-t border-brand-sand/30">
-                    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer" class="w-full bg-brand-dark text-white py-3 rounded-full text-center text-xs uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
-                        Agendar minha consulta 
-                    </a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- HERO SECTION - Autoral Editorial Approach -->
-    <section id="inicio" class="as-hero pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-                
-                <!-- Left Narrative Content -->
-                <div class="lg:col-span-7 flex flex-col justify-center reveal-left">
-                    
-                    <!-- Location & Brand Signature Pill -->
-                    <div class="as-hero-eyebrow inline-flex items-center gap-3 px-4 py-1.5 bg-brand-signaturelight rounded-full w-fit mb-8 border border-brand-signature/20">
-                        <span class="w-2 h-2 rounded-full bg-brand-signature"></span>
-                        <span class="text-xs uppercase tracking-widest font-medium text-brand-signature">São José · Santa Catarina</span>
-                        <span class="text-brand-sand">|</span>
-                        <span class="text-xs uppercase tracking-widest text-brand-dark font-semibold">AS Beauty Center</span>
-                    </div>
-
-                    <!-- Main Editorial Title -->
-                    <h1 class="as-hero-title font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.08] mb-8 font-light hero-title">
-                        Seu corpo mudou. <span class="as-hero-accent italic font-normal text-brand-signature block">Seu tratamento também pode ser diferente.</span>
-                    </h1>
-
-                    <!-- Editorial Subheadline -->
-                    <p class="as-hero-description text-base sm:text-lg text-brand-text font-light leading-relaxed mb-10 max-w-xl hero-subtitle">
-                        Na AS Beauty Center, o cuidado começa pela sua história. Conheça opções de tratamento para gordura localizada, flacidez, sinais do envelhecimento e outras preocupações estéticas — sempre a partir de uma consulta individualizada.
-                    </p>
-
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
-                        <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer" class="as-primary-cta bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-3 group">
-                            <span>Quero agendar minha consulta</span>
-                            
-                        </a>
-                        <a href="#preocupacoes" class="as-secondary-cta px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold border border-brand-sand text-brand-dark hover:bg-brand-ivory transition-colors flex items-center justify-center">
-                            Descobrir por onde começar
-                        </a>
-                    </div>
-
-                    <!-- Hero information rail: credibility without unverified statistics -->
-                    <div class="as-hero-facts pt-7 border-t border-brand-sand/60 flex flex-wrap items-center gap-x-7 gap-y-3" aria-label="Informações sobre o atendimento">
-                        <span class="flex items-center gap-2 text-xs uppercase tracking-widest font-medium">
-                            <span class="as-facts-line" aria-hidden="true"></span> Atendimento individualizado
-                        </span>
-                        <span class="flex items-center gap-2 text-xs uppercase tracking-widest font-medium">
-                            <span class="as-facts-line" aria-hidden="true"></span> São José · Santa Catarina
-                        </span>
-                    </div>
-
-                </div>
-
-                <!-- Right Dominant Editorial Photo (Dra. Aline Real Photo) -->
-                <div class="lg:col-span-5 relative reveal-right">
-                    <div class="relative mx-auto max-w-md lg:max-w-none">
-                        
-                        <!-- Main Portrait Frame -->
-                        <div class="as-image-shell aspect-[3/4] rounded-t-[5rem] rounded-b-[2rem] overflow-hidden shadow-2xl border-4 border-white relative z-10 img-zoom-container hero-image-mask">
-                            <img src="assets/hero-aline.webp" onerror="this.onerror=null;this.src='aline-schewtizer-hero.png'" alt="Retrato profissional da Dra. Aline Schweitzer" fetchpriority="high" width="1050" height="1400" class="w-full h-full object-cover object-center">
-                        </div>
-
-                        <!-- Simplified editorial caption: no unsupported numeric claims -->
-                        <div class="as-portrait-tag absolute -bottom-6 -left-4 sm:-left-8 z-20 bg-white p-6 rounded-2xl shadow-xl max-w-[280px]">
-                            <span class="as-caption-overline block text-[10px] uppercase tracking-widest font-semibold mb-2">AS Beauty Center</span>
-                            <p class="font-serif text-xl font-normal leading-snug">Dra. Aline Schweitzer</p>
-                            <p class="text-[11px] font-light mt-1">Atendimento individualizado · São José, SC</p>
-                        </div>
-
-                        <!-- Abstract Luxe Background Element -->
-                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-brand-rose/50 rounded-full blur-3xl -z-0 pointer-events-none"></div>
-                        <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-brand-champagne/40 rounded-full blur-3xl -z-0 pointer-events-none"></div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- RECURRENT BRAND SIGNATURE STRIP (Editorial Divider) -->
-    <section class="as-signature-strip py-6 bg-brand-dark text-brand-ivory border-y border-brand-champagne/20">
-        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center sm:justify-between items-center gap-4 text-center sm:text-left">
-            <p class="font-serif italic text-lg sm:text-xl text-brand-champagne font-light">
-                “Estética de resultado. Com estratégia, naturalidade e propósito.”
-            </p>
-            <span class="text-xs uppercase tracking-widest text-brand-rose/70 font-medium">
-                AS Beauty Center · Dra. Aline Schweitzer
-            </span>
-        </div>
-    </section>
-
-
-    <!-- ETAPA 02 — Jornada interativa por preocupações, sem diagnóstico ou coleta de dados -->
-    <section id="preocupacoes" class="as-concerns" aria-labelledby="as-concerns-heading">
-        <div class="as-concerns-container">
-            <div class="as-concerns-intro reveal">
-                <div class="as-concerns-kicker">
-                    <span class="as-kicker-number">01 / SUA JORNADA</span>
-                    <span class="as-kicker-line" aria-hidden="true"></span>
-                    <span>O PRIMEIRO PASSO É UMA CONVERSA</span>
-                </div>
-                <h2 id="as-concerns-heading">O que você gostaria de <em>cuidar hoje?</em></h2>
-                <p>Antes de falar sobre procedimentos, queremos entender o que faz sentido para você. Escolha o assunto que mais desperta seu interesse.</p>
-            </div>
-
-            <div class="as-concerns-layout">
-                <div class="as-concerns-chooser" role="group" aria-label="Selecione o assunto de interesse">
-                    <p class="as-concerns-small-label">ESCOLHA UMA PREOCUPAÇÃO <span aria-hidden="true">— 01 A 05</span></p>
-                    <button type="button" class="as-concern-option is-active" data-concern="gordura" aria-pressed="true" aria-controls="as-concern-panel">
-                        <span class="as-concern-index" aria-hidden="true">01</span>
-                        <span class="as-concern-option-text">Gordura localizada</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><svg class="as-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M10 8h6v6"/></svg></span>
-                    </button>
-                    <button type="button" class="as-concern-option" data-concern="flacidez" aria-pressed="false" aria-controls="as-concern-panel">
-                        <span class="as-concern-index" aria-hidden="true">02</span>
-                        <span class="as-concern-option-text">Flacidez corporal</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><svg class="as-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M10 8h6v6"/></svg></span>
-                    </button>
-                    <button type="button" class="as-concern-option" data-concern="facial" aria-pressed="false" aria-controls="as-concern-panel">
-                        <span class="as-concern-index" aria-hidden="true">03</span>
-                        <span class="as-concern-option-text">Sinais do envelhecimento facial</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><svg class="as-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M10 8h6v6"/></svg></span>
-                    </button>
-                    <button type="button" class="as-concern-option" data-concern="capilar" aria-pressed="false" aria-controls="as-concern-panel">
-                        <span class="as-concern-index" aria-hidden="true">04</span>
-                        <span class="as-concern-option-text">Queda capilar</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><svg class="as-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M10 8h6v6"/></svg></span>
-                    </button>
-                    <button type="button" class="as-concern-option" data-concern="pelos" aria-pressed="false" aria-controls="as-concern-panel">
-                        <span class="as-concern-index" aria-hidden="true">05</span>
-                        <span class="as-concern-option-text">Pelos indesejados</span>
-                        <span class="as-concern-arrow" aria-hidden="true"><svg class="as-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M10 8h6v6"/></svg></span>
-                    </button>
-                    <p class="as-concerns-privacy"> Sua escolha não fica armazenada neste site. Ao abrir o WhatsApp, o assunto é incluído na mensagem.</p>
-                </div>
-
-                <div class="as-concern-panel" id="as-concern-panel" role="region" aria-label="Orientação sobre o assunto escolhido">
-                    <span class="as-panel-decoration" aria-hidden="true"></span>
-                    <div class="as-concern-panel-top">
-                        <span class="as-panel-eyebrow">ESCUTA, CUIDADO E INDIVIDUALIDADE</span>
-                        <span class="as-panel-counter" id="as-concern-counter" aria-hidden="true">01 / 05</span>
-                    </div>
-                    <div class="as-concern-panel-copy">
-                        <span class="as-panel-subtitle">SUA ESCOLHA</span>
-                        <h3 id="as-concern-title" aria-live="polite">Gordura localizada</h3>
-                        <p id="as-concern-description">Cada corpo tem suas particularidades. Uma consulta individualizada é o momento de conversar sobre o que incomoda você e conhecer possibilidades de cuidado.</p>
-                    </div>
-                    <div class="as-concern-panel-bottom">
-                        <p>Uma conversa pode ser o começo de um cuidado mais consciente.</p>
-                        <a id="as-concern-whatsapp"
-                            href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20individualizada%20para%20conversar%20sobre%20gordura%20localizada."
-                            target="_blank" rel="noopener noreferrer" class="as-concern-cta">
-                            <span>Conversar sobre minha consulta</span>
-                            <span class="as-cta-icon" aria-hidden="true"><svg class="as-arrow-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M10 8h6v6"/></svg></span>
-                        </a>
-                        <a id="as-concern-explore" class="as-concern-explore" href="#tratamento-crio-as">Conhecer esta frente de cuidado </a>
-                        <span class="as-panel-note">A escolha do tratamento depende de uma consulta profissional.</span>
-                    </div>
-                </div>
-            </div>
-            <div class="as-concerns-footer">
-                <span>AS BEAUTY CENTER</span>
-                <span class="as-concerns-footer-line" aria-hidden="true"></span>
-                <span>SEU CUIDADO COMEÇA COM VOCÊ</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDITORIAL POSITIONING SECTION -->
-    
-    <!-- ETAPA 03 | Filosofia orientada à consulta -->
-    <section id="posicionamento" class="as-method" aria-labelledby="as-method-title">
-      <div class="as-method-container">
-        <div class="as-method-heading reveal">
-          <span class="as-method-kicker"><span aria-hidden="true"></span> O JEITO AS BEAUTY DE CUIDAR</span>
-          <h2 id="as-method-title">Antes de escolher um tratamento, <em>existe uma conversa.</em></h2>
-          <p>Não existe uma única resposta para todas as pessoas. Na consulta individualizada, você pode falar sobre suas preocupações, esclarecer dúvidas e compreender quais possibilidades merecem ser consideradas.</p>
-          <a class="as-method-link" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20individualizada%20na%20AS%20Beauty%20Center." target="_blank" rel="noopener noreferrer">
-            Agendar minha consulta 
-          </a>
-        </div>
-        <div class="as-method-steps reveal reveal-delay-1" aria-label="Como começa o atendimento">
-          <div class="as-method-step"><span class="as-method-num">01</span><div><h3>Escutar</h3><p>Entender o que você deseja cuidar e quais são suas dúvidas.</p></div></div>
-          <div class="as-method-step"><span class="as-method-num">02</span><div><h3>Considerar</h3><p>Conversar sobre as possibilidades e os limites de cada abordagem.</p></div></div>
-          <div class="as-method-step"><span class="as-method-num">03</span><div><h3>Orientar</h3><p>Esclarecer os próximos passos de acordo com suas necessidades.</p></div></div>
-          <div class="as-method-footer"><span aria-hidden="true">AS</span> O cuidado faz mais sentido quando começa por você.</div>
+            <figcaption>Resultados podem variar de acordo com cada paciente.</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- DRA. ALINE SCHWEITZER AUTHORITY SECTION -->
-    <section id="dra-aline" class="py-24 bg-brand-offwhite overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="grid lg:grid-cols-12 gap-16 items-center">
-                
-                <!-- Real Photo of Dra. Aline Schweitzer -->
-                <div class="lg:col-span-5 relative order-2 lg:order-1 reveal">
-                    <div class="relative">
-                        <!-- Main Image -->
-                        <div class="aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-2 border-brand-sand img-zoom-container">
-                            <img src="assets/aline-retrato.webp" onerror="this.onerror=null;this.src='aline-schewtizer.png'" alt="Dra. Aline Schweitzer na clínica" loading="lazy" width="901" height="1400" class="w-full h-full object-cover">
-                        </div>
-
-                        <!-- Accent Line Frame -->
-                        <div class="absolute -bottom-6 -right-6 w-full h-full border border-brand-signature/30 rounded-2xl -z-10 hidden sm:block"></div>
-                        
-                        <!-- Floating Quote Pill -->
-                        <div class="absolute -bottom-6 left-6 right-6 bg-brand-offwhite/95 backdrop-blur-md p-5 rounded-xl shadow-lg border border-brand-sand text-center">
-                            <p class="font-serif italic text-brand-dark text-sm sm:text-base">
-                                “Cuidar da estética também é entender a pessoa por trás dela.”
-                            </p>
-                            <span class="text-[10px] uppercase tracking-widest text-brand-signature font-semibold block mt-1.5">— Dra. Aline Schweitzer</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Editorial Content -->
-                <div class="lg:col-span-7 order-1 lg:order-2 reveal">
-                    
-                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">A Especialista à frente da clínica</span>
-                    
-                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light leading-tight mb-4">
-                        Dra. Aline Schweitzer
-                    </h2>
-                    
-                    <p class="text-sm uppercase tracking-widest text-brand-brown font-semibold mb-8 border-b border-brand-sand pb-4">
-                        Alta performance em estética avançada
-                    </p>
-
-                    <div class="space-y-5 text-brand-text font-light text-base leading-relaxed mb-10">
-                        <p>
-                            Com uma trajetória construída em torno da ciência da estética, da precisão técnica e do aprimoramento constante, Aline criou a <strong>AS Beauty Center</strong> para ser a expressão de seu compromisso com a excelência.
-                        </p>
-                        <p>
-                            Atuando no ensino e na mentoria, já formou mais de 2.000 profissionais em todo o país. Essa bagagem acadêmica e prática garante que cada protocolo executado na clínica siga os mais elevados padrões de segurança e efetividade.
-                        </p>
-                    </div>
-
-                    <!-- Highlight Metrics Strip -->
-                    <div class="grid grid-cols-3 gap-4 py-6 px-6 bg-brand-ivory rounded-2xl border border-brand-sand/50 mb-8">
-                        <div>
-                            <span class="font-serif text-2xl sm:text-3xl text-brand-dark font-medium block">26,7k</span>
-                            <span class="text-[10px] uppercase tracking-wider text-brand-muted block mt-1">Comunidade Digital</span>
-                        </div>
-                        <div class="border-x border-brand-sand/60 px-4">
-                            <span class="font-serif text-2xl sm:text-3xl text-brand-dark font-medium block">+2.000</span>
-                            <span class="text-[10px] uppercase tracking-wider text-brand-muted block mt-1">Alunos Formados</span>
-                        </div>
-                        <div class="pl-2">
-                            <span class="font-serif text-2xl sm:text-3xl text-brand-signature font-medium block">100%</span>
-                            <span class="text-[10px] uppercase tracking-wider text-brand-muted block mt-1">Foco Individual</span>
-                        </div>
-                    </div>
-
-                    <!-- CTA to Instagram -->
-                    <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 text-brand-dark hover:text-brand-signature font-medium transition-colors group text-sm uppercase tracking-wider">
-                        
-                        <span class="border-b border-brand-dark group-hover:border-brand-signature pb-1">Acompanhe o trabalho da Dra. Aline no Instagram</span>
-                    </a>
-
-                </div>
-
-            </div>
-
+    <!-- 2. ANTES E DEPOIS -->
+    <section class="section section--soft" id="resultados" aria-labelledby="resultados-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <span class="overline">Resultados reais</span>
+          <h2 class="section-title" id="resultados-title">Veja a diferença da <em>criomodelagem</em></h2>
+          <p class="section-lead">Casos de pacientes atendidas na AS Beauty Center.</p>
         </div>
-    </section>
-
-    <!-- INTERSTITIAL EDITORIAL PAUSE -->
-    <section class="py-16 bg-brand-ivory text-center relative overflow-hidden border-y border-brand-sand/40">
-        <div class="max-w-4xl mx-auto px-6 reveal">
-            <span class="text-[11px] uppercase tracking-superwide text-brand-signature font-bold block mb-3">Conceito AS</span>
-            <p class="font-serif text-2xl sm:text-3xl lg:text-4xl text-brand-dark font-light leading-relaxed italic">
-                “Beleza não precisa ser exagerada. Precisa fazer sentido para você.”
-            </p>
+        <!-- TROCAR: fotos de antes e depois da criomodelagem (2 a 3 casos) -->
+        <div class="results-grid">
+          <figure class="result-card reveal">
+            <div class="ba"><div class="ba-side" data-pendente><span>Antes</span></div><div class="ba-side" data-pendente><span>Depois</span></div></div>
+            <h3>Caso 01</h3><p>Criomodelagem</p>
+          </figure>
+          <figure class="result-card reveal">
+            <div class="ba"><div class="ba-side" data-pendente><span>Antes</span></div><div class="ba-side" data-pendente><span>Depois</span></div></div>
+            <h3>Caso 02</h3><p>Criomodelagem</p>
+          </figure>
+          <figure class="result-card reveal">
+            <div class="ba"><div class="ba-side" data-pendente><span>Antes</span></div><div class="ba-side" data-pendente><span>Depois</span></div></div>
+            <h3>Caso 03</h3><p>Criomodelagem</p>
+          </figure>
         </div>
-    </section>
 
-    <!-- TREATMENTS SECTION - Asymmetrical Editorial Layout -->
-    
-    <!-- ETAPA 03 | Apresentação editorial dos seis tratamentos -->
-    <section id="tratamentos" class="as-services" aria-labelledby="as-services-title">
-      <div class="as-services-container">
-        <div class="as-services-intro reveal">
-          <div><span class="as-services-kicker">TRATAMENTOS · AS BEAUTY CENTER / 03</span>
-            <h2 id="as-services-title">Cada preocupação tem <em>sua própria história.</em></h2></div>
-          <p>Conheça as frentes de atendimento da clínica. A indicação de procedimentos e a definição de um plano dependem de uma consulta individualizada.</p>
+        <div class="results-others">
+          <h3 class="reveal">Outros procedimentos</h3>
+          <!-- TROCAR: antes e depois de outros procedimentos (opcional; pode remover o bloco se não houver) -->
+          <div class="results-grid results-grid--small">
+            <figure class="result-card reveal">
+              <div class="ba"><div class="ba-side" data-pendente><span>Antes</span></div><div class="ba-side" data-pendente><span>Depois</span></div></div>
+              <h3>Flacidez corporal</h3>
+            </figure>
+            <figure class="result-card reveal">
+              <div class="ba"><div class="ba-side" data-pendente><span>Antes</span></div><div class="ba-side" data-pendente><span>Depois</span></div></div>
+              <h3>Rejuvenescimento facial</h3>
+            </figure>
+            <figure class="result-card reveal">
+              <div class="ba"><div class="ba-side" data-pendente><span>Antes</span></div><div class="ba-side" data-pendente><span>Depois</span></div></div>
+              <h3>Terapia capilar</h3>
+            </figure>
+          </div>
         </div>
-        <div class="as-services-grid">
-        <article class="as-service-card as-olive as-feature reveal" id="tratamento-crio-as" data-future-path="/tratamentos/crio-as/" aria-labelledby="as-treatment-title-01">
-          <div class="as-service-card-top"><span>GORDURA LOCALIZADA</span><span>01 / 06</span></div>
-          <div class="as-service-card-center">
-            <span class="as-service-kind">CORPO</span>
-            <h3 id="as-treatment-title-01">CRIO AS</h3>
-            <p>A gordura localizada é uma das preocupações que podem ser conversadas em consulta. Conheça a proposta CRIO AS e esclareça se essa abordagem faz sentido para o seu caso.</p>
-            <a class="as-service-detail-link" href="/tratamentos/crio-as/">Conhecer a CRIO AS </a>
-          </div>
-          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20CRIO%20AS%20e%20gordura%20localizada." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre CRIO AS">
-            <span>Agendar consulta</span>
-          </a>
-        </article>
 
-        <article class="as-service-card as-lavender as-feature reveal" id="tratamento-flacidez-corporal" data-future-path="/tratamentos/flacidez-corporal/" aria-labelledby="as-treatment-title-02">
-          <div class="as-service-card-top"><span>FIRMEZA DA PELE</span><span>02 / 06</span></div>
-          <div class="as-service-card-center">
-            <span class="as-service-kind">CORPO</span>
-            <h3 id="as-treatment-title-02">Flacidez corporal</h3>
-            <p>Mudanças na firmeza da pele são percebidas de maneiras diferentes. Saiba como a clínica aborda dúvidas sobre flacidez e estímulo de colágeno.</p>
-            <a class="as-service-detail-link" href="/tratamentos/flacidez-corporal/">Entender a flacidez </a>
-          </div>
-          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20flacidez%20corporal%20e%20est%C3%ADmulo%20de%20col%C3%A1geno." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Flacidez corporal">
-            <span>Agendar consulta</span>
+        <div class="results-foot">
+          <small>Os resultados variam de pessoa para pessoa. A indicação é feita na consulta.</small>
+          <a class="btn btn--primary" href="https://wa.me/5548988430101?text=Ol%C3%A1!%20Vi%20os%20resultados%20no%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>Quero agendar minha consulta
           </a>
-        </article>
-
-        <article class="as-service-card as-white  reveal" id="tratamento-depilacao-laser" data-future-path="/tratamentos/depilacao-a-laser/" aria-labelledby="as-treatment-title-03">
-          <div class="as-service-card-top"><span>HAKON 4D</span><span>03 / 06</span></div>
-          <div class="as-service-card-center">
-            <span class="as-service-kind">PELE</span>
-            <h3 id="as-treatment-title-03">Depilação a laser</h3>
-            <p>Pelos indesejados ou desconforto com a rotina de depilação? Converse sobre o laser HAKON 4D, suas condições de atendimento e limitações.</p>
-            <a class="as-service-detail-link" href="/tratamentos/depilacao-a-laser/">Conhecer HAKON 4D </a>
-          </div>
-          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20depila%C3%A7%C3%A3o%20a%20laser%20HAKON%204D." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Depilação a laser">
-            <span>Agendar consulta</span>
-          </a>
-        </article>
-
-        <article class="as-service-card as-taupe  reveal" id="tratamento-rejuvenescimento-facial" data-future-path="/tratamentos/rejuvenescimento-facial/" aria-labelledby="as-treatment-title-04">
-          <div class="as-service-card-top"><span>TOXINA BOTULÍNICA</span><span>04 / 06</span></div>
-          <div class="as-service-card-center">
-            <span class="as-service-kind">FACE</span>
-            <h3 id="as-treatment-title-04">Rejuvenescimento facial</h3>
-            <p>Linhas de expressão e mudanças faciais despertam expectativas diferentes. Conheça as possibilidades de consulta sobre toxina botulínica e cuidados faciais.</p>
-            <a class="as-service-detail-link" href="/tratamentos/rejuvenescimento-facial/">Conhecer cuidado facial </a>
-          </div>
-          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20toxina%20botul%C3%ADnica%20e%20rejuvenescimento%20facial." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Rejuvenescimento facial">
-            <span>Agendar consulta</span>
-          </a>
-        </article>
-
-        <article class="as-service-card as-cream  reveal" id="tratamento-terapias-capilares" data-future-path="/tratamentos/terapias-capilares/" aria-labelledby="as-treatment-title-05">
-          <div class="as-service-card-top"><span>SAÚDE DOS FIOS</span><span>05 / 06</span></div>
-          <div class="as-service-card-center">
-            <span class="as-service-kind">CABELOS</span>
-            <h3 id="as-treatment-title-05">Terapias capilares</h3>
-            <p>A queda capilar pode ter diferentes causas. O primeiro passo é conversar sobre suas preocupações e entender quais orientações profissionais são apropriadas.</p>
-            <a class="as-service-detail-link" href="/tratamentos/terapias-capilares/">Conhecer terapias capilares </a>
-          </div>
-          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20terapias%20capilares." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Terapias capilares">
-            <span>Agendar consulta</span>
-          </a>
-        </article>
-
-        <article class="as-service-card as-blue  reveal" id="tratamento-drenagem-linfatica" data-future-path="/tratamentos/drenagem-linfatica/" aria-labelledby="as-treatment-title-06">
-          <div class="as-service-card-top"><span>CUIDADO CORPORAL</span><span>06 / 06</span></div>
-          <div class="as-service-card-center">
-            <span class="as-service-kind">CORPO</span>
-            <h3 id="as-treatment-title-06">Drenagem linfática</h3>
-            <p>Uma possibilidade de cuidado corporal sobre a qual vale esclarecer objetivos, indicação e condições de atendimento antes de agendar.</p>
-            <a class="as-service-detail-link" href="/tratamentos/drenagem-linfatica/">Conhecer a drenagem </a>
-          </div>
-          <a class="as-service-cta" href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20drenagem%20linf%C3%A1tica." target="_blank" rel="noopener noreferrer" aria-label="Agendar consulta sobre Drenagem linfática">
-            <span>Agendar consulta</span>
-          </a>
-        </article></div>
-        <div class="as-services-outro reveal">
-          <div><span>AINDA TEM DÚVIDAS?</span><p>Você não precisa escolher um procedimento antes de conversar.</p></div>
-          <a href="https://api.whatsapp.com/send?phone=554888430101&amp;text=Ol%C3%A1!%20Acessei%20o%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta%20para%20conversar%20sobre%20as%20possibilidades%20de%20atendimento%20da%20cl%C3%ADnica." target="_blank" rel="noopener noreferrer">Agendar consulta individualizada </a>
         </div>
       </div>
     </section>
 
-    <!-- CONTEXTUAL CONVERSION BLOCK (Mid-Page Natural CTA) -->
-    <section class="py-16 bg-brand-sand/30 border-y border-brand-sand/50">
-        <div class="max-w-5xl mx-auto px-6 text-center reveal">
-            <h3 class="font-serif text-2xl sm:text-3xl text-brand-dark mb-3">Em dúvida sobre qual protocolo é ideal para você?</h3>
-            <p class="text-brand-text font-light text-base mb-8 max-w-xl mx-auto">
-                Não é necessário decidir sozinha. A consulta individualizada na AS Beauty Center é o momento de conversar sobre suas necessidades e conhecer as possibilidades de cuidado.
-            </p>
-            <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20AS%20Beauty%20Center%20para%20entender%20qual%20o%20melhor%20tratamento%20para%20mim." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-brand-dark text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-signature transition-all shadow-md">
-                <span>Falar com a equipe AS Beauty Center</span>
-                
-            </a>
+    <!-- 3. TRATAMENTOS / BENEFÍCIOS -->
+    <section class="section" id="tratamentos" aria-labelledby="tratamentos-title">
+      <div class="wrap">
+        <div class="section-head section-head--center reveal">
+          <span class="overline overline--center">Nossos tratamentos</span>
+          <h2 class="section-title" id="tratamentos-title">Beleza e bem-estar <em>em um só lugar</em></h2>
         </div>
+        <div class="treat-grid">
+          <a class="treat-card treat-card--featured reveal" href="tratamentos/crio-as/">
+            <span class="badge">Mais procurado</span>
+            <span class="treat-icon"><svg aria-hidden="true"><use href="#i-snow"/></svg></span>
+            <h3>Criomodelagem</h3>
+            <p>Redução de gordura localizada sem cirurgia, com o protocolo CRIO AS.</p>
+            <span class="link-arrow">Saiba mais <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="treat-card reveal" href="tratamentos/flacidez-corporal/">
+            <span class="treat-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Flacidez corporal</h3>
+            <p>Estímulo de colágeno para uma pele mais firme.</p>
+            <span class="link-arrow">Saiba mais <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="treat-card reveal" href="tratamentos/rejuvenescimento-facial/">
+            <span class="treat-icon"><svg aria-hidden="true"><use href="#i-sparkles"/></svg></span>
+            <h3>Rejuvenescimento facial</h3>
+            <p>Suavização de linhas de expressão com naturalidade.</p>
+            <span class="link-arrow">Saiba mais <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="treat-card reveal" href="tratamentos/depilacao-a-laser/">
+            <span class="treat-icon"><svg aria-hidden="true"><use href="#i-zap"/></svg></span>
+            <h3>Depilação a laser</h3>
+            <p>Pele lisa por muito mais tempo com o laser HAKON 4D.</p>
+            <span class="link-arrow">Saiba mais <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="treat-card reveal" href="tratamentos/terapias-capilares/">
+            <span class="treat-icon"><svg aria-hidden="true"><use href="#i-sprout"/></svg></span>
+            <h3>Terapias capilares</h3>
+            <p>Cuidado com a queda e a saúde dos fios.</p>
+            <span class="link-arrow">Saiba mais <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <a class="treat-card reveal" href="tratamentos/drenagem-linfatica/">
+            <span class="treat-icon"><svg aria-hidden="true"><use href="#i-drops"/></svg></span>
+            <h3>Drenagem linfática</h3>
+            <p>Sensação de leveza e menos inchaço no corpo.</p>
+            <span class="link-arrow">Saiba mais <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- THE "AS EXPERIENCE" SCENES SECTION -->
-    
-    <!-- CLÍNICA: ensaio fotográfico real, sem fotografias de banco de imagens -->
-    <section id="clinica" class="py-24 lg:py-28 bg-brand-ivory/60 overflow-hidden" aria-labelledby="clinica-titulo">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12 reveal">
-                <div class="max-w-2xl">
-                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-4 block">Conheça nosso espaço</span>
-                    <h2 id="clinica-titulo" class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark font-light leading-tight">Um olhar por dentro da <em class="text-brand-brown">AS Beauty.</em></h2>
-                </div>
-                <p class="text-brand-text font-light max-w-sm leading-relaxed text-sm">Ambientes e momentos reais do atendimento. Conheça alguns detalhes da clínica antes da sua visita.</p>
-            </div>
-            <div class="clinic-gallery">
-                <figure class="clinic-photo col-span-2 md:col-span-7 reveal">
-                    <img src="assets/clinica-atendimento.webp" loading="lazy" decoding="async" width="1400" height="1050" alt="Dra. Aline no espaço de atendimento da clínica">
-                    <figcaption>Um atendimento que começa pela escuta</figcaption>
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-5 reveal reveal-delay-1">
-                    <img src="assets/clinica-equipamento.webp" loading="lazy" decoding="async" width="901" height="1400" alt="Dra. Aline na clínica, atrás de um frasco de produto de estética">
-                <figcaption>Dra. Aline · AS Beauty Center</figcaption>
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-4 reveal">
-                    <img src="assets/clinica-ambiente.webp" loading="lazy" decoding="async" width="982" height="1400" alt="Recepção com iluminação acolhedora e mobiliário da clínica">
-                    <figcaption>Recepção</figcaption>
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-4 reveal">
-                    <img src="assets/clinica-procedimento.webp" loading="lazy" decoding="async" width="1050" height="1400" alt="Registro real de um atendimento estético">
-                    <figcaption>Cuidado em cada detalhe</figcaption>
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-4 reveal">
-                    <img src="assets/clinica-tecnologia.webp" loading="lazy" decoding="async" width="882" height="1400" alt="Equipamento utilizado em atendimento na clínica">
-                    <figcaption>Ambiente de atendimento</figcaption>
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
-                    <img src="assets/clinica-cuidado.webp" loading="lazy" decoding="async" width="932" height="1400" alt="Dra. Aline realizando procedimento com uma paciente">
-                    <figcaption>Atendimento individualizado</figcaption>
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
-                    <img src="assets/clinica-recepcao.webp" loading="lazy" decoding="async" width="600" height="900" alt="Poltronas e mesa da recepção">
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
-                    <img src="assets/clinica-detalhe.webp" loading="lazy" decoding="async" width="983" height="1400" alt="Detalhe decorativo do espaço da clínica">
-                </figure>
-                <figure class="clinic-photo col-span-1 md:col-span-3 reveal">
-                    <img src="assets/clinica-acolhimento.webp" loading="lazy" decoding="async" width="884" height="1400" alt="Momento de acolhimento registrado na clínica">
-                </figure>
-            </div>
+    <!-- 4. DIFERENCIAIS -->
+    <section class="section section--soft" id="diferenciais" aria-labelledby="diferenciais-title">
+      <div class="wrap diff-grid">
+        <div class="diff-photos reveal">
+          <img src="assets/clinica-cuidado.webp" alt="Dra. Aline atendendo uma paciente" width="932" height="1400" loading="lazy">
+          <img src="assets/clinica-atendimento.webp" alt="Sala de consulta da AS Beauty Center" width="1400" height="1050" loading="lazy">
+          <img src="assets/clinica-ambiente.webp" alt="Ambiente de espera da clínica" width="982" height="1400" loading="lazy">
         </div>
+        <div class="reveal">
+          <span class="overline">Diferenciais</span>
+          <h2 class="section-title" id="diferenciais-title" style="margin-top:14px">Por que escolher a <em>AS Beauty Center?</em></h2>
+          <ul class="diff-list">
+            <li><span class="treat-icon"><svg aria-hidden="true"><use href="#i-chat"/></svg></span><div><h3>Consulta individual, sem pressa</h3><p>Tempo para entender seus objetivos antes de indicar qualquer tratamento.</p></div></li>
+            <li><span class="treat-icon"><svg aria-hidden="true"><use href="#i-pulse"/></svg></span><div><h3>Tecnologia e protocolos atualizados</h3><p>Equipamentos e técnicas de estética avançada, sempre em atualização.</p></div></li>
+            <li><span class="treat-icon"><svg aria-hidden="true"><use href="#i-shield"/></svg></span><div><h3>Segurança em cada etapa</h3><p>Procedimentos feitos com delicadeza e rigor de biossegurança.</p></div></li>
+            <li><span class="treat-icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><div><h3>Acompanhamento depois da sessão</h3><p>O cuidado continua no pós-procedimento, com retorno próximo e atento.</p></div></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-<section id="experiencia" class="py-24 bg-brand-offwhite relative">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="text-center max-w-2xl mx-auto mb-20 reveal">
-                <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">A Jornada na Clínica</span>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light">
-                    Você percebe a diferença <span class="italic text-brand-brown font-normal">nos detalhes.</span>
-                </h2>
-                <p class="text-brand-text font-light mt-4 text-base">
-                    Desde o seu primeiro contato até o pós-procedimento, criamos uma atmosfera pensada para o seu bem-estar integral.
-                </p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-                
-                <!-- Scene 01 -->
-                <div class="bg-brand-ivory p-8 rounded-2xl border border-brand-sand/50 relative reveal">
-                    <span class="font-serif text-3xl text-brand-signature block mb-4">01 · Recepção</span>
-                    <h3 class="font-serif text-xl text-brand-dark mb-2">Acolhimento imediato</h3>
-                    <p class="text-xs text-brand-text font-light leading-relaxed">Um ambiente sofisticado, calmo e silencioso, projetado para que você desacelere assim que cruzar a porta.</p>
-                </div>
-
-                <!-- Scene 02 -->
-                <div class="bg-brand-ivory p-8 rounded-2xl border border-brand-sand/50 relative reveal reveal-delay-1">
-                    <span class="font-serif text-3xl text-brand-signature block mb-4">02 · Escuta</span>
-                    <h3 class="font-serif text-xl text-brand-dark mb-2">Consulta sem pressa</h3>
-                    <p class="text-xs text-brand-text font-light leading-relaxed">Tempo dedicado exclusivamente a você para compreender seus objetivos, histórico e desejos estéticos.</p>
-                </div>
-
-                <!-- Scene 03 -->
-                <div class="bg-brand-ivory p-8 rounded-2xl border border-brand-sand/50 relative reveal reveal-delay-2">
-                    <span class="font-serif text-3xl text-brand-signature block mb-4">03 · Execução</span>
-                    <h3 class="font-serif text-xl text-brand-dark mb-2">Técnica e conforto</h3>
-                    <p class="text-xs text-brand-text font-light leading-relaxed">Procedimentos realizados com extrema delicadeza, biossegurança rigorosa e tecnologia de ponta.</p>
-                </div>
-
-                <!-- Scene 04 -->
-                <div class="bg-brand-dark text-white p-8 rounded-2xl relative reveal reveal-delay-3">
-                    <span class="font-serif text-3xl text-brand-champagne block mb-4">04 · Cuidado</span>
-                    <h3 class="font-serif text-xl text-white mb-2">Acompanhamento</h3>
-                    <p class="text-xs text-brand-rose/80 font-light leading-relaxed">Sua jornada não termina ao fim da sessão. Oferecemos acompanhamento pós-procedimento atento e acessível.</p>
-                </div>
-
-            </div>
-
+    <!-- 5. DRA. ALINE -->
+    <section class="section" id="dra-aline" aria-labelledby="aline-title">
+      <div class="wrap about-grid">
+        <div class="about-photo reveal">
+          <img src="assets/aline-retrato.webp" alt="Retrato da Dra. Aline Schweitzer" width="901" height="1400" loading="lazy">
         </div>
+        <div class="about-copy reveal">
+          <span class="overline">Quem cuida de você</span>
+          <h2 class="section-title" id="aline-title" style="margin-top:14px">Dra. Aline Schweitzer</h2>
+          <p class="about-role">Estética avançada · Responsável técnica</p>
+          <p>Aline criou a AS Beauty Center para unir ciência, técnica e um atendimento próximo, em que cada protocolo é pensado para a pessoa que está sendo atendida.</p>
+          <p>Além da clínica, atua no ensino e já formou mais de 2.000 profissionais da estética em todo o país.</p>
+          <blockquote class="about-quote">“Cuidar da estética também é entender a pessoa por trás dela.”</blockquote>
+          <div class="stats">
+            <div><strong>+2.000</strong><span>profissionais formados</span></div>
+            <div><strong>26,7 mil</strong><span>seguidores no Instagram</span></div>
+          </div>
+          <a class="link-arrow" href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer">Acompanhar no Instagram <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
     </section>
 
-    <!-- REVIEWS & SOCIAL PROOF SECTION (Humanized with Real Names) -->
-    <section id="avaliacoes" class="py-24 bg-brand-ivory overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
-                <div>
-                    <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Depoimentos Reais</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light">
-                        A melhor prova é a experiência <span class="italic text-brand-brown font-normal block sm:inline">de quem já viveu.</span>
-                    </h2>
-                </div>
-                <div class="mt-6 md:mt-0 flex items-center gap-3 bg-brand-offwhite px-5 py-3 rounded-full border border-brand-sand w-fit">
-                    
-                    <span class="font-serif font-bold text-brand-dark">Nota 5,0 no Google</span>
-                    <span class="text-xs text-brand-muted">(137 avaliações)</span>
-                </div>
+    <!-- 6. DEPOIMENTOS -->
+    <section class="section section--soft" id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="wrap">
+        <div class="reviews-head reveal">
+          <div class="section-head" style="margin:0">
+            <span class="overline">Depoimentos</span>
+            <h2 class="section-title" id="depoimentos-title">Quem conhece, <em>recomenda</em></h2>
+          </div>
+          <div class="google-badge">
+            <span class="score">5,0</span>
+            <div>
+              <span class="stars" aria-label="5 de 5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+              <small>137 avaliações no Google</small>
             </div>
-
-            <!-- Spotlight Review Card + Secondary Grid -->
-            <div class="grid lg:grid-cols-12 gap-8 items-stretch">
-                
-                <!-- Main Spotlight Review -->
-                <div class="lg:col-span-6 bg-brand-offwhite p-10 lg:p-12 rounded-3xl border border-brand-sand/80 shadow-sm flex flex-col justify-between reveal">
-                    <div>
-                        
-                        <p class="font-serif text-2xl sm:text-3xl text-brand-dark font-light italic leading-relaxed mb-8">
-                            “A clínica Beauty Center proporciona uma experiência verdadeiramente diferenciada. Cada detalhe é cuidadosamente pensado, e me senti extremamente confortável e segura do início ao fim.”
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-6 border-t border-brand-sand/40">
-                        <div class="w-12 h-12 rounded-full bg-brand-signaturelight border border-brand-signature/30 flex items-center justify-center font-serif text-brand-signature font-bold text-lg">P</div>
-                        <div>
-                            <p class="font-medium text-brand-dark text-sm">Patricia Santos</p>
-                            <span class="text-xs text-brand-muted">Paciente da AS Beauty Center</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Secondary Reviews Column -->
-                <div class="lg:col-span-6 grid sm:grid-cols-2 gap-6 reveal reveal-delay-1">
-                    
-                    <!-- Review 2 -->
-                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
-                        <div>
-                            
-                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
-                                “Que profissional maravilhosa! Eu amei meu tratamento, tive um ótimo resultado e o atendimento é impecável.”
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-rose flex items-center justify-center font-serif text-brand-brown text-xs font-bold">M</div>
-                            <span class="text-xs font-medium text-brand-dark">Maria Vogado</span>
-                        </div>
-                    </div>
-
-                    <!-- Review 3 -->
-                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
-                        <div>
-                            
-                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
-                                “A clínica é muito acolhedora. No meu primeiro atendimento, me senti extremamente confortável e segura com a Dra. Aline.”
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-champagne flex items-center justify-center font-serif text-brand-brown text-xs font-bold">K</div>
-                            <span class="text-xs font-medium text-brand-dark">Karoline Castro</span>
-                        </div>
-                    </div>
-
-                    <!-- Review 4 -->
-                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
-                        <div>
-                            
-                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
-                                “Desde a primeira consulta fui extremamente bem acolhida por toda a equipe. O ambiente é lindo e muito limpo.”
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-sand flex items-center justify-center font-serif text-brand-brown text-xs font-bold">J</div>
-                            <span class="text-xs font-medium text-brand-dark">Juliana Lima</span>
-                        </div>
-                    </div>
-
-                    <!-- Review 5 -->
-                    <div class="bg-brand-offwhite p-7 rounded-2xl border border-brand-sand/60 flex flex-col justify-between">
-                        <div>
-                            
-                            <p class="text-xs text-brand-text font-light italic leading-relaxed mb-6">
-                                “Clínica linda, atendimento maravilhoso e serviço perfeito. Recomendo de olhos fechados em São José!”
-                            </p>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-ivory border border-brand-sand flex items-center justify-center font-serif text-brand-brown text-xs font-bold">A</div>
-                            <span class="text-xs font-medium text-brand-dark">Ana Paula</span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
+          </div>
         </div>
+        <div class="reviews-grid">
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote>“A clínica proporciona uma experiência verdadeiramente diferenciada. Cada detalhe é cuidadosamente pensado, e me senti extremamente confortável e segura do início ao fim.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">P</span><span><strong>Patricia Santos</strong>Paciente</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote>“Que profissional maravilhosa! Eu amei meu tratamento, tive um ótimo resultado e o atendimento é impecável.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">M</span><span><strong>Maria Vogado</strong>Paciente</span></figcaption>
+          </figure>
+          <figure class="review reveal">
+            <span class="stars" aria-label="5 estrelas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote>“A clínica é muito acolhedora. No meu primeiro atendimento, me senti extremamente confortável e segura com a Dra. Aline.”</blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">K</span><span><strong>Karoline Castro</strong>Paciente</span></figcaption>
+          </figure>
+        </div>
+      </div>
     </section>
 
-    <!-- DIGITAL AUTHORITY BLOCK (Community & Education) -->
-    <section class="py-20 bg-brand-dark text-white relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                
-                <div class="lg:col-span-8 reveal">
-                    <span class="text-xs uppercase tracking-superwide text-brand-champagne font-bold mb-3 block">Autoridade Digital e Ensino</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl text-white font-light mb-4">
-                        Conhecimento também faz parte da <span class="italic text-brand-champagne font-normal">experiência.</span>
-                    </h2>
-                    <p class="text-brand-rose/80 font-light text-base leading-relaxed max-w-2xl">
-                        A estética avançada exige atualização contínua e rigor científico. Além da prática clínica diária na AS Beauty Center, a Dra. Aline Schweitzer compartilha diariamente conteúdo técnico, bastidores e conhecimento com milhares de seguidores e profissionais da área.
-                    </p>
-                </div>
-
-                <div class="lg:col-span-4 flex flex-col items-start lg:items-end justify-center reveal reveal-delay-1">
-                    <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer" class="bg-brand-champagne text-brand-dark px-8 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-white transition-colors flex items-center gap-3 shadow-lg">
-                        
-                        <span>Acessar o Instagram</span>
-                    </a>
-                </div>
-
-            </div>
+    <!-- 7. DÚVIDAS FREQUENTES -->
+    <section class="section" id="duvidas" aria-labelledby="duvidas-title">
+      <div class="wrap faq-grid">
+        <div class="section-head reveal">
+          <span class="overline">Dúvidas frequentes</span>
+          <h2 class="section-title" id="duvidas-title">Tire suas <em>dúvidas</em></h2>
+          <p class="section-lead">As perguntas que mais recebemos sobre a criomodelagem e o agendamento.</p>
+          <a class="link-arrow" style="justify-self:start;margin-top:10px" href="https://wa.me/5548988430101?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20tratamentos%20da%20AS%20Beauty%20Center." target="_blank" rel="noopener noreferrer">Outra dúvida? Fale com a clínica <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
+        <div class="faq reveal">
+          <!-- TROCAR: respostas da Dra. Aline (buscar por "aguardando Dra. Aline") -->
+          <details>
+            <summary>A criomodelagem dói?</summary>
+            <div class="answer"><p class="pendente" data-pendente>[aguardando Dra. Aline]</p></div>
+          </details>
+          <details>
+            <summary>Quantas sessões são necessárias?</summary>
+            <div class="answer"><p class="pendente" data-pendente>[aguardando Dra. Aline]</p></div>
+          </details>
+          <details>
+            <summary>Quais áreas podem ser tratadas?</summary>
+            <div class="answer"><p class="pendente" data-pendente>[aguardando Dra. Aline]</p></div>
+          </details>
+          <details>
+            <summary>Que cuidados devo ter depois do procedimento?</summary>
+            <div class="answer"><p class="pendente" data-pendente>[aguardando Dra. Aline]</p></div>
+          </details>
+          <details>
+            <summary>Como agendo minha consulta?</summary>
+            <div class="answer"><p>Pelo WhatsApp <a href="https://wa.me/5548988430101?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">(48) 98843-0101</a>. A equipe responde e encontra o melhor horário para você.</p></div>
+          </details>
+        </div>
+      </div>
     </section>
 
-    <!-- LOCATION & CONTACT SECTION -->
-    <section id="contato" class="py-24 bg-brand-offwhite relative">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Contact Details -->
-            <div class="lg:col-span-5 reveal">
-                <span class="text-xs uppercase tracking-superwide text-brand-signature font-bold mb-3 block">Localização Exclusiva</span>
-                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-brand-dark font-light mb-8">
-                    Seu próximo cuidado está em <span class="italic text-brand-brown font-normal block mt-1">São José — SC.</span>
-                </h2>
-
-                <div class="space-y-8 mb-10">
-                    
-                    <div class="flex items-start gap-4">
-                        
-                        <div>
-                            <p class="font-serif text-lg text-brand-dark font-medium">AS Beauty Center</p>
-                            <p class="text-sm text-brand-text font-light leading-relaxed mt-1">
-                                Av. João Theodoro da Silva, 243 — Sala 03<br>
-                                Bairro Roçado, São José — Santa Catarina
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        
-                        <div>
-                            <p class="font-serif text-lg text-brand-dark font-medium">Agendamento & Informações</p>
-                            <p class="text-sm text-brand-text font-light leading-relaxed mt-1">
-                                (48) 98843-0101
-                            </p>
-                            <span class="text-xs text-brand-muted block mt-0.5">Atendimento de segunda a sexta-feira</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <a href="https://maps.google.com/?q=Av.+João+Theodoro+da+Silva,+243+-+Roçado,+São+José+-+SC" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 border border-brand-dark text-brand-dark px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-brand-dark hover:text-white transition-all">
-                    <span>Como Chegar no Google Maps</span>
-                    
-                </a>
-            </div>
-
-            <!-- Stylized Map Embed Container -->
-            <div class="lg:col-span-7 h-[420px] rounded-3xl overflow-hidden shadow-lg border border-brand-sand relative reveal reveal-delay-1">
-                <iframe title="Localização da AS Beauty Center em São José, Santa Catarina" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3536.2163994788!2d-48.6253!3d-27.5946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDM1JzQwLjYiUyA0OMKwMzcnMzEuMSJX!5e0!3m2!1spt-BR!2sbr!4v1600000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; filter: grayscale(40%) contrast(90%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
+    <!-- 8. CHAMADA FINAL + CONTATO -->
+    <section class="section cta-final" id="contato" aria-labelledby="contato-title">
+      <div class="wrap cta-grid">
+        <div class="reveal">
+          <span class="overline">Seu próximo passo</span>
+          <h2 id="contato-title">Agende sua <em>consulta</em></h2>
+          <p>Conte o que você quer cuidar e a equipe da AS Beauty Center encontra o melhor horário para você.</p>
+          <a class="btn btn--light" href="https://wa.me/5548988430101?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>Falar com a clínica no WhatsApp
+          </a>
         </div>
+        <address class="contact-card reveal" style="font-style:normal">
+          <div class="contact-item"><svg aria-hidden="true"><use href="#i-pin"/></svg><span><strong>Av. João Theodoro da Silva, 243 — Sala 03</strong>Roçado, São José — SC · <a href="https://maps.google.com/?q=Av.+Jo%C3%A3o+Theodoro+da+Silva,+243+-+Ro%C3%A7ado,+S%C3%A3o+Jos%C3%A9+-+SC" target="_blank" rel="noopener noreferrer">Como chegar</a></span></div>
+          <div class="contact-item"><svg aria-hidden="true"><use href="#i-clock"/></svg><span><strong>Segunda a sexta-feira</strong>Atendimento com hora marcada</span></div>
+          <div class="contact-item"><svg aria-hidden="true"><use href="#i-wa"/></svg><span><strong>WhatsApp</strong><a href="https://wa.me/5548988430101" target="_blank" rel="noopener noreferrer">(48) 98843-0101</a></span></div>
+          <div class="contact-item"><svg aria-hidden="true"><use href="#i-insta"/></svg><span><strong>Instagram</strong><a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer">@alinefarmaceutica</a></span></div>
+        </address>
+      </div>
     </section>
+  </main>
 
-    <!-- FINAL EDITORIAL CTA SECTION -->
-    <section class="py-24 bg-brand-dark text-center px-6 relative overflow-hidden">
-        <!-- Ambient Glow -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-signature/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <footer class="footer">
+    <div class="wrap footer-row">
+      <a class="logo" href="#inicio" aria-label="AS Beauty Center — voltar ao início">
+        <span class="logo-mark" aria-hidden="true">AS</span>
+        <span class="logo-text"><strong>Beauty Center</strong><span>Estética avançada</span></span>
+      </a>
+      <nav class="footer-links" aria-label="Rodapé">
+        <a href="#tratamentos">Tratamentos</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#dra-aline">Dra. Aline</a>
+        <a href="#duvidas">Dúvidas</a>
+      </nav>
+      <p>© 2026 AS Beauty Center · São José — SC · Responsável técnica: Dra. Aline Schweitzer</p>
+    </div>
+  </footer>
 
-        <div class="max-w-3xl mx-auto relative z-10 reveal">
-            <span class="text-xs uppercase tracking-superwide text-brand-champagne font-bold mb-4 block">Seu Próximo Passo</span>
-            
-            <h2 class="font-serif text-4xl sm:text-5xl text-white font-light mb-6 leading-tight">
-                Sua beleza merece <span class="italic text-brand-champagne font-normal">estratégia.</span>
-            </h2>
-            
-            <p class="text-brand-rose/80 font-light text-base sm:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-                Agende sua consulta e conheça as possibilidades de cuidado da AS Beauty Center.
-            </p>
-            
-            <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-brand-champagne text-brand-dark px-10 py-5 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white transition-all shadow-xl hover:scale-105">
-                <span>Agendar minha consulta</span>
-                
-            </a>
+  <a class="wa-float" href="https://wa.me/5548988430101?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
 
-            <div class="mt-8 pt-6 border-t border-white/10 text-xs text-brand-rose/50 uppercase tracking-widest font-light">
-                AS Beauty Center · Dra. Aline Schweitzer · São José — SC
-            </div>
-        </div>
-    </section>
+  <script>
+    (function () {
+      var header = document.querySelector('.header');
+      var toggle = document.querySelector('.menu-toggle');
+      var menu = document.getElementById('menu-mobile');
+      var icon = toggle.querySelector('use');
 
-    <!-- FOOTER -->
-    <footer class="bg-brand-darker text-white/70 pt-16 pb-12 border-t border-white/10 text-xs">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="grid md:grid-cols-12 gap-10 pb-12 border-b border-white/10 items-start">
-                
-                <!-- Brand Info -->
-                <div class="md:col-span-5">
-                    <a href="#" class="font-serif text-2xl text-white tracking-wide font-normal block mb-3">
-                        AS <span class="italic text-brand-champagne font-light">Beauty Center</span>
-                    </a>
-                    <p class="text-white/60 font-light leading-relaxed max-w-sm mb-4">
-                        Clínica de estética avançada liderada pela Dra. Aline Schweitzer. Atendimento individualizado, alta performance e resultados naturais em São José — SC.
-                    </p>
-                    <p class="text-brand-champagne/80 font-serif italic text-sm">
-                        “Estética de resultado com estratégia, naturalidade e propósito.”
-                    </p>
-                </div>
+      function setMenu(open) {
+        menu.hidden = !open;
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+        icon.setAttribute('href', open ? '#i-close' : '#i-menu');
+      }
+      toggle.addEventListener('click', function () { setMenu(menu.hidden); });
+      menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !menu.hidden) { setMenu(false); toggle.focus(); }
+      });
+      window.matchMedia('(min-width: 1081px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
 
-                <!-- Navigation Quick Links -->
-                <div class="md:col-span-4 grid grid-cols-2 gap-4">
-                    <div class="flex flex-col gap-3">
-                        <span class="text-white uppercase tracking-widest text-[10px] font-bold mb-1">Navegação</span>
-                        <a href="#inicio" class="hover:text-white transition-colors">Início</a>
-                        <a href="#posicionamento" class="hover:text-white transition-colors">A Filosofia</a>
-                        <a href="#dra-aline" class="hover:text-white transition-colors">Dra. Aline</a>
-                        <a href="#tratamentos" class="hover:text-white transition-colors">Tratamentos</a>
-                    </div>
-                    <div class="flex flex-col gap-3">
-                        <span class="text-white uppercase tracking-widest text-[10px] font-bold mb-1">Clínica</span>
-                        <a href="#experiencia" class="hover:text-white transition-colors">Experiência</a>
-                        <a href="#avaliacoes" class="hover:text-white transition-colors">Avaliações</a>
-                        <a href="#contato" class="hover:text-white transition-colors">Localização</a>
-                    </div>
-                </div>
+      function onScroll() { header.classList.toggle('is-scrolled', window.scrollY > 8); }
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
 
-                <!-- Social & Contact -->
-                <div class="md:col-span-3 flex flex-col gap-4">
-                    <span class="text-white uppercase tracking-widest text-[10px] font-bold mb-1">Canais</span>
-                    <a href="https://api.whatsapp.com/send?phone=554888430101" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
-                        
-                        <span>(48) 98843-0101</span>
-                    </a>
-                    <a href="https://www.instagram.com/alinefarmaceutica/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition-colors">
-                        
-                        <span>@alinefarmaceutica</span>
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/40 text-[11px]">
-                <p>© 2026 AS Beauty Center. Todos os direitos reservados.</p>
-                <p>São José — SC · Responsável Técnica: Dra. Aline Schweitzer</p>
-            </div>
-
-        </div>
-    </footer>
-
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        // Mobile Navigation Toggle Logic
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuLabel = menuBtn.querySelector('.as-menu-label');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        function setMenu(open) {
-            mobileMenu.classList.toggle('hidden', !open);
-            menuBtn.setAttribute('aria-expanded', String(open));
-            menuBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-            menuLabel.textContent = open ? 'Fechar' : 'Menu';
-        }
-
-        setMenu(false);
-        menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => setMenu(false));
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
         });
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape') setMenu(false);
-        });
-
-        document.addEventListener('click', (event) => {
-            if (mobileMenu.classList.contains('hidden')) return;
-            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) setMenu(false);
-        });
-
-        // Header Blur & Shadow on Scroll
-        const header = document.getElementById('header');
-        const updateHeader = () => {
-            if (window.scrollY > 30) {
-                header.classList.add('shadow-sm', 'bg-brand-offwhite/95');
-                header.classList.remove('bg-brand-offwhite/85');
-            } else {
-                header.classList.remove('shadow-sm', 'bg-brand-offwhite/95');
-                header.classList.add('bg-brand-offwhite/85');
-            }
-        };
-        updateHeader();
-        window.addEventListener('scroll', updateHeader, { passive: true });
-
-        // Intersection Observer for Editorial Scroll Reveals
-        document.addEventListener('DOMContentLoaded', () => {
-            const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-            const revealOnScroll = 'IntersectionObserver' in window
-                ? new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('active');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' })
-                : null;
-
-            reveals.forEach(reveal => {
-                if (revealOnScroll) revealOnScroll.observe(reveal);
-                else reveal.classList.add('active');
-            });
-
-            // Fallback so content is never left invisible if an observer/network issue occurs.
-            window.setTimeout(() => reveals.forEach(reveal => reveal.classList.add('active')), 2200);
-        });
-    </script>
-
-
-    <script>
-        /* Etapa 02: escolha local, sem rastrear nem armazenar qualquer dado pessoal. */
-        (() => {
-            const section = document.getElementById('preocupacoes');
-            if (!section) return;
-            const options = Array.from(section.querySelectorAll('.as-concern-option'));
-            const title = document.getElementById('as-concern-title');
-            const description = document.getElementById('as-concern-description');
-            const counter = document.getElementById('as-concern-counter');
-            const link = document.getElementById('as-concern-whatsapp');
-            const choices = {
-                gordura: {
-                    title: 'Gordura localizada', number: '01',
-                    description: 'Cada corpo tem suas particularidades. Uma consulta individualizada é o momento de conversar sobre o que incomoda você e conhecer possibilidades de cuidado.',
-                    subject: 'gordura localizada'
-                },
-                flacidez: {
-                    title: 'Flacidez corporal', number: '02',
-                    description: 'Mudanças na firmeza da pele podem despertar dúvidas. Uma conversa individualizada ajuda a entender seu objetivo e discutir quais opções podem fazer sentido.',
-                    subject: 'flacidez corporal'
-                },
-                facial: {
-                    title: 'Sinais do envelhecimento facial', number: '03',
-                    description: 'Sua expressão e seus traços merecem respeito. A consulta é o espaço para conversar sobre as mudanças que você percebe e as possibilidades de cuidado facial.',
-                    subject: 'sinais do envelhecimento facial'
-                },
-                capilar: {
-                    title: 'Queda capilar', number: '04',
-                    description: 'Quando o cabelo muda, surgem perguntas. Na consulta, você pode compartilhar suas preocupações e entender quais próximos passos profissionais são apropriados.',
-                    subject: 'queda capilar'
-                },
-                pelos: {
-                    title: 'Pelos indesejados', number: '05',
-                    description: 'O conforto com a própria pele é individual. Converse sobre seus hábitos, expectativas e dúvidas antes de escolher qualquer procedimento.',
-                    subject: 'pelos indesejados'
-                }
-            };
-
-            options.forEach(button => {
-                button.addEventListener('click', () => {
-                    const selected = choices[button.dataset.concern];
-                    if (!selected) return;
-                    options.forEach(item => {
-                        const active = item === button;
-                        item.classList.toggle('is-active', active);
-                        item.setAttribute('aria-pressed', String(active));
-                    });
-                    title.textContent = selected.title;
-                    description.textContent = selected.description;
-                    counter.textContent = selected.number + ' / 05';
-                    const message = 'Olá! Acessei o site da AS Beauty Center e gostaria de agendar uma consulta individualizada para conversar sobre ' + selected.subject + '.';
-                    link.href = 'https://api.whatsapp.com/send?phone=554888430101&text=' + encodeURIComponent(message);
-                    const explore=document.getElementById('as-concern-explore');
-                    const details={gordura:'/tratamentos/crio-as/',flacidez:'/tratamentos/flacidez-corporal/',facial:'/tratamentos/rejuvenescimento-facial/',capilar:'/tratamentos/terapias-capilares/',pelos:'/tratamentos/depilacao-a-laser/'};
-                    if(explore&&details[button.dataset.concern])explore.href=details[button.dataset.concern];
-
-                    // Mostra o painel de resultado no celular após uma seleção direta.
-                    if (window.matchMedia('(max-width: 767px)').matches) {
-                        document.getElementById('as-concern-panel').scrollIntoView({
-                            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        })();
-    </script>
-
-    <!-- WhatsApp flutuante: contato direto sem interromper a navegação -->
-    <a href="https://api.whatsapp.com/send?phone=554888430101&text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20AS%20Beauty%20Center%20e%20gostaria%20de%20agendar%20minha%20consulta."
-       target="_blank" rel="noopener noreferrer" aria-label="Agendar minha consulta pelo WhatsApp"
-       class="as-whatsapp-float as-whatsapp-icon-button"
-       style="box-shadow:0 8px 32px rgba(0,0,0,.22);">
-        <svg class="as-whatsapp-svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M19.11 17.44c-.27-.14-1.58-.78-1.83-.87-.24-.09-.42-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.6-1.45-.82-1.99-.22-.52-.44-.45-.6-.46h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.22s.95 2.58 1.08 2.76c.14.18 1.87 2.86 4.54 4.01.64.28 1.14.45 1.53.58.64.2 1.22.17 1.68.1.51-.08 1.58-.64 1.8-1.26.22-.62.22-1.15.15-1.26-.07-.11-.25-.18-.52-.31Z"/><path fill="currentColor" d="M16.03 3.2c-7.07 0-12.8 5.65-12.8 12.62 0 2.23.59 4.41 1.72 6.33L3.2 28.8l6.87-1.79a12.9 12.9 0 0 0 5.96 1.46h.01c7.06 0 12.79-5.65 12.79-12.63S23.1 3.2 16.03 3.2Zm0 23.14h-.01a10.8 10.8 0 0 1-5.5-1.5l-.39-.23-4.08 1.06 1.09-3.97-.25-.41a10.43 10.43 0 0 1-1.61-5.53c0-5.79 4.81-10.5 10.73-10.5 2.87 0 5.56 1.1 7.59 3.1a10.34 10.34 0 0 1 3.15 7.4c0 5.79-4.82 10.5-10.72 10.5Z"/></svg>
-    </a>
+      }, { rootMargin: '0px 0px -8% 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>

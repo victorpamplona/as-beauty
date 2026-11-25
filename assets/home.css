@@ -173,11 +173,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 /* ---------- 2. Resultados ---------- */
 .results-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .result-card { background: var(--white); border-radius: var(--radius); padding: 12px 12px 18px; box-shadow: 0 10px 30px rgba(35, 38, 35, .06); }
-.result-card h3 { font-size: 22px; margin: 16px 6px 2px; }
-.result-card p { font-size: 14px; color: var(--muted); margin: 0 6px; }
+.result-card h3 { font-size: 24px; line-height: 1.2; margin: 16px 8px 0; }
+.result-card p { font-size: 14px; line-height: 1.5; color: var(--muted); margin: 4px 8px 0; }
+.results-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
 .results-others { margin-top: clamp(48px, 6vw, 72px); }
 .results-others h3 { font-size: clamp(26px, 3vw, 32px); margin-bottom: 22px; }
-.results-grid--small .result-card h3 { font-size: 20px; }
 .results-foot { margin-top: 40px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
 .results-foot small { font-size: 13px; color: var(--muted); }
 
@@ -307,7 +307,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 @media (max-width: 900px) {
   .hero-grid, .diff-grid, .about-grid, .faq-grid, .cta-grid { grid-template-columns: minmax(0, 1fr); }
   .hero-visual { max-width: 520px; width: 100%; margin-inline: auto; }
-  .results-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .results-grid { gap: 14px; }
+  .results-grid--small { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .results-grid--small .result-card h3 { font-size: 19px; }
   .about-photo { max-width: 460px; }
 }
 @media (max-width: 680px) {
@@ -330,8 +332,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .hero-name { right: 10px; top: 16px; padding: 10px 12px; }
   .hero-name strong { font-size: 17px; }
   .results-grid { grid-template-columns: minmax(0, 1fr); }
-  .results-grid--small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .results-grid--small .result-card:last-child { grid-column: span 2; }
+  .results-grid--small { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin-inline: -16px; padding: 4px 16px 12px; scrollbar-width: none; }
+  .results-grid--small::-webkit-scrollbar { display: none; }
+  .results-grid--small .result-card { flex: 0 0 84%; scroll-snap-align: center; }
   .results-foot .btn { width: 100%; }
   .treat-grid, .reviews-grid { grid-template-columns: minmax(0, 1fr); }
   .diff-photos { height: 340px; }
@@ -348,4 +351,35 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   .btn, .treat-card, .wa-float, .link-arrow svg { transition: none; }
+}
+
+/* ==========================================================
+   Páginas de tratamento (mesmo sistema visual da home)
+   ========================================================== */
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+.breadcrumbs a { text-decoration: none; color: var(--text); }
+.breadcrumbs a:hover { color: var(--caramel); text-decoration: underline; }
+.page-hero .hero-visual { padding: 0; }
+.page-hero .hero-photo { aspect-ratio: 4 / 4.6; }
+.page-hero .hero-lead { max-width: 540px; }
+
+.ident-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.ident-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 30px 28px; }
+.ident-card .treat-icon { margin-bottom: 18px; }
+.ident-card h3 { font-size: 28px; line-height: 1.15; margin-bottom: 10px; }
+.ident-card p { font-size: 16px; }
+
+.about-treat { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 6vw, 88px); align-items: start; }
+.about-treat p { font-size: 17px; }
+.note { margin-top: 26px; padding: 22px 24px; border-radius: var(--radius); background: var(--lavender-soft); border-left: 3px solid var(--lavender); font-size: 15px; color: var(--ink); }
+.note strong { display: block; margin-bottom: 4px; }
+
+@media (max-width: 900px) {
+  .ident-grid, .about-treat { grid-template-columns: minmax(0, 1fr); }
+  .page-hero .hero-visual { max-width: 480px; }
+}
+@media (max-width: 680px) {
+  .ident-card { padding: 24px 22px; }
+  .ident-card h3 { font-size: 25px; }
+  .page-hero .hero-photo { aspect-ratio: 1 / 1; border-radius: 160px 160px var(--radius) var(--radius); }
 }
